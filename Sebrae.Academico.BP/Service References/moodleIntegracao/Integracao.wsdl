@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="MatricularAluno">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cpf" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cidade" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codCurso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codTurma" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MatricularAlunoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MatricularAlunoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="MatricularAlunoSoapIn">
+    <wsdl:part name="parameters" element="tns:MatricularAluno" />
+  </wsdl:message>
+  <wsdl:message name="MatricularAlunoSoapOut">
+    <wsdl:part name="parameters" element="tns:MatricularAlunoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IntegracaoSoap">
+    <wsdl:operation name="MatricularAluno">
+      <wsdl:input message="tns:MatricularAlunoSoapIn" />
+      <wsdl:output message="tns:MatricularAlunoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IntegracaoSoap" type="tns:IntegracaoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MatricularAluno">
+      <soap:operation soapAction="http://tempuri.org/MatricularAluno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IntegracaoSoap12" type="tns:IntegracaoSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MatricularAluno">
+      <soap12:operation soapAction="http://tempuri.org/MatricularAluno" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Integracao">
+    <wsdl:port name="IntegracaoSoap" binding="tns:IntegracaoSoap">
+      <soap:address location="http://ava.uc.sebrae.com.br/WS/Integracao.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IntegracaoSoap12" binding="tns:IntegracaoSoap12">
+      <soap12:address location="http://ava.uc.sebrae.com.br/WS/Integracao.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

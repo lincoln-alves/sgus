@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="urn:soap_server" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" name="soap_server" targetNamespace="urn:soap_server" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema targetNamespace="urn:soap_server" />
+  </types>
+  <message name="cursos_soap_create_request">
+    <part name="login" type="xsd:string" />
+    <part name="senha" type="xsd:string" />
+    <part name="id_solucao_educacional" type="xsd:string" />
+    <part name="titulo" type="xsd:string" />
+    <part name="descricao" type="xsd:string" />
+    <part name="taxonomias" type="xsd:string" />
+    <part name="status" type="xsd:string" />
+    <part name="parent_id" type="xsd:string" />
+    <part name="imagem" type="xsd:string" />
+    <part name="carga_horaria" type="xsd:int" />
+  </message>
+  <message name="cursos_soap_update_request">
+    <part name="login" type="xsd:string" />
+    <part name="senha" type="xsd:string" />
+    <part name="id_solucao_educacional" type="xsd:string" />
+    <part name="titulo" type="xsd:string" />
+    <part name="descricao" type="xsd:string" />
+    <part name="taxonomias" type="xsd:string" />
+    <part name="status" type="xsd:string" />
+    <part name="node_id" type="xsd:string" />
+    <part name="parent_id" type="xsd:string" />
+    <part name="imagem" type="xsd:string" />
+    <part name="carga_horaria" type="xsd:int" />
+  </message>
+  <message name="cursos_soap_create_response">
+    <part name="response_object" type="xsd:struct" />
+  </message>
+  <message name="cursos_soap_update_response">
+    <part name="response_object" type="xsd:struct" />
+  </message>
+  <portType name="soap_server_port_type">
+    <operation name="cursos_soap_create">
+      <input message="tns:cursos_soap_create_request" />
+      <output message="tns:cursos_soap_create_response" />
+    </operation>
+    <operation name="cursos_soap_update">
+      <input message="tns:cursos_soap_update_request" />
+      <output message="tns:cursos_soap_update_response" />
+    </operation>
+  </portType>
+  <binding name="soap_server_binding" type="tns:soap_server_port_type">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <operation name="cursos_soap_create">
+      <soap:operation soapAction="urn:xmethods-delayed-quotes#cursos_soap_create" />
+      <input>
+        <soap:body use="literal" namespace="urn:xmethods-delayed-quotes" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="urn:xmethods-delayed-quotes" />
+      </output>
+    </operation>
+    <operation name="cursos_soap_update">
+      <soap:operation soapAction="urn:xmethods-delayed-quotes#cursos_soap_update" />
+      <input>
+        <soap:body use="literal" namespace="urn:xmethods-delayed-quotes" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="urn:xmethods-delayed-quotes" />
+      </output>
+    </operation>
+  </binding>
+  <service name="soap_server_service">
+    <port name="soap_server_port" binding="tns:soap_server_binding">
+      <soap:address location="http://des.portal20.intranet.ice/sgus" />
+    </port>
+  </service>
+</definitions>

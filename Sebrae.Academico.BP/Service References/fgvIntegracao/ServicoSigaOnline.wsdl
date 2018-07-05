@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Matricular_Aluno_Em_Oferta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_objPrematricula" type="tns:Prematricula" />
+            <s:element minOccurs="0" maxOccurs="1" name="_Oferta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_cd_turma" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Prematricula">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DDD_CELULAR_NR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CELULAR_NR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ALISTAMENTO_EXPED_DT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ALISTAMENTO_NR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ALISTAMENTO_RM_NR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ALISTAMENTO_SERIE_NR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ANO_PRES_NR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="APELIDO_DS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CARTEIRA_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CONFIRM_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CONV_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CPF_DS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CURSO_ANT_AA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DDD_TELEF_NR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DDI_TELEF_NR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EAD_INSCR_SQ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMAIL_AUX_DS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMAIL_DS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ENVIO_DT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EST_CIVIL_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FAT_NOME_DS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FLAG_EMIT_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FLAG_PAG_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FLAG_TURMA_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GRUPO_FUNC_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDENT_DS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDENT_EXPED_DT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDT_NUM_DS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JABBER_FLG_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LOCAL_SQ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LOGIN_SIT_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MAE_DS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MATR_PRES_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MATRICULA_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NACIONAL_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NASC_DT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NASCIMENTO_DT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NATUR_DS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NATUR_UF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOME_DS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ORG_EMISS_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PAI_DS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PESSOA_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PROD_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CURSO_PROD_EAD_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CURSO_PROD_EAD_DATA_SQ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RESERVISTA_CAT_NR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RESERVISTA_EXPED_DT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RESERVISTA_NR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RESERVISTA_RM_NR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RESERVISTA_SERIE_NR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SENHA_DS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SEXO_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SEXO_DS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SUB_PROD_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TELEF_NR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIPO_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIPO_DOC_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TITULO_ELEITOR_NR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TITULO_EXPED_DT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TITULO_SECAO_NR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TITULO_ZONA_NR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="USERID_DS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SKYPE_DS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AGENCIA_DS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="endereco" type="tns:Endereco" />
+          <s:element minOccurs="0" maxOccurs="1" name="plano_aluno" type="tns:ArrayOfPlanoAluno" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Endereco">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EAD_INSCR_SQ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EAD_ENDER_SQ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EAD_ENDER_TIPO_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EAD_ENDER_LOGR_DS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EAD_ENDER_BAIRRO_DS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EAD_ENDER_CIDADE_DS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EAD_ENDER_UF_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EAD_ENDER_CEP_NR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EAD_ENDER_PAIS_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EAD_ENDER_RESP_NM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EAD_MATERIAL_FLG_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contato" type="tns:EnderecoContato" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EnderecoContato">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EAD_INSCR_SQ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EAD_ENDER_SQ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EAD_MODO_CONT_SQ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EAD_MODO_CONT_TIPO_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EAD_MODO_CONT_DDI_NR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EAD_MODO_CONT_DDD_NR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EAD_MODO_CONT_NR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EAD_MODO_CONT_COMPL_NR" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPlanoAluno">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PlanoAluno" nillable="true" type="tns:PlanoAluno" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PlanoAluno">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PROD_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SUB_PROD_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CURSO_PROD_EAD_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CURSO_PROD_EAD_DATA_SQ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO_EAD_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO_EAD_SQ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EAD_INSCR_SQ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO_EAD_RESP_CPFCGC_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO_EAD_RESP_CPFCGC_PERC_NR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO_EAD_RESP_CPFCGC_VL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO_EAD_RESP_TIPO_PESSOA_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO_EAD_RESP_CPFCGC2_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO_EAD_RESP_CPFCGC2_PERC_NR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO_EAD_RESP_CPFCGC2_VL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO_EAD_RESP_TIPO_PESSOA2_CD" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PLANO_EAD_INICIO_EVENTO_DT" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO_EAD_FORMPAG_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO_EAD_BANC_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RESPONSAVEL_PLANO" type="tns:ResponsavelPlanoAluno" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ResponsavelPlanoAluno">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PROD_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SUB_PROD_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CURSO_PROD_EAD_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CURSO_PROD_EAD_DATA_SQ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO_EAD_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO_EAD_SQ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EAD_INSCR_SQ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO_EAD_ENDER_SQ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO_EAD_ENDER_CPF_CGC_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO_EAD_ENDER_RESP_NM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO_EAD_ENDER_LOGR_DS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO_EAD_ENDER_BAIRRO_DS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO_EAD_ENDER_CIDADE_DS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO_EAD_ENDER_UF_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO_EAD_ENDER_CEP_NR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO_EAD_ENDER_PAIS_CD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO_EAD_ENDER_RESP_RECEB_NM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO_EAD_ENDER_RESP_SETOR_NM" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Matricular_Aluno_Em_OfertaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Matricular_Aluno_Em_OfertaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Retorna_Cursos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_convenio" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Retorna_CursosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Retorna_CursosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Retorna_Cursos_Ofertas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_convenio" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Retorna_Cursos_OfertasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Retorna_Cursos_OfertasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="Matricular_Aluno_Em_OfertaSoapIn">
+    <wsdl:part name="parameters" element="tns:Matricular_Aluno_Em_Oferta" />
+  </wsdl:message>
+  <wsdl:message name="Matricular_Aluno_Em_OfertaSoapOut">
+    <wsdl:part name="parameters" element="tns:Matricular_Aluno_Em_OfertaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Retorna_CursosSoapIn">
+    <wsdl:part name="parameters" element="tns:Retorna_Cursos" />
+  </wsdl:message>
+  <wsdl:message name="Retorna_CursosSoapOut">
+    <wsdl:part name="parameters" element="tns:Retorna_CursosResponse" />
+  </wsdl:message>
+  <wsdl:message name="Retorna_Cursos_OfertasSoapIn">
+    <wsdl:part name="parameters" element="tns:Retorna_Cursos_Ofertas" />
+  </wsdl:message>
+  <wsdl:message name="Retorna_Cursos_OfertasSoapOut">
+    <wsdl:part name="parameters" element="tns:Retorna_Cursos_OfertasResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServicoSigaOnlineSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Matricular_Aluno_Em_Oferta">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Matricula aluno em oferta</wsdl:documentation>
+      <wsdl:input message="tns:Matricular_Aluno_Em_OfertaSoapIn" />
+      <wsdl:output message="tns:Matricular_Aluno_Em_OfertaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Retorna_Cursos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Relaciona o cursos por convênio</wsdl:documentation>
+      <wsdl:input message="tns:Retorna_CursosSoapIn" />
+      <wsdl:output message="tns:Retorna_CursosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Retorna_Cursos_Ofertas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Relaciona as ofertas por convênio</wsdl:documentation>
+      <wsdl:input message="tns:Retorna_Cursos_OfertasSoapIn" />
+      <wsdl:output message="tns:Retorna_Cursos_OfertasSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicoSigaOnlineSoap" type="tns:ServicoSigaOnlineSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Matricular_Aluno_Em_Oferta">
+      <soap:operation soapAction="http://tempuri.org/Matricular_Aluno_Em_Oferta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Retorna_Cursos">
+      <soap:operation soapAction="http://tempuri.org/Retorna_Cursos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Retorna_Cursos_Ofertas">
+      <soap:operation soapAction="http://tempuri.org/Retorna_Cursos_Ofertas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicoSigaOnlineSoap12" type="tns:ServicoSigaOnlineSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Matricular_Aluno_Em_Oferta">
+      <soap12:operation soapAction="http://tempuri.org/Matricular_Aluno_Em_Oferta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Retorna_Cursos">
+      <soap12:operation soapAction="http://tempuri.org/Retorna_Cursos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Retorna_Cursos_Ofertas">
+      <soap12:operation soapAction="http://tempuri.org/Retorna_Cursos_Ofertas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicoSigaOnline">
+    <wsdl:port name="ServicoSigaOnlineSoap" binding="tns:ServicoSigaOnlineSoap">
+      <soap:address location="http://e012740.fgv.br/siga/servicosiga/ws_sebrae/ServicoSigaOnline.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServicoSigaOnlineSoap12" binding="tns:ServicoSigaOnlineSoap12">
+      <soap12:address location="http://e012740.fgv.br/siga/servicosiga/ws_sebrae/ServicoSigaOnline.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

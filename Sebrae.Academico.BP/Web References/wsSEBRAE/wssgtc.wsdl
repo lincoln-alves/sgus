@@ -1,0 +1,1297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="InsereProfessorExterno">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodColigada" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="XMLProfessor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsereProfessorExternoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsereProfessorExternoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExcluiProfessorExterno">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodColigada" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="XMLProfessor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExcluiProfessorExternoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExcluiProfessorExternoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsereCurso">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodColigada" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CodUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="XMLCurso" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsereCursoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsereCursoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExcluiCurso">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodColigada" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="XMLCurso" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExcluiCursoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExcluiCursoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsereTurma">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodColigada" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="XMLTurma" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsereTurmaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsereTurmaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExcluiTurma">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodColigada" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="XMLTurma" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExcluiTurmaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExcluiTurmaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsereParticipante">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodColigada" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="XMLParticipante" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsereParticipanteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsereParticipanteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExcluiParticipante">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodColigada" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="XMLParticipante" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExcluiParticipanteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExcluiParticipanteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsereNotaParticipante">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodColigada" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="XMLNotaParticipante" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsereNotaParticipanteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsereNotaParticipanteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InserePresencaParticipante">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodColigada" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="XMLPresencaParticipante" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InserePresencaParticipanteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InserePresencaParticipanteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsereParticipanteTurma">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodColigada" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="XMLParticipanteTurma" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsereParticipanteTurmaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsereParticipanteTurmaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExcluiParticipanteTurma">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodColigada" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="XMLParticipanteTurma" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExcluiParticipanteTurmaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExcluiParticipanteTurmaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsereEntidade">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodColigada" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="XMLEntidade" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsereEntidadeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsereEntidadeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExcluiEntidade">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodColigada" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="XMLEntidade" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExcluiEntidadeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExcluiEntidadeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaFuncionariosZUSUARIOSGTC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodColigada" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="filter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaFuncionariosZUSUARIOSGTCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaFuncionariosZUSUARIOSGTCResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaFuncionariosZUSUARIOSGTCList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodColigada" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="filter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaFuncionariosZUSUARIOSGTCListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaFuncionariosZUSUARIOSGTCListResult" type="tns:ArrayOfZUSUARIOSGTC" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfZUSUARIOSGTC">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ZUSUARIOSGTC" nillable="true" type="tns:ZUSUARIOSGTC" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ZUSUARIOSGTC">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IDUSUARIO" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SENHA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DTNASCIMENTO" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMAIL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TELEFONE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CHAPA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODSITUACAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODFUNCAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODSECAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SEXO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CONFIANCA" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRIMEIROACESSO" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TIPOUSUARIO" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RetornaFuncionariosZPFUNC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodColigada" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="filter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaFuncionariosZPFUNCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaFuncionariosZPFUNCResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaFuncionariosZPFUNCList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodColigada" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="filter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaFuncionariosZPFUNCListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaFuncionariosZPFUNCListResult" type="tns:ArrayOfZPFUNC" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfZPFUNC">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ZPFUNC" nillable="true" type="tns:ZPFUNC" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ZPFUNC">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CHAPA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMAIL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODFUNCAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOMEFUNCAO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DTNASCIMENTO" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATAADMINISSAO" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATADEMISSAO" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODSITUACAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESC_SITUACAO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATAATUALIZACAO" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="UNIDADE" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RetornaParticipantesZCREDENCIADOS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodColigada" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="filter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaParticipantesZCREDENCIADOSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaParticipantesZCREDENCIADOSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaParticipantesZCREDENCIADOSList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodColigada" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="filter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaParticipantesZCREDENCIADOSListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaParticipantesZCREDENCIADOSListResult" type="tns:ArrayOfZCREDENCIADOS" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfZCREDENCIADOS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ZCREDENCIADOS" nillable="true" type="tns:ZCREDENCIADOS" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ZCREDENCIADOS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMAIL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SITUACAOCRED" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATAALTERACAO" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODSITUACAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESCSITUACAO" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RetornaParticipantesZALI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodColigada" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="filter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaParticipantesZALIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaParticipantesZALIResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaParticipantesZALIList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodColigada" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="filter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaParticipantesZALIListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaParticipantesZALIListResult" type="tns:ArrayOfZALI" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfZALI">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ZALI" nillable="true" type="tns:ZALI" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ZALI">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMAIL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SITUACAOCRED" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATAALTERACAO" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODSITUACAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESCSITUACAO" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RetornaParticipantesZADL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodColigada" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="filter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaParticipantesZADLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaParticipantesZADLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaParticipantesZADLList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodColigada" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="filter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaParticipantesZADLListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaParticipantesZADLListResult" type="tns:ArrayOfZADL" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfZADL">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ZADL" nillable="true" type="tns:ZADL" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ZADL">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMAIL" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATAALTERACAO" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODSITUACAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESCSITUACAO" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RetornaParticipantesZAOE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodColigada" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="filter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaParticipantesZAOEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaParticipantesZAOEResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaParticipantesZAOEList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CodColigada" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="filter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaParticipantesZAOEListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaParticipantesZAOEListResult" type="tns:ArrayOfZAOE" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfZAOE">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ZAOE" nillable="true" type="tns:ZAOE" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ZAOE">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMAIL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SITUACAOCRED" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATAALTERACAO" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODSITUACAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESCSITUACAO" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="InsereProfessorExternoSoapIn">
+    <wsdl:part name="parameters" element="tns:InsereProfessorExterno" />
+  </wsdl:message>
+  <wsdl:message name="InsereProfessorExternoSoapOut">
+    <wsdl:part name="parameters" element="tns:InsereProfessorExternoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExcluiProfessorExternoSoapIn">
+    <wsdl:part name="parameters" element="tns:ExcluiProfessorExterno" />
+  </wsdl:message>
+  <wsdl:message name="ExcluiProfessorExternoSoapOut">
+    <wsdl:part name="parameters" element="tns:ExcluiProfessorExternoResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsereCursoSoapIn">
+    <wsdl:part name="parameters" element="tns:InsereCurso" />
+  </wsdl:message>
+  <wsdl:message name="InsereCursoSoapOut">
+    <wsdl:part name="parameters" element="tns:InsereCursoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExcluiCursoSoapIn">
+    <wsdl:part name="parameters" element="tns:ExcluiCurso" />
+  </wsdl:message>
+  <wsdl:message name="ExcluiCursoSoapOut">
+    <wsdl:part name="parameters" element="tns:ExcluiCursoResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsereTurmaSoapIn">
+    <wsdl:part name="parameters" element="tns:InsereTurma" />
+  </wsdl:message>
+  <wsdl:message name="InsereTurmaSoapOut">
+    <wsdl:part name="parameters" element="tns:InsereTurmaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExcluiTurmaSoapIn">
+    <wsdl:part name="parameters" element="tns:ExcluiTurma" />
+  </wsdl:message>
+  <wsdl:message name="ExcluiTurmaSoapOut">
+    <wsdl:part name="parameters" element="tns:ExcluiTurmaResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsereParticipanteSoapIn">
+    <wsdl:part name="parameters" element="tns:InsereParticipante" />
+  </wsdl:message>
+  <wsdl:message name="InsereParticipanteSoapOut">
+    <wsdl:part name="parameters" element="tns:InsereParticipanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExcluiParticipanteSoapIn">
+    <wsdl:part name="parameters" element="tns:ExcluiParticipante" />
+  </wsdl:message>
+  <wsdl:message name="ExcluiParticipanteSoapOut">
+    <wsdl:part name="parameters" element="tns:ExcluiParticipanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsereNotaParticipanteSoapIn">
+    <wsdl:part name="parameters" element="tns:InsereNotaParticipante" />
+  </wsdl:message>
+  <wsdl:message name="InsereNotaParticipanteSoapOut">
+    <wsdl:part name="parameters" element="tns:InsereNotaParticipanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="InserePresencaParticipanteSoapIn">
+    <wsdl:part name="parameters" element="tns:InserePresencaParticipante" />
+  </wsdl:message>
+  <wsdl:message name="InserePresencaParticipanteSoapOut">
+    <wsdl:part name="parameters" element="tns:InserePresencaParticipanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsereParticipanteTurmaSoapIn">
+    <wsdl:part name="parameters" element="tns:InsereParticipanteTurma" />
+  </wsdl:message>
+  <wsdl:message name="InsereParticipanteTurmaSoapOut">
+    <wsdl:part name="parameters" element="tns:InsereParticipanteTurmaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExcluiParticipanteTurmaSoapIn">
+    <wsdl:part name="parameters" element="tns:ExcluiParticipanteTurma" />
+  </wsdl:message>
+  <wsdl:message name="ExcluiParticipanteTurmaSoapOut">
+    <wsdl:part name="parameters" element="tns:ExcluiParticipanteTurmaResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsereEntidadeSoapIn">
+    <wsdl:part name="parameters" element="tns:InsereEntidade" />
+  </wsdl:message>
+  <wsdl:message name="InsereEntidadeSoapOut">
+    <wsdl:part name="parameters" element="tns:InsereEntidadeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExcluiEntidadeSoapIn">
+    <wsdl:part name="parameters" element="tns:ExcluiEntidade" />
+  </wsdl:message>
+  <wsdl:message name="ExcluiEntidadeSoapOut">
+    <wsdl:part name="parameters" element="tns:ExcluiEntidadeResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornaFuncionariosZUSUARIOSGTCSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaFuncionariosZUSUARIOSGTC" />
+  </wsdl:message>
+  <wsdl:message name="RetornaFuncionariosZUSUARIOSGTCSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaFuncionariosZUSUARIOSGTCResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornaFuncionariosZUSUARIOSGTCListSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaFuncionariosZUSUARIOSGTCList" />
+  </wsdl:message>
+  <wsdl:message name="RetornaFuncionariosZUSUARIOSGTCListSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaFuncionariosZUSUARIOSGTCListResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornaFuncionariosZPFUNCSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaFuncionariosZPFUNC" />
+  </wsdl:message>
+  <wsdl:message name="RetornaFuncionariosZPFUNCSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaFuncionariosZPFUNCResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornaFuncionariosZPFUNCListSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaFuncionariosZPFUNCList" />
+  </wsdl:message>
+  <wsdl:message name="RetornaFuncionariosZPFUNCListSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaFuncionariosZPFUNCListResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornaParticipantesZCREDENCIADOSSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaParticipantesZCREDENCIADOS" />
+  </wsdl:message>
+  <wsdl:message name="RetornaParticipantesZCREDENCIADOSSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaParticipantesZCREDENCIADOSResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornaParticipantesZCREDENCIADOSListSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaParticipantesZCREDENCIADOSList" />
+  </wsdl:message>
+  <wsdl:message name="RetornaParticipantesZCREDENCIADOSListSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaParticipantesZCREDENCIADOSListResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornaParticipantesZALISoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaParticipantesZALI" />
+  </wsdl:message>
+  <wsdl:message name="RetornaParticipantesZALISoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaParticipantesZALIResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornaParticipantesZALIListSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaParticipantesZALIList" />
+  </wsdl:message>
+  <wsdl:message name="RetornaParticipantesZALIListSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaParticipantesZALIListResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornaParticipantesZADLSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaParticipantesZADL" />
+  </wsdl:message>
+  <wsdl:message name="RetornaParticipantesZADLSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaParticipantesZADLResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornaParticipantesZADLListSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaParticipantesZADLList" />
+  </wsdl:message>
+  <wsdl:message name="RetornaParticipantesZADLListSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaParticipantesZADLListResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornaParticipantesZAOESoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaParticipantesZAOE" />
+  </wsdl:message>
+  <wsdl:message name="RetornaParticipantesZAOESoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaParticipantesZAOEResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornaParticipantesZAOEListSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaParticipantesZAOEList" />
+  </wsdl:message>
+  <wsdl:message name="RetornaParticipantesZAOEListSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaParticipantesZAOEListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsSGTCSoap">
+    <wsdl:operation name="InsereProfessorExterno">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Executa a inserção de Professor por meio do DataServer de Pessoa (regra de negócio RM) 
+        com base no XML passado como parâmetro e retorna o número de registros inseridos.</wsdl:documentation>
+      <wsdl:input message="tns:InsereProfessorExternoSoapIn" />
+      <wsdl:output message="tns:InsereProfessorExternoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExcluiProfessorExterno">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Executa a exclusão de Professor por meio do DataServer de Pessoa Externo (regra de negócio RM)  
+                      com base no XML passado como parâmetro e retorna o número de registros inseridos.</wsdl:documentation>
+      <wsdl:input message="tns:ExcluiProfessorExternoSoapIn" />
+      <wsdl:output message="tns:ExcluiProfessorExternoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsereCurso">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Executa a inserção do Curso por meio do DataServer de Cursos (regra de negócio RM) 
+        com base no XML passado como parâmetro e retorna o número de registros inseridos.</wsdl:documentation>
+      <wsdl:input message="tns:InsereCursoSoapIn" />
+      <wsdl:output message="tns:InsereCursoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExcluiCurso">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Executa a exclusão do Curso por meio do DataServer de Cursos (regra de negócio RM) 
+        com base no XML passado como parâmetro e retorna o número de registros inseridos.</wsdl:documentation>
+      <wsdl:input message="tns:ExcluiCursoSoapIn" />
+      <wsdl:output message="tns:ExcluiCursoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsereTurma">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Executa a inserção da Turma por meio do DataServer de Turmas (regra de negócio RM) 
+        com base no XML passado como parâmetro e retorna o número de registros inseridos.</wsdl:documentation>
+      <wsdl:input message="tns:InsereTurmaSoapIn" />
+      <wsdl:output message="tns:InsereTurmaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExcluiTurma">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Executa a exclusão da Turma por meio do DataServer de Turmas (regra de negócio RM) 
+        com base no XML passado como parâmetro e retorna o número de registros inseridos.</wsdl:documentation>
+      <wsdl:input message="tns:ExcluiTurmaSoapIn" />
+      <wsdl:output message="tns:ExcluiTurmaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsereParticipante">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Executa a inserção do Participante por meio do DataServer de Pessoa (regra de negócio RM) 
+        com base no XML passado como parâmetro e retorna o número de registros inseridos.</wsdl:documentation>
+      <wsdl:input message="tns:InsereParticipanteSoapIn" />
+      <wsdl:output message="tns:InsereParticipanteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExcluiParticipante">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Executa a exclusão do Participante por meio do DataServer de Pessoa (regra de negócio RM) 
+        com base no XML passado como parâmetro e retorna o número de registros inseridos.</wsdl:documentation>
+      <wsdl:input message="tns:ExcluiParticipanteSoapIn" />
+      <wsdl:output message="tns:ExcluiParticipanteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsereNotaParticipante">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Executa a inserção da Nota do Participante por meio do DataServer de Nota do Participante (regra de negócio RM Customizado) 
+        com base no XML passado como parâmetro e retorna o número de registros inseridos.</wsdl:documentation>
+      <wsdl:input message="tns:InsereNotaParticipanteSoapIn" />
+      <wsdl:output message="tns:InsereNotaParticipanteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InserePresencaParticipante">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Executa a inserção da Presença do Participante por meio do DataServer de Presença do Participante (regra de negócio RM Customizado) 
+        com base no XML passado como parâmetro e retorna o número de registros inseridos.</wsdl:documentation>
+      <wsdl:input message="tns:InserePresencaParticipanteSoapIn" />
+      <wsdl:output message="tns:InserePresencaParticipanteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsereParticipanteTurma">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Executa a inserção de associação de Participante na Turma por meio do DataServer de Participante (regra de negócio RM) 
+        com base no XML passado como parâmetro e retorna o número de registros inseridos.</wsdl:documentation>
+      <wsdl:input message="tns:InsereParticipanteTurmaSoapIn" />
+      <wsdl:output message="tns:InsereParticipanteTurmaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExcluiParticipanteTurma">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Executa a exclusão de associação de Participante da Turma por meio do DataServer de Participante (regra de negócio RM) 
+        com base no XML passado como parâmetro e retorna o número de registros inseridos.</wsdl:documentation>
+      <wsdl:input message="tns:ExcluiParticipanteTurmaSoapIn" />
+      <wsdl:output message="tns:ExcluiParticipanteTurmaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsereEntidade">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Executa a inserção da Entidade por meio do DataServer de Entidades (regra de negócio RM) 
+        com base no XML passado como parâmetro e retorna o número de registros inseridos.</wsdl:documentation>
+      <wsdl:input message="tns:InsereEntidadeSoapIn" />
+      <wsdl:output message="tns:InsereEntidadeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExcluiEntidade">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Executa a exclusão da Entidade por meio do DataServer de Entidades (regra de negócio RM) 
+        com base no XML passado como parâmetro e retorna o número de registros inseridos.</wsdl:documentation>
+      <wsdl:input message="tns:ExcluiEntidadeSoapIn" />
+      <wsdl:output message="tns:ExcluiEntidadeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaFuncionariosZUSUARIOSGTC">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna todos os Funcionarios do SGTC (ZUSUARIOSGTC) a partir do filtro passado.</wsdl:documentation>
+      <wsdl:input message="tns:RetornaFuncionariosZUSUARIOSGTCSoapIn" />
+      <wsdl:output message="tns:RetornaFuncionariosZUSUARIOSGTCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaFuncionariosZUSUARIOSGTCList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna todos os Funcionarios do SGTC (ZUSUARIOSGTC) a partir do filtro passado.</wsdl:documentation>
+      <wsdl:input message="tns:RetornaFuncionariosZUSUARIOSGTCListSoapIn" />
+      <wsdl:output message="tns:RetornaFuncionariosZUSUARIOSGTCListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaFuncionariosZPFUNC">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna todos os Funcionarios do SGTC (ZPFUNC) a partir do filtro passado.</wsdl:documentation>
+      <wsdl:input message="tns:RetornaFuncionariosZPFUNCSoapIn" />
+      <wsdl:output message="tns:RetornaFuncionariosZPFUNCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaFuncionariosZPFUNCList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna todos os Funcionarios do SGTC (ZPFUNC) a partir do filtro passado.</wsdl:documentation>
+      <wsdl:input message="tns:RetornaFuncionariosZPFUNCListSoapIn" />
+      <wsdl:output message="tns:RetornaFuncionariosZPFUNCListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaParticipantesZCREDENCIADOS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna todos os participantes do SGTC (ZCREDENCIADOS) a partir do filtro passado.</wsdl:documentation>
+      <wsdl:input message="tns:RetornaParticipantesZCREDENCIADOSSoapIn" />
+      <wsdl:output message="tns:RetornaParticipantesZCREDENCIADOSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaParticipantesZCREDENCIADOSList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna todos os participantes do SGTC (ZCREDENCIADOS) a partir do filtro passado.</wsdl:documentation>
+      <wsdl:input message="tns:RetornaParticipantesZCREDENCIADOSListSoapIn" />
+      <wsdl:output message="tns:RetornaParticipantesZCREDENCIADOSListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaParticipantesZALI">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna todos os participantes do SGTC (ZALI) a partir do filtro passado.</wsdl:documentation>
+      <wsdl:input message="tns:RetornaParticipantesZALISoapIn" />
+      <wsdl:output message="tns:RetornaParticipantesZALISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaParticipantesZALIList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna todos os participantes do SGTC (ZALI) a partir do filtro passado.</wsdl:documentation>
+      <wsdl:input message="tns:RetornaParticipantesZALIListSoapIn" />
+      <wsdl:output message="tns:RetornaParticipantesZALIListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaParticipantesZADL">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna todos os participantes do SGTC (ZADL) a partir do filtro passado.</wsdl:documentation>
+      <wsdl:input message="tns:RetornaParticipantesZADLSoapIn" />
+      <wsdl:output message="tns:RetornaParticipantesZADLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaParticipantesZADLList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna todos os participantes do SGTC (ZADL) a partir do filtro passado.</wsdl:documentation>
+      <wsdl:input message="tns:RetornaParticipantesZADLListSoapIn" />
+      <wsdl:output message="tns:RetornaParticipantesZADLListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaParticipantesZAOE">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna todos os participantes do SGTC (ZAOE) a partir do filtro passado.</wsdl:documentation>
+      <wsdl:input message="tns:RetornaParticipantesZAOESoapIn" />
+      <wsdl:output message="tns:RetornaParticipantesZAOESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaParticipantesZAOEList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna todos os participantes do SGTC (ZAOE) a partir do filtro passado.</wsdl:documentation>
+      <wsdl:input message="tns:RetornaParticipantesZAOEListSoapIn" />
+      <wsdl:output message="tns:RetornaParticipantesZAOEListSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsSGTCSoap" type="tns:wsSGTCSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsereProfessorExterno">
+      <soap:operation soapAction="http://tempuri.org/InsereProfessorExterno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcluiProfessorExterno">
+      <soap:operation soapAction="http://tempuri.org/ExcluiProfessorExterno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsereCurso">
+      <soap:operation soapAction="http://tempuri.org/InsereCurso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcluiCurso">
+      <soap:operation soapAction="http://tempuri.org/ExcluiCurso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsereTurma">
+      <soap:operation soapAction="http://tempuri.org/InsereTurma" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcluiTurma">
+      <soap:operation soapAction="http://tempuri.org/ExcluiTurma" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsereParticipante">
+      <soap:operation soapAction="http://tempuri.org/InsereParticipante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcluiParticipante">
+      <soap:operation soapAction="http://tempuri.org/ExcluiParticipante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsereNotaParticipante">
+      <soap:operation soapAction="http://tempuri.org/InsereNotaParticipante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InserePresencaParticipante">
+      <soap:operation soapAction="http://tempuri.org/InserePresencaParticipante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsereParticipanteTurma">
+      <soap:operation soapAction="http://tempuri.org/InsereParticipanteTurma" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcluiParticipanteTurma">
+      <soap:operation soapAction="http://tempuri.org/ExcluiParticipanteTurma" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsereEntidade">
+      <soap:operation soapAction="http://tempuri.org/InsereEntidade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcluiEntidade">
+      <soap:operation soapAction="http://tempuri.org/ExcluiEntidade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaFuncionariosZUSUARIOSGTC">
+      <soap:operation soapAction="http://tempuri.org/RetornaFuncionariosZUSUARIOSGTC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaFuncionariosZUSUARIOSGTCList">
+      <soap:operation soapAction="http://tempuri.org/RetornaFuncionariosZUSUARIOSGTCList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaFuncionariosZPFUNC">
+      <soap:operation soapAction="http://tempuri.org/RetornaFuncionariosZPFUNC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaFuncionariosZPFUNCList">
+      <soap:operation soapAction="http://tempuri.org/RetornaFuncionariosZPFUNCList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaParticipantesZCREDENCIADOS">
+      <soap:operation soapAction="http://tempuri.org/RetornaParticipantesZCREDENCIADOS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaParticipantesZCREDENCIADOSList">
+      <soap:operation soapAction="http://tempuri.org/RetornaParticipantesZCREDENCIADOSList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaParticipantesZALI">
+      <soap:operation soapAction="http://tempuri.org/RetornaParticipantesZALI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaParticipantesZALIList">
+      <soap:operation soapAction="http://tempuri.org/RetornaParticipantesZALIList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaParticipantesZADL">
+      <soap:operation soapAction="http://tempuri.org/RetornaParticipantesZADL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaParticipantesZADLList">
+      <soap:operation soapAction="http://tempuri.org/RetornaParticipantesZADLList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaParticipantesZAOE">
+      <soap:operation soapAction="http://tempuri.org/RetornaParticipantesZAOE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaParticipantesZAOEList">
+      <soap:operation soapAction="http://tempuri.org/RetornaParticipantesZAOEList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsSGTCSoap12" type="tns:wsSGTCSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsereProfessorExterno">
+      <soap12:operation soapAction="http://tempuri.org/InsereProfessorExterno" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcluiProfessorExterno">
+      <soap12:operation soapAction="http://tempuri.org/ExcluiProfessorExterno" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsereCurso">
+      <soap12:operation soapAction="http://tempuri.org/InsereCurso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcluiCurso">
+      <soap12:operation soapAction="http://tempuri.org/ExcluiCurso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsereTurma">
+      <soap12:operation soapAction="http://tempuri.org/InsereTurma" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcluiTurma">
+      <soap12:operation soapAction="http://tempuri.org/ExcluiTurma" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsereParticipante">
+      <soap12:operation soapAction="http://tempuri.org/InsereParticipante" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcluiParticipante">
+      <soap12:operation soapAction="http://tempuri.org/ExcluiParticipante" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsereNotaParticipante">
+      <soap12:operation soapAction="http://tempuri.org/InsereNotaParticipante" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InserePresencaParticipante">
+      <soap12:operation soapAction="http://tempuri.org/InserePresencaParticipante" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsereParticipanteTurma">
+      <soap12:operation soapAction="http://tempuri.org/InsereParticipanteTurma" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcluiParticipanteTurma">
+      <soap12:operation soapAction="http://tempuri.org/ExcluiParticipanteTurma" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsereEntidade">
+      <soap12:operation soapAction="http://tempuri.org/InsereEntidade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcluiEntidade">
+      <soap12:operation soapAction="http://tempuri.org/ExcluiEntidade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaFuncionariosZUSUARIOSGTC">
+      <soap12:operation soapAction="http://tempuri.org/RetornaFuncionariosZUSUARIOSGTC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaFuncionariosZUSUARIOSGTCList">
+      <soap12:operation soapAction="http://tempuri.org/RetornaFuncionariosZUSUARIOSGTCList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaFuncionariosZPFUNC">
+      <soap12:operation soapAction="http://tempuri.org/RetornaFuncionariosZPFUNC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaFuncionariosZPFUNCList">
+      <soap12:operation soapAction="http://tempuri.org/RetornaFuncionariosZPFUNCList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaParticipantesZCREDENCIADOS">
+      <soap12:operation soapAction="http://tempuri.org/RetornaParticipantesZCREDENCIADOS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaParticipantesZCREDENCIADOSList">
+      <soap12:operation soapAction="http://tempuri.org/RetornaParticipantesZCREDENCIADOSList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaParticipantesZALI">
+      <soap12:operation soapAction="http://tempuri.org/RetornaParticipantesZALI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaParticipantesZALIList">
+      <soap12:operation soapAction="http://tempuri.org/RetornaParticipantesZALIList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaParticipantesZADL">
+      <soap12:operation soapAction="http://tempuri.org/RetornaParticipantesZADL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaParticipantesZADLList">
+      <soap12:operation soapAction="http://tempuri.org/RetornaParticipantesZADLList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaParticipantesZAOE">
+      <soap12:operation soapAction="http://tempuri.org/RetornaParticipantesZAOE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaParticipantesZAOEList">
+      <soap12:operation soapAction="http://tempuri.org/RetornaParticipantesZAOEList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsSGTC">
+    <wsdl:port name="wsSGTCSoap" binding="tns:wsSGTCSoap">
+      <soap:address location="https://www.sgo.sebrae.com.br/businessconnect/wssgtc.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsSGTCSoap12" binding="tns:wsSGTCSoap12">
+      <soap12:address location="https://www.sgo.sebrae.com.br/businessconnect/wssgtc.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

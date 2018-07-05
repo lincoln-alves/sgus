@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InscreveAlunoemOfertaOCW">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_inscricao" type="tns:Inscricao" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Inscricao">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:FgvOnlineBaseClass">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Id" nillable="true" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="IdOferta" nillable="true" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="CodigoPessoa" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="CodigoAluno" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="NomeInscrito" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Passaporte" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Celular" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TelefoneResidencial" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="DataNascimento" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="DataInscricao" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="CodigoCurriculo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnidadeEnsino" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Sexo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Naturalidade" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Pais" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Endereco" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Bairro" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Municipio" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Estado" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="EnderecoMaterialDidatico" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="EstadoCivil" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Nacionalidade" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CEP" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Situacao" type="tns:InscricaoSituacao" />
+              <s:element minOccurs="1" maxOccurs="1" name="IdSubconvenio" nillable="true" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="IdSituacao" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CursoSugerido" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LogradouroMaterialDidatico" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="NumeroMaterialDidatico" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ComplementoMaterialDidatico" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="BairroMaterialDidatico" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MunicipioMaterialDidatico" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="UFMaterialDidatico" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CEPMaterialDidatico" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PaisMaterialDidatico" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TelefoneResidencialMaterialDidatico" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Numero" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Complemento" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CodigoMunicipio" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CodigoNaturalidade" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Identidade" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TipoIdentidade" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CodigoOrgaoEmissor" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="UfIdentidade" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="UfOrgaoEmissor" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="DataExpedicao" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CodigoPedidoCartao" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CodigoResponsavelFinanceiro" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TipoPagamento" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CertificadoGratuitoEmitido" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="PercentualDescontoExAluno" nillable="true" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="NomeMunicipioMaterialDidatico" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Escolaridade" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AreaConhecimento" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Instituicao" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="AnoConclusao" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="SemEmprego" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="Empresa" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Cargo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FaixaSalarial" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Setor" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CargoSuperiorImediato" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PorteEmpresa" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AnosExperiencia" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CodigoPessoaFisicaTutorBolsista" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CnpjHotSiteCorporativo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CodigoUnidadeEnsinoLocalProva" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CodigoAlunoAcesso" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RecebeInformativos" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="PagamentoIntegralMBA" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="EhInscricaoNucleo" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="FgvOnlineBaseClass" />
+      <s:complexType name="InscricaoSituacao">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Situacao" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InscreveAlunoemOfertaOCWResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InscreveAlunoemOfertaOCWResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SegurancaServices" type="tns:SegurancaServices" />
+      <s:complexType name="SegurancaServices">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="BuscaOfertasOCW">
+        <s:complexType />
+      </s:element>
+      <s:element name="BuscaOfertasOCWResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscaOfertasOCWResult" type="tns:ArrayOfCursoCurriculo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCursoCurriculo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CursoCurriculo" nillable="true" type="tns:CursoCurriculo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CursoCurriculo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:FgvOnlineBaseClass">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="CodigoCurso" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Turno" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CodigoCurriculo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="NomeCurso" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AreaDeConhecimento" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="HorasPrevistas" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Ano" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Presencial" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Observacoes" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TipoCurso" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ListaOferta" type="tns:ArrayOfOferta" />
+              <s:element minOccurs="0" maxOccurs="1" name="PreRequisito" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Resumo" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfOferta">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Oferta" nillable="true" type="tns:Oferta" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Oferta">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" nillable="true" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataInicioOferta" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataFimOferta" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataInicioPrevisaoTurma" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataFimPrevisaoTurma" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdiomaTurma" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tipo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NrMaximoAlunos" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoExternoCurso" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoExternoCurriculo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NomeCurso" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MunicipioUnidadeFisica" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CentroDeCusto" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RequerAprovacao" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Natureza" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoConveniado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CnpjHotSiteCorporativo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="URLAcessoExterno" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="BuscaCurriculoOCW">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_id_curriculo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_id_curso" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscaCurriculoOCWResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscaCurriculoOCWResult" type="tns:Curriculo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Curriculo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:FgvOnlineBaseClass">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="CodigoCurso" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CodigoTurno" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CodigoCurriculo" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="HorasPrevistas" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Observacoes" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="NomeCurso" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AreaDeConhecimento" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Presencial" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PreRequisito" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PublicoAlvo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Objetivo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Metodologia" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Avaliacao" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Diferenciais" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ListaDisciplina" type="tns:ArrayOfDisciplina" />
+              <s:element minOccurs="0" maxOccurs="1" name="Resumo" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfDisciplina">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Disciplina" nillable="true" type="tns:Disciplina" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Disciplina">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:FgvOnlineBaseClass">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="CodigoDisciplina" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="NomeDisciplina" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="HorasAula" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="HorasPraticas" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="HorasAtividade" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="HorasEstagio" type="s:decimal" />
+              <s:element minOccurs="0" maxOccurs="1" name="Ementa" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ListaDocenteAutor" type="tns:ArrayOfDocenteAutor" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfDocenteAutor">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DocenteAutor" nillable="true" type="tns:DocenteAutor" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DocenteAutor">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:FgvOnlineBaseClass">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Codigo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="NomeCompleto" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="NomeAbreviado" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Percentual" type="s:decimal" />
+              <s:element minOccurs="0" maxOccurs="1" name="MiniCurriculo" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="CertificadoOCWEmitido">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_cpf" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_passaporte" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="_id_oferta" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CertificadoOCWEmitidoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CertificadoOCWEmitidoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaOfertasSebraeOCW">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListaOfertasSebraeOCWResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListaOfertasSebraeOCWResult" type="tns:ArrayOfOferta" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaURLCurso">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_cpf" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_passaporte" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="_id_oferta" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaURLCursoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaURLCursoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="InscreveAlunoemOfertaOCWSoapIn">
+    <wsdl:part name="parameters" element="tns:InscreveAlunoemOfertaOCW" />
+  </wsdl:message>
+  <wsdl:message name="InscreveAlunoemOfertaOCWSoapOut">
+    <wsdl:part name="parameters" element="tns:InscreveAlunoemOfertaOCWResponse" />
+  </wsdl:message>
+  <wsdl:message name="InscreveAlunoemOfertaOCWSegurancaServices">
+    <wsdl:part name="SegurancaServices" element="tns:SegurancaServices" />
+  </wsdl:message>
+  <wsdl:message name="BuscaOfertasOCWSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscaOfertasOCW" />
+  </wsdl:message>
+  <wsdl:message name="BuscaOfertasOCWSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscaOfertasOCWResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscaOfertasOCWSegurancaServices">
+    <wsdl:part name="SegurancaServices" element="tns:SegurancaServices" />
+  </wsdl:message>
+  <wsdl:message name="BuscaCurriculoOCWSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscaCurriculoOCW" />
+  </wsdl:message>
+  <wsdl:message name="BuscaCurriculoOCWSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscaCurriculoOCWResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscaCurriculoOCWSegurancaServices">
+    <wsdl:part name="SegurancaServices" element="tns:SegurancaServices" />
+  </wsdl:message>
+  <wsdl:message name="CertificadoOCWEmitidoSoapIn">
+    <wsdl:part name="parameters" element="tns:CertificadoOCWEmitido" />
+  </wsdl:message>
+  <wsdl:message name="CertificadoOCWEmitidoSoapOut">
+    <wsdl:part name="parameters" element="tns:CertificadoOCWEmitidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CertificadoOCWEmitidoSegurancaServices">
+    <wsdl:part name="SegurancaServices" element="tns:SegurancaServices" />
+  </wsdl:message>
+  <wsdl:message name="ListaOfertasSebraeOCWSoapIn">
+    <wsdl:part name="parameters" element="tns:ListaOfertasSebraeOCW" />
+  </wsdl:message>
+  <wsdl:message name="ListaOfertasSebraeOCWSoapOut">
+    <wsdl:part name="parameters" element="tns:ListaOfertasSebraeOCWResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListaOfertasSebraeOCWSegurancaServices">
+    <wsdl:part name="SegurancaServices" element="tns:SegurancaServices" />
+  </wsdl:message>
+  <wsdl:message name="RetornaURLCursoSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaURLCurso" />
+  </wsdl:message>
+  <wsdl:message name="RetornaURLCursoSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaURLCursoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornaURLCursoSegurancaServices">
+    <wsdl:part name="SegurancaServices" element="tns:SegurancaServices" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceSebraeOCWSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InscreveAlunoemOfertaOCW">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inscreve aluno em oferta OCW</wsdl:documentation>
+      <wsdl:input message="tns:InscreveAlunoemOfertaOCWSoapIn" />
+      <wsdl:output message="tns:InscreveAlunoemOfertaOCWSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscaOfertasOCW">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Busca cursos e ofertas OCW do Sebrae</wsdl:documentation>
+      <wsdl:input message="tns:BuscaOfertasOCWSoapIn" />
+      <wsdl:output message="tns:BuscaOfertasOCWSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscaCurriculoOCW">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Busca currículos de ofertas OCW</wsdl:documentation>
+      <wsdl:input message="tns:BuscaCurriculoOCWSoapIn" />
+      <wsdl:output message="tns:BuscaCurriculoOCWSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CertificadoOCWEmitido">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">O certificado foi emitido?</wsdl:documentation>
+      <wsdl:input message="tns:CertificadoOCWEmitidoSoapIn" />
+      <wsdl:output message="tns:CertificadoOCWEmitidoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaOfertasSebraeOCW">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista ofertas Sebrae OCW</wsdl:documentation>
+      <wsdl:input message="tns:ListaOfertasSebraeOCWSoapIn" />
+      <wsdl:output message="tns:ListaOfertasSebraeOCWSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaURLCurso">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna URL Curso OCW</wsdl:documentation>
+      <wsdl:input message="tns:RetornaURLCursoSoapIn" />
+      <wsdl:output message="tns:RetornaURLCursoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceSebraeOCWSoap" type="tns:WebServiceSebraeOCWSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InscreveAlunoemOfertaOCW">
+      <soap:operation soapAction="http://tempuri.org/InscreveAlunoemOfertaOCW" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:InscreveAlunoemOfertaOCWSegurancaServices" part="SegurancaServices" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaOfertasOCW">
+      <soap:operation soapAction="http://tempuri.org/BuscaOfertasOCW" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BuscaOfertasOCWSegurancaServices" part="SegurancaServices" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaCurriculoOCW">
+      <soap:operation soapAction="http://tempuri.org/BuscaCurriculoOCW" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BuscaCurriculoOCWSegurancaServices" part="SegurancaServices" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CertificadoOCWEmitido">
+      <soap:operation soapAction="http://tempuri.org/CertificadoOCWEmitido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CertificadoOCWEmitidoSegurancaServices" part="SegurancaServices" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaOfertasSebraeOCW">
+      <soap:operation soapAction="http://tempuri.org/ListaOfertasSebraeOCW" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ListaOfertasSebraeOCWSegurancaServices" part="SegurancaServices" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaURLCurso">
+      <soap:operation soapAction="http://tempuri.org/RetornaURLCurso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:RetornaURLCursoSegurancaServices" part="SegurancaServices" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceSebraeOCWSoap12" type="tns:WebServiceSebraeOCWSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InscreveAlunoemOfertaOCW">
+      <soap12:operation soapAction="http://tempuri.org/InscreveAlunoemOfertaOCW" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:InscreveAlunoemOfertaOCWSegurancaServices" part="SegurancaServices" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaOfertasOCW">
+      <soap12:operation soapAction="http://tempuri.org/BuscaOfertasOCW" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BuscaOfertasOCWSegurancaServices" part="SegurancaServices" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaCurriculoOCW">
+      <soap12:operation soapAction="http://tempuri.org/BuscaCurriculoOCW" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BuscaCurriculoOCWSegurancaServices" part="SegurancaServices" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CertificadoOCWEmitido">
+      <soap12:operation soapAction="http://tempuri.org/CertificadoOCWEmitido" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CertificadoOCWEmitidoSegurancaServices" part="SegurancaServices" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaOfertasSebraeOCW">
+      <soap12:operation soapAction="http://tempuri.org/ListaOfertasSebraeOCW" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ListaOfertasSebraeOCWSegurancaServices" part="SegurancaServices" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaURLCurso">
+      <soap12:operation soapAction="http://tempuri.org/RetornaURLCurso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:RetornaURLCursoSegurancaServices" part="SegurancaServices" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServiceSebraeOCW">
+    <wsdl:port name="WebServiceSebraeOCWSoap" binding="tns:WebServiceSebraeOCWSoap">
+      <soap:address location="http://www5.fgv.br/ucsebraeocw/WebServiceSebraeOCW.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceSebraeOCWSoap12" binding="tns:WebServiceSebraeOCWSoap12">
+      <soap12:address location="http://www5.fgv.br/ucsebraeocw/WebServiceSebraeOCW.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,883 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4E54C184-890B-4856-B77E-238F594B15B8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sebrae.Academico.BP</RootNamespace>
+    <AssemblyName>Sebrae.Academico.BP</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>Sebrae.Academico.BP-1.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>Sebrae.Academico.BP.Release.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=5.0.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.5.0.2\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.10\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itextsharp.xmlworker.5.5.10\lib\itextsharp.xmlworker.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="JWT, Version=1.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JWT.1.3.4\lib\3.5\JWT.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Client, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Client.2.2.0\lib\net45\Microsoft.AspNet.SignalR.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.VS2010.10.0.40219.1\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WebForms.VS2010.10.0.40219.1\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Services3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Microsoft.Web.Services3.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy, Version=1.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nancy.1.4.3\lib\net40\Nancy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Auth\UserIdentity.cs" />
+    <Compile Include="AutoMapper\AutoMapperConfig.cs" />
+    <Compile Include="AutoMapper\EntityToEntityMappingProfile.cs" />
+    <Compile Include="AutoMapper\EntityToDTOMappingProfile.cs" />
+    <Compile Include="BusinessProcessBase.cs" />
+    <Compile Include="Classes\ConheciGame\ManterConteudo.cs" />
+    <Compile Include="Classes\ConheciGame\ManterResposta.cs" />
+    <Compile Include="Classes\ConheciGame\ManterTema.cs" />
+    <Compile Include="DTO\Dominio\DTOAvaliacaoSolucaoSebrae.cs" />
+    <Compile Include="DTO\Dominio\DTOEtapaEncaminhamentoUsuario.cs" />
+    <Compile Include="DTO\Dominio\DTOItemQuestionario.cs" />
+    <Compile Include="DTO\Dominio\DTOItemQuestionarioOpcoes.cs" />
+    <Compile Include="DTO\Dominio\DTOSolucoesDaTrilha.cs" />
+    <Compile Include="DTO\Dominio\DTOUsuarioUF.cs" />
+    <Compile Include="DTO\Dominio\DTOPontoSebrae.cs" />
+    <Compile Include="DTO\Dominio\DtoCertificadoCertame.cs" />
+    <Compile Include="DTO\Dominio\DTOEtapaPermissaoNucleo.cs" />
+    <Compile Include="DTO\Dominio\DTOObjetivo.cs" />
+    <Compile Include="DTO\Dominio\DTOQuestionario.cs" />
+    <Compile Include="DTO\Dominio\DTOQuestionarioPermissao.cs" />
+    <Compile Include="DTO\Dominio\DTOTipoQuestionario.cs" />
+    <Compile Include="DTO\Dominio\DTOTrilhaTopicoTematico.cs" />
+    <Compile Include="DTO\Dominio\DTOUsuarioPDI.cs" />
+    <Compile Include="DTO\Dominio\DTOUsuarioTrilhaParticipacao.cs" />
+    <Compile Include="DTO\Dominio\DTOValidarCertificadoTutor.cs" />
+    <Compile Include="DTO\Dominio\DTOEstiloItemQuestionario.cs" />
+    <Compile Include="DTO\Dominio\DTONotificacoes.cs" />
+    <Compile Include="DTO\Dominio\DTOTermoAceite.cs" />
+    <Compile Include="DTO\DTORelatorioAcessosPaginas.cs" />
+    <Compile Include="DTO\DTORelatorioAcessosPortal.cs" />
+    <Compile Include="DTO\Relatorios\DashBoard\BTOValorSistema.cs" />
+    <Compile Include="DTO\Relatorios\DashBoard\DTOBlocoCampo.cs" />
+    <Compile Include="DTO\Relatorios\DashBoard\DTODemandaNucleo.cs" />
+    <Compile Include="DTO\Relatorios\DashBoard\DTOEtapaNucleo.cs" />
+    <Compile Include="DTO\Relatorios\DashBoard\DTOIndiceSatisfacao.cs" />
+    <Compile Include="DTO\Relatorios\DashBoard\DTOMatriculasPorUF.cs" />
+    <Compile Include="DTO\Relatorios\DashBoard\DTOMatriculas.cs" />
+    <Compile Include="DTO\Relatorios\DashBoard\DTOConcluentesEspacoOcupacional.cs" />
+    <Compile Include="DTO\Relatorios\DashBoard\DTOMatriculasPorMes.cs" />
+    <Compile Include="DTO\Relatorios\DashBoard\DTOMonitoramento.cs" />
+    <Compile Include="DTO\Relatorios\DashBoard\DTOMonitoramentoTurma.cs" />
+    <Compile Include="DTO\Relatorios\DTOConcluinte.cs" />
+    <Compile Include="DTO\Relatorios\DTOOrcamentoReembolso.cs" />
+    <Compile Include="DTO\Relatorios\DTOFiltroDesempenhoAcademico.cs" />
+    <Compile Include="DTO\Relatorios\DTOMonitorTrilhas.cs" />
+    <Compile Include="DTO\Relatorios\DTORelatorioAtividadeExtraCurricular.cs" />
+    <Compile Include="DTO\Relatorios\DTORelatorioSolicitacaoDemanda.cs" />
+    <Compile Include="DTO\Relatorios\DTORelatorioUsuarioCertificadoCertame.cs" />
+    <Compile Include="DTO\Relatorios\DTOTrilhas.cs" />
+    <Compile Include="DTO\Relatorios\DTOMonitoramentoTrilhas.cs" />
+    <Compile Include="DTO\Relatorios\DTOQuestionarioPesquisaTutores.cs" />
+    <Compile Include="DTO\Relatorios\DTOTop5Cursos.cs" />
+    <Compile Include="DTO\Relatorios\DTOUnificadoSolucaoEducacional.cs" />
+    <Compile Include="DTO\Relatorios\DTOQuestionarioReacao.cs" />
+    <Compile Include="DTO\Relatorios\DTORelatorioInscricoesPorStatusENivel.cs" />
+    <Compile Include="DTO\Relatorios\DTORelatorioStatusUsuariosTrilhas.cs" />
+    <Compile Include="DTO\Relatorios\DTOSolucaoEducacionalPublicoAlvo.cs" />
+    <Compile Include="DTO\Relatorios\DTOSolucoesPorCategoria.cs" />
+    <Compile Include="DTO\Relatorios\RelatorioAcessosPortal.cs" />
+    <Compile Include="DTO\Services\ConsultarFormacaoDeMultiplicadores\DTOCategoriasFormacaoDeMultiplicadores.cs" />
+    <Compile Include="DTO\Services\ConsultarFormacaoDeMultiplicadores\DTOConsultaFormacaoDeMultiplicadores.cs" />
+    <Compile Include="DTO\Services\Credenciamento\DTOEvento.cs" />
+    <Compile Include="DTO\Services\DTOAtualizaNotaAlunoMoodle.cs" />
+    <Compile Include="DTO\Services\DTOConsultaDisponibilidadeMatriculaNivelTrilha.cs" />
+    <Compile Include="DTO\Services\DTOConsultarOfertasComInicioEm.cs" />
+    <Compile Include="DTO\Services\DTOConsultarVersoesTeste.cs" />
+    <Compile Include="DTO\Services\DTOConsultaUsuarioPorFiltro.cs" />
+    <Compile Include="DTO\Services\DTOEstatisticaHomePortal.cs" />
+    <Compile Include="DTO\Services\DTOFileServer.cs" />
+    <Compile Include="DTO\Services\DTOMatriculaTrilha.cs" />
+    <Compile Include="DTO\Services\DTOObjetivosTrilhas.cs" />
+    <Compile Include="DTO\Services\DTOUsuarioPortal.cs" />
+    <Compile Include="DTO\Services\DTOMinhaPagina.cs" />
+    <Compile Include="DTO\Services\DTOUsuarioPortalConselhos.cs" />
+    <Compile Include="DTO\Services\EF\BasicEfEntity.cs" />
+    <Compile Include="DTO\Services\EF\DTOActivateSubscription.cs" />
+    <Compile Include="DTO\Services\EF\DTOCancelSubscription.cs" />
+    <Compile Include="DTO\Services\EF\DTOCreateMember.cs" />
+    <Compile Include="DTO\Services\EF\DTOCreateMemberAndActivateSubscription.cs" />
+    <Compile Include="DTO\Services\GerarUsuarioPagamento\DTODadosPagamento.cs" />
+    <Compile Include="DTO\Services\HistoricoAcademico\DTOItemHistoricoTutoria.cs" />
+    <Compile Include="DTO\Services\IRetornoWebService.cs" />
+    <Compile Include="DTO\Services\ManterSolucaoEducacionalService\DTOOcorrenciaSAS.cs" />
+    <Compile Include="DTO\Services\ManterSolucaoEducacionalService\DTOUsuarioSAS.cs" />
+    <Compile Include="DTO\Services\Processo\DTOCampoArquivo.cs" />
+    <Compile Include="DTO\Services\Processo\DTOCargosDemandante.cs" />
+    <Compile Include="DTO\Services\Processo\DTOEfetuarInscricao.cs" />
+    <Compile Include="DTO\Services\Processo\DTOEtapaInfo.cs" />
+    <Compile Include="DTO\Services\Processo\DTODetalhamentoProcesso.cs" />
+    <Compile Include="DTO\Services\Processo\DTOMetaValues.cs" />
+    <Compile Include="DTO\Services\Processo\DTOProcessosAcompanhar.cs" />
+    <Compile Include="DTO\Services\Processo\DTOResponderFormulario.cs" />
+    <Compile Include="DTO\Services\Processo\DTOEtapaAAnalisar.cs" />
+    <Compile Include="DTO\Services\Processo\DTOMeusProcessos.cs" />
+    <Compile Include="DTO\Services\Processo\DTOProcessoResposta.cs" />
+    <Compile Include="DTO\Services\Protocolo\DTOProtocolo.cs" />
+    <Compile Include="DTO\Services\Protocolo\RetornoProtocolo.cs" />
+    <Compile Include="DTO\Services\Questionario\DTOQuestionario.cs" />
+    <Compile Include="DTO\Services\Trilhas\ConheciGame\DTOParticipacaoConheciGame.cs" />
+    <Compile Include="DTO\Services\Trilhas\Loja\DTOUsuarioCurtida.cs" />
+    <Compile Include="DTO\Services\Trilhas\Loja\DTOCurtidas.cs" />
+    <Compile Include="DTO\Services\Trilhas\Loja\DTOSolucaoTrilheiro.cs" />
+    <Compile Include="DTO\Services\Trilhas\Mapa\DTOParticipacao.cs" />
+    <Compile Include="DTO\Services\Trilhas\MensagemGuia\DTOMensagemGuia.cs" />
+    <Compile Include="DTO\Services\Trilhas\MensagemGuia\DTOTutorial.cs" />
+    <Compile Include="DTO\Services\Trilhas\RetornoTokenTrilha.cs" />
+    <Compile Include="DTO\Services\Trilhas\Auth\DTODadosAcesso.cs" />
+    <Compile Include="DTO\Services\Trilhas\DtoResponse.cs" />
+    <Compile Include="DTO\Services\Trilhas\Mapa\DTOAcessoMapa.cs" />
+    <Compile Include="DTO\Services\Trilhas\Loja\DTOCambio.cs" />
+    <Compile Include="DTO\Services\Trilhas\Questionario\DTOInformarRespostaQuestionario.cs" />
+    <Compile Include="DTO\Services\Trilhas\Solucao\DTOMatriculaTurma.cs" />
+    <Compile Include="DTO\SGC\DTOSubarea.cs" />
+    <Compile Include="DTO\SGC\DTOArea.cs" />
+    <Compile Include="Extensions\AutoMapper\AutoMapperExtensions.cs" />
+    <Compile Include="Helpers\RelatoriosHelper.cs" />
+    <Compile Include="Helpers\TotalizadorHelper.cs" />
+    <Compile Include="ManterEtapaEncaminhamentoUsuario.cs" />
+    <Compile Include="ManterEtapaPermissao.cs" />
+    <Compile Include="ManterEmailEnvioPermissao.cs" />
+    <Compile Include="ManterEtapaPermissaoNucleo.cs" />
+    <Compile Include="ManterEtapaResposta.cs" />
+    <Compile Include="ManterEtapaRespostaPermissao.cs" />
+    <Compile Include="ManterEtapaVersao.cs" />
+    <Compile Include="ManterOrcamentoReembolso.cs" />
+    <Compile Include="ManterMissaoMedalha.cs" />
+    <Compile Include="ManterGroupMoodle.cs" />
+    <Compile Include="ManterItemTrilhaAvaliacao.cs" />
+    <Compile Include="ManterNotificacaoEnvioPermissao.cs" />
+    <Compile Include="ManterProcessoResposta.cs" />
+    <Compile Include="ManterProtocoloFileServer.cs" />
+    <Compile Include="ManterSessao.cs" />
+    <Compile Include="ManterUsuarioPerfil.cs" />
+    <Compile Include="ManterUsuarioCertificadoCertame.cs" />
+    <Compile Include="ManterHierarquiaNucleoUsuario.cs" />
+    <Compile Include="ManterHierarquiaNucleo.cs" />
+    <Compile Include="ManterMissao.cs" />
+    <Compile Include="ManterPosicaoDadoCertificadoCertame.cs" />
+    <Compile Include="ManterCertificadoCertame.cs" />
+    <Compile Include="ManterPontoSebrae.cs" />
+    <Compile Include="ManterUsuarioCargo.cs" />
+    <Compile Include="ManterCargo.cs" />
+    <Compile Include="ManterLogLider.cs" />
+    <Compile Include="ManterUsuarioTrilhaMensagemGuia.cs" />
+    <Compile Include="ManterMensagemGuia.cs" />
+    <Compile Include="ManterAvaliacao.cs" />
+    <Compile Include="ManterEnvioInforme.cs" />
+    <Compile Include="ManterHelperTag.cs" />
+    <Compile Include="ManterInforme.cs" />
+    <Compile Include="ManterItemQuestionarioParticipacaoOpcoes.cs" />
+    <Compile Include="ManterTrilhaTopicoTematicoParticipacao.cs" />
+    <Compile Include="ManterUsuarioTrilhaMoedas.cs" />
+    <Compile Include="ManterItemTrilhaCurtida.cs" />
+    <Compile Include="ManterLogConsultorEducacional.cs" />
+    <Compile Include="ManterLogResponsavel.cs" />
+    <Compile Include="ManterFormacaoDeMultiplicadores.cs" />
+    <Compile Include="ManterHierarquiaAuxiliar.cs" />
+    <Compile Include="ManterLogSincronia.cs" />
+    <Compile Include="ManterAreaTematica.cs" />
+    <Compile Include="ManterAlternativa.cs" />
+    <Compile Include="ManterCampoResposta.cs" />
+    <Compile Include="ManterMatriculaCapacitacao.cs" />
+    <Compile Include="ManterMetaFm.cs" />
+    <Compile Include="ManterModuloPreRequisito.cs" />
+    <Compile Include="ManterMonitoramentoIndicadores.cs" />
+    <Compile Include="ManterNacionalizacaoUf.cs" />
+    <Compile Include="ManterPublicoAlvo.cs" />
+    <Compile Include="ManterQuestionarioAssociacaoEnvio.cs" />
+    <Compile Include="ManterTermoAceite.cs" />
+    <Compile Include="ManterOfertaPermissao.cs" />
+    <Compile Include="ManterOfertaGerenciadorVaga.cs" />
+    <Compile Include="ManterModulo.cs" />
+    <Compile Include="ManterTrilhaTutorial.cs" />
+    <Compile Include="ManterTrilhaFaq.cs" />
+    <Compile Include="ManterTurmaCapacitacao.cs" />
+    <Compile Include="Relatorios\Dashboard\RelatorioMonitoramentoTurma.cs" />
+    <Compile Include="Relatorios\RelatorioAcessosPaginas.cs" />
+    <Compile Include="Relatorios\RelatorioAtividadeExtraCurricular.cs" />
+    <Compile Include="Relatorios\RelatorioMonitoramentoTrilhas.cs" />
+    <Compile Include="Relatorios\RelatorioSolicitacaoDemandas.cs" />
+    <Compile Include="Relatorios\RelatorioUsuarioCertificadoConhecimento.cs" />
+    <Compile Include="Service References\integracaoSAS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Credenciamento\ManterCredenciamento.cs" />
+    <Compile Include="Services\MensagemGuiaServices.cs" />
+    <Compile Include="Services\LojaTrilhaServices.cs" />
+    <Compile Include="Services\NotificarAlunosQuestionarioEficacia.cs" />
+    <Compile Include="Services\NotificarLiberacaoNovaProvaTrilhaService.cs" />
+    <Compile Include="Services\NotificarAlunosAprovadosTurmaQuestionarioPosService.cs" />
+    <Compile Include="Services\AtualizarStatusTurmasService.cs" />
+    <Compile Include="Services\FormacaoDeFormadoresServices.cs" />
+    <Compile Include="Services\ManterProtocolo.cs" />
+    <Compile Include="ManterValorSistema.cs" />
+    <Compile Include="ManterSolicitacaoRelatorio.cs" />
+    <Compile Include="ManterRelatorioPaginaInicial.cs" />
+    <Compile Include="ManterCampo.cs" />
+    <Compile Include="DTO\Services\Processo\DTOAnalise.cs" />
+    <Compile Include="DTO\Services\Processo\DTOConsultarEtapasProcesso.cs" />
+    <Compile Include="DTO\Services\Processo\DTOAcompanharProcessosSolicitados.cs" />
+    <Compile Include="DTO\Services\Processo\DTOEtapa.cs" />
+    <Compile Include="DTO\Services\Processo\DTOCampo.cs" />
+    <Compile Include="DTO\Services\Processo\DTOAlternativa.cs" />
+    <Compile Include="DTO\Services\Processo\DTOProcessoEmAnalise.cs" />
+    <Compile Include="DTO\Services\Processo\DTOProcessoInfo.cs" />
+    <Compile Include="DTO\Services\Processo\DTOSituacaoProcesso.cs" />
+    <Compile Include="DTO\Services\Processo\DTOTipoFormulario.cs" />
+    <Compile Include="ManterEmailEnvio.cs" />
+    <Compile Include="ManterEstatistica.cs" />
+    <Compile Include="ManterNomeReprovacaoEtapa.cs" />
+    <Compile Include="ManterNomeFinalizacaoEtapa.cs" />
+    <Compile Include="ManterPagina.cs" />
+    <Compile Include="ManterUsuarioProfessor.cs" />
+    <Compile Include="ManterRespostaParticipacaoProfessor.cs" />
+    <Compile Include="ManterEstiloItemQuestionario.cs" />
+    <Compile Include="ManterEtapa.cs" />
+    <Compile Include="ManterProcesso.cs" />
+    <Compile Include="DTO\Relatorios\DTOCursosMaiorNumeroConcluintes.cs" />
+    <Compile Include="DTO\Relatorios\DTORelatorioCapacitados.cs" />
+    <Compile Include="DTO\Relatorios\DTORelatorioHorasCapacitacao.cs" />
+    <Compile Include="DTO\Relatorios\DTORelatorioUsuarioPagante.cs" />
+    <Compile Include="DTO\Relatorios\DTOSituacaoCursos.cs" />
+    <Compile Include="ManterNotificacaoEnvio.cs" />
+    <Compile Include="DTO\Dominio\DTOTemplate.cs" />
+    <Compile Include="DTO\Dominio\DTOTurmaCapacitacao.cs" />
+    <Compile Include="DTO\Relatorios\DTORelatorioPesquisa.cs" />
+    <Compile Include="DTO\Services\DTOManterTurmaProfessor.cs" />
+    <Compile Include="Helpers\QuestionarioComParticipacao.cs" />
+    <Compile Include="ManterCapacitacao.cs" />
+    <Compile Include="DTO\Dominio\DTOCategoriaConteudo.cs" />
+    <Compile Include="DTO\Dominio\DTOCertificadoTemplate.cs" />
+    <Compile Include="DTO\Dominio\DTODisponibilidadeSolucaoEducacional.cs" />
+    <Compile Include="DTO\Dominio\DTOEntidadeBasicaPorId.cs" />
+    <Compile Include="DTO\Dominio\DTOEntidadeBasica.cs" />
+    <Compile Include="DTO\Dominio\DTOFormaAquisicao.cs" />
+    <Compile Include="DTO\Dominio\DTOFornecedor.cs" />
+    <Compile Include="DTO\Dominio\DTOHistoricoExtraCurricular.cs" />
+    <Compile Include="DTO\Dominio\DTOItemMeusCursos.cs" />
+    <Compile Include="DTO\Relatorios\DTOItemTrilha.cs" />
+    <Compile Include="DTO\Dominio\DTOItemTrilhaParticipacao.cs" />
+    <Compile Include="DTO\Dominio\DTOMatriculaPrograma.cs" />
+    <Compile Include="DTO\Dominio\DTOMetaIndividual.cs" />
+    <Compile Include="DTO\Dominio\DTOMetaInstitucional.cs" />
+    <Compile Include="DTO\Dominio\DTONivelOcupacional.cs" />
+    <Compile Include="DTO\Dominio\DTONotificacao.cs" />
+    <Compile Include="DTO\Dominio\DTOOferta.cs" />
+    <Compile Include="DTO\Dominio\DTOPerfil.cs" />
+    <Compile Include="DTO\Dominio\DTOProfessor.cs" />
+    <Compile Include="DTO\Dominio\DTOPrograma.cs" />
+    <Compile Include="DTO\Dominio\DTOProgramaSolucaoEducacional.cs" />
+    <Compile Include="DTO\Dominio\DTOPublicacaoSaber.cs" />
+    <Compile Include="DTO\Dominio\DTOSistemaExterno.cs" />
+    <Compile Include="DTO\Dominio\DTOSolucaoEducacional.cs" />
+    <Compile Include="DTO\Dominio\DTOSolucaoEducacionalExtraCurricular.cs" />
+    <Compile Include="DTO\Dominio\DTOStatusMatricula.cs" />
+    <Compile Include="DTO\Dominio\DTOTag.cs" />
+    <Compile Include="DTO\Dominio\DTOTipoItemQuestionario.cs" />
+    <Compile Include="DTO\Dominio\DTOTipoOferta.cs" />
+    <Compile Include="DTO\Dominio\DTOTipoQuestionarioAssociacao.cs" />
+    <Compile Include="DTO\Dominio\DTOTrilha.cs" />
+    <Compile Include="DTO\Dominio\DTOTrilhaNivel.cs" />
+    <Compile Include="DTO\Dominio\DTOTrilhaPermissao.cs" />
+    <Compile Include="DTO\Dominio\DTOTurma.cs" />
+    <Compile Include="DTO\Dominio\DTOUf.cs" />
+    <Compile Include="DTO\Dominio\DTOUsuario.cs" />
+    <Compile Include="DTO\Dominio\DTOUsuarioPerfil.cs" />
+    <Compile Include="DTO\Dominio\DTOUsuarioTag.cs" />
+    <Compile Include="DTO\Dominio\DTOUsuarioTrilha.cs" />
+    <Compile Include="DTO\Relatorios\DTODesempenhoAcademico.cs" />
+    <Compile Include="DTO\Relatorios\DTOHistoricoAcademicoCursos.cs" />
+    <Compile Include="DTO\Relatorios\DTOHistoricoAcademicoDadosGerais.cs" />
+    <Compile Include="DTO\Relatorios\DTOHistoricoAcademicoExtracurricular.cs" />
+    <Compile Include="DTO\Relatorios\DTOHistoricoAcademicoPrograma.cs" />
+    <Compile Include="DTO\Relatorios\DTOHistoricoAcademicoSGTC.cs" />
+    <Compile Include="DTO\Relatorios\DTOHistoricoAcademicoTrilha.cs" />
+    <Compile Include="DTO\Relatorios\DTOQuestionarioAvaliacao.cs" />
+    <Compile Include="DTO\Relatorios\DTORelatorioDadosProfessor.cs" />
+    <Compile Include="DTO\Relatorios\DTORelatorioFornecedorAcesso.cs" />
+    <Compile Include="DTO\Relatorios\DTORelatorioHistoricoAtividadeDadosBasicos.cs" />
+    <Compile Include="DTO\Relatorios\DTORelatorioHistoricoAtividadeDiagnostico.cs" />
+    <Compile Include="DTO\Relatorios\DTORelatorioHistoricoAtividadeNotaProva.cs" />
+    <Compile Include="DTO\Relatorios\DTORelatorioHistoricoAtividadeSolucaoAutoindicativa.cs" />
+    <Compile Include="DTO\Relatorios\DTORelatorioHistoricoAtividadeSolucoesPortifolio.cs" />
+    <Compile Include="DTO\Relatorios\DTORelatorioHistoricoAtividadeSprint.cs" />
+    <Compile Include="DTO\Relatorios\DTORelatorioHistoricoAtividadeTopicoTematicoCount.cs" />
+    <Compile Include="DTO\Relatorios\DTORelatorioImagens.cs" />
+    <Compile Include="DTO\Relatorios\DTORelatorioMatriculaSolucaoEducacional.cs" />
+    <Compile Include="DTO\Relatorios\DTORelatorioAcesso.cs" />
+    <Compile Include="DTO\Relatorios\DTORelatorioDadosPessoais.cs" />
+    <Compile Include="DTO\Relatorios\DTORelatorioMetaDesenvolvimentoSE.cs" />
+    <Compile Include="DTO\Relatorios\DTORelatorioPrograma.cs" />
+    <Compile Include="DTO\Relatorios\DTORelatorioSolucaoEducacionalPrograma.cs" />
+    <Compile Include="DTO\Relatorios\DTORelatorioUsuarioMatriculadoPorTurma.cs" />
+    <Compile Include="DTO\Relatorios\DTORelatorioUsuarioMatriculadoPrograma.cs" />
+    <Compile Include="DTO\Relatorios\DTORelatorioUsuarioMatriculadoSEFormaAquisicao.cs" />
+    <Compile Include="DTO\Relatorios\DTORelatorioSEOfertaMatricula.cs" />
+    <Compile Include="DTO\Relatorios\DTOSolucaoEducacionalFormaAquisicao.cs" />
+    <Compile Include="DTO\Relatorios\DTOSolucaoEducacionalOferta.cs" />
+    <Compile Include="DTO\Relatorios\DTOUsuarioCadastrado.cs" />
+    <Compile Include="DTO\Services\BuscaAtividadeFormativa.cs" />
+    <Compile Include="DTO\Services\ConsultarSolucaoEducacionalAutoIndicativa\ItemTrilhaAutoIndicativaDTO.cs" />
+    <Compile Include="DTO\Services\ConsultaSolucaoEducacional\DTOSolucEducFormaAquisicao.cs" />
+    <Compile Include="DTO\Services\ConsultaSolucaoEducacional\DTOSolucEducSolucaoEducacional.cs" />
+    <Compile Include="DTO\Services\ConsultaSolucaoEducacional\DTOSolucEducSolucaoEducacionalMatricula.cs" />
+    <Compile Include="DTO\Services\ConsultaStatusMatriculaSE\DTOConsultaMatriculaSE.cs" />
+    <Compile Include="DTO\Services\DTOCursosUsuarioPorCPF.cs" />
+    <Compile Include="DTO\Services\DTOMatriculaTurma.cs" />
+    <Compile Include="DTO\Services\DTOSolucaoEducacional.cs" />
+    <Compile Include="DTO\Services\DTOManterOferta.cs" />
+    <Compile Include="DTO\Services\DTOManterTurma.cs" />
+    <Compile Include="DTO\Services\DTOManterUsuario.cs" />
+    <Compile Include="DTO\Services\DTORankingTrilha.cs" />
+    <Compile Include="DTO\Services\DTOStatusMatricula.cs" />
+    <Compile Include="DTO\Services\DTOStatusTrilhaNivel.cs" />
+    <Compile Include="DTO\Services\GerarPagamento\DTOGerarPagamento.cs" />
+    <Compile Include="DTO\Services\GerarUsuarioPagamento\DTOUsuarioPagamento.cs" />
+    <Compile Include="DTO\Services\GestorUC\DTOGestorUC.cs" />
+    <Compile Include="DTO\Services\GestorUC\DTOGestorUCUsuario.cs" />
+    <Compile Include="DTO\Services\HistoricoAcademico\DTOItemHistoricoAcademico.cs" />
+    <Compile Include="DTO\Services\ListaProgramas\DTOListaProgramaMatriculaPrograma.cs" />
+    <Compile Include="DTO\Services\ListaProgramas\DTOListaProgramaPrograma.cs" />
+    <Compile Include="DTO\Services\ListaProgramas\DTOListaProgramaSolucaoEducacional.cs" />
+    <Compile Include="DTO\Services\ListaProgramas\DTOListaProgramaSolucaoEducacionalMatricula.cs" />
+    <Compile Include="DTO\Services\ListaProgramas\DTOListaProgramaSolucaoEducacionalTags.cs" />
+    <Compile Include="DTO\Services\MetasIndividuais\DTOListaMetaIndividualItemMeta.cs" />
+    <Compile Include="DTO\Services\MetasIndividuais\DTOListaMetaIndividualMeta.cs" />
+    <Compile Include="DTO\Services\Questionario\DTOCadastroUsuario.cs" />
+    <Compile Include="DTO\Services\Questionario\DTOItemQuestionarioParticipacao.cs" />
+    <Compile Include="DTO\Services\Questionario\DTOItemQuestionarioParticipacaoOpcoes.cs" />
+    <Compile Include="DTO\Services\Questionario\DTOQuestionarioParticipacao.cs" />
+    <Compile Include="DTO\Services\DTOMatriculaSE.cs" />
+    <Compile Include="DTO\Services\RetornoWebService.cs" />
+    <Compile Include="DTO\Services\StatusTrilha\AtividadeFormativaDTO.cs" />
+    <Compile Include="DTO\Services\StatusTrilha\ItemTrilhaDTO.cs" />
+    <Compile Include="DTO\Services\StatusTrilha\ItemTrilhaParticipacaoDTO.cs" />
+    <Compile Include="DTO\Services\StatusTrilha\QuestionarioDTO.cs" />
+    <Compile Include="DTO\Services\StatusTrilha\SolucaoEducacionalDTO.cs" />
+    <Compile Include="DTO\Services\StatusTrilha\TrilhaTopicoTematicoDTO.cs" />
+    <Compile Include="DTO\Services\StatusTrilha\TrilhaDTO.cs" />
+    <Compile Include="DTO\Services\StatusTrilha\TrilhaNivelDTO.cs" />
+    <Compile Include="DTO\Services\StatusTrilha\UsuarioTrilhaDTO.cs" />
+    <Compile Include="DTO\Services\StatusTrilha\RetornoStatusTrilha.cs" />
+    <Compile Include="DTO\Services\UsuarioPorSID\CadastrarUsuarioPorSID.cs" />
+    <Compile Include="DTO\Services\UsuarioPorSID\ConsultarUsuarioPorSID.cs" />
+    <Compile Include="DTO\Services\UsuarioPorSID\DTOUsuarioRecuperado.cs" />
+    <Compile Include="Helpers\LupaUsuarioHelper.cs" />
+    <Compile Include="ManterAbandono.cs" />
+    <Compile Include="ManterCategoriaConteudo.cs" />
+    <Compile Include="ManterCertificadoTemplate.cs" />
+    <Compile Include="ManterConfiguracaoPagamento.cs" />
+    <Compile Include="ManterConfiguracaoSistema.cs" />
+    <Compile Include="ManterDashBoard.cs" />
+    <Compile Include="ManterEmail.cs" />
+    <Compile Include="ManterFaleConosco.cs" />
+    <Compile Include="ManterFileServer.cs" />
+    <Compile Include="ManterFornecedor.cs" />
+    <Compile Include="ManterFuncionalidade.cs" />
+    <Compile Include="ManterGenerico.cs" />
+    <Compile Include="ManterHistoricoExtraCurricular.cs" />
+    <Compile Include="ManterItemQuestionario.cs" />
+    <Compile Include="ManterItemQuestionarioOpcoes.cs" />
+    <Compile Include="ManterLogAcesso.cs" />
+    <Compile Include="ManterLogAcessoFuncionalidade.cs" />
+    <Compile Include="ManterMatricula.cs" />
+    <Compile Include="ManterMatriculaOferta.cs" />
+    <Compile Include="ManterMatriculaPrograma.cs" />
+    <Compile Include="ManterMatriculaTurma.cs" />
+    <Compile Include="ManterNotificacao.cs" />
+    <Compile Include="ManterObjetivo.cs" />
+    <Compile Include="ManterProfessor.cs" />
+    <Compile Include="ManterPublicacaoSaberUsuario.cs" />
+    <Compile Include="ManterQuestionarioAssociacao.cs" />
+    <Compile Include="ManterQuestionarioParticipacao.cs" />
+    <Compile Include="ManterResposta.cs" />
+    <Compile Include="ManterItemTrilhaParticipacao.cs" />
+    <Compile Include="ManterMetaIndividual.cs" />
+    <Compile Include="ManterMetaInstitucional.cs" />
+    <Compile Include="ManterNivelOcupacional.cs" />
+    <Compile Include="ManterOferta.cs" />
+    <Compile Include="ManterParticipacaoItemTrilha.cs" />
+    <Compile Include="ManterPerfil.cs" />
+    <Compile Include="ManterPrograma.cs" />
+    <Compile Include="ManterRespostaParticipacaoProfessorOpcoes.cs" />
+    <Compile Include="ManterSenhaEmergencia.cs" />
+    <Compile Include="ManterSolicitacaoSenha.cs" />
+    <Compile Include="ManterSolucaoEducacional.cs" />
+    <Compile Include="ManterStatusMatricula.cs" />
+    <Compile Include="ManterTag.cs" />
+    <Compile Include="ManterTemplate.cs" />
+    <Compile Include="ManterTipoItemQuestionario.cs" />
+    <Compile Include="ManterTipoOferta.cs" />
+    <Compile Include="ManterTipoQuestionario.cs" />
+    <Compile Include="ManterTipoQuestionarioAssociacao.cs" />
+    <Compile Include="ManterTrilha.cs" />
+    <Compile Include="ManterItemTrilha.cs" />
+    <Compile Include="ManterFormaAquisicao.cs" />
+    <Compile Include="ManterTrilhaAtividadeFormativaParticipacao.cs" />
+    <Compile Include="ManterTrilhaNivel.cs" />
+    <Compile Include="ManterTrilhaTopicoTematico.cs" />
+    <Compile Include="ManterTurma.cs" />
+    <Compile Include="ManterUf.cs" />
+    <Compile Include="ManterUsuario.cs" />
+    <Compile Include="ManterMatriculaTrilha.cs" />
+    <Compile Include="ManterUsuarioMoodleInscricao.cs" />
+    <Compile Include="ManterUsuarioPagamento.cs" />
+    <Compile Include="ManterUsuarioTrilha.cs" />
+    <Compile Include="NotificaFornecedor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\BusinessProcessBaseRelatorio.cs" />
+    <Compile Include="Relatorios\Dashboard\RelatorioConcluintesEspacoOcupacional.cs" />
+    <Compile Include="Relatorios\Dashboard\RelatorioConcluintes.cs" />
+    <Compile Include="Relatorios\Dashboard\RelatorioMonitoramento.cs" />
+    <Compile Include="Relatorios\Dashboard\RelatorioValoresSistema.cs" />
+    <Compile Include="Relatorios\Dashboard\RelatorioMatriculas.cs" />
+    <Compile Include="Relatorios\Dashboard\RelatorioIndiceSatisfacao.cs" />
+    <Compile Include="Relatorios\Dashboard\RelatorioMatriculasPorUF.cs" />
+    <Compile Include="Relatorios\Dashboard\RelatorioMatriculasPorMes.cs" />
+    <Compile Include="Relatorios\RelatatoriosIndividuais.cs" />
+    <Compile Include="Relatorios\RelatorioAcesso.cs" />
+    <Compile Include="Relatorios\RelatorioSolucaoEducacionalUnificada.cs" />
+    <Compile Include="Relatorios\RelatorioStatusUsuariosTrilhas.cs" />
+    <Compile Include="Relatorios\RelatorioConcluintes.cs" />
+    <Compile Include="Relatorios\RelatorioCursosMaiorNumeroConcluintes.cs" />
+    <Compile Include="Relatorios\RelatorioCapacitados.cs" />
+    <Compile Include="Relatorios\RelatorioDadosPessoais.cs" />
+    <Compile Include="Relatorios\RelatorioDadosProfessor.cs" />
+    <Compile Include="Relatorios\RelatorioDesempenhoAcademico.cs" />
+    <Compile Include="Relatorios\RelatorioFornecedorAcesso.cs" />
+    <Compile Include="Relatorios\RelatorioHistoricoAcademico.cs" />
+    <Compile Include="Relatorios\RelatorioHistoricoAtividade.cs" />
+    <Compile Include="Relatorios\RelatorioHorasCapacitacao.cs" />
+    <Compile Include="Relatorios\RelatorioImagens.cs" />
+    <Compile Include="Relatorios\RelatorioInscricoesPorStatusENivel.cs" />
+    <Compile Include="Relatorios\RelatorioMatriculaSolucaoEducacional.cs" />
+    <Compile Include="Relatorios\RelatorioMetaDesenvolvimentoSE.cs" />
+    <Compile Include="Relatorios\RelatorioParticipacaoTrilha.cs" />
+    <Compile Include="Relatorios\RelatorioPrograma.cs" />
+    <Compile Include="Relatorios\RelatorioQuestionarioAvaliacao.cs" />
+    <Compile Include="Relatorios\RelatorioQuestionario.cs" />
+    <Compile Include="Relatorios\RelatorioQuestionarioReacao.cs" />
+    <Compile Include="Relatorios\RelatorioSEOfertaMatricula.cs" />
+    <Compile Include="Relatorios\RelatorioSituacaoCursos.cs" />
+    <Compile Include="Relatorios\RelatorioSolucaoEducacionalFormaAquisicao.cs" />
+    <Compile Include="Relatorios\RelatorioSolucaoEducacionalOferta.cs" />
+    <Compile Include="Relatorios\RelatorioSolucaoEducacionalPorCategoria.cs" />
+    <Compile Include="Relatorios\RelatorioSolucaoEducacionalPrograma.cs" />
+    <Compile Include="Relatorios\RelatorioTop5CursoOnline.cs" />
+    <Compile Include="Relatorios\RelatorioTop5CursoPresencial.cs" />
+    <Compile Include="Relatorios\RelatorioUsuarioCadastrado.cs" />
+    <Compile Include="Relatorios\RelatorioUsuarioMatriculadoPorTurma.cs" />
+    <Compile Include="Relatorios\RelatorioUsuarioMatriculadoPrograma.cs" />
+    <Compile Include="Relatorios\RelatorioUsuarioMatriculadoSEFormaAquisicao.cs" />
+    <Compile Include="Relatorios\RelatorioUsuarioPagante.cs" />
+    <Compile Include="Relatorios\RelatorioUsuarioTrilha.cs" />
+    <Compile Include="Relatorios\RelatorioSolucaoEducacionalPublicoAlvo.cs" />
+    <Compile Include="Service References\fgvIntegracaoOCW\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\fgvIntegracao\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\moodleIntegracao\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\solTokenService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\waIntegracao\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsDrupalServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Services\AtividadeFormativaServices.cs" />
+    <Compile Include="Services\BusinessProcessServicesBase.cs" />
+    <Compile Include="Services\FornecedorServices.cs" />
+    <Compile Include="Services\ObjetivosTrilhaServices.cs" />
+    <Compile Include="Services\SgusWebService\AtividadeExtraCurricularServices.cs" />
+    <Compile Include="Services\SgusWebService\ConsultarMinhaPagina.cs" />
+    <Compile Include="Services\SgusWebService\DTODemandaAcompanhar.cs" />
+    <Compile Include="Services\SgusWebService\ManterEmailService.cs" />
+    <Compile Include="Services\SgusWebService\ManterCapacitacaoService.cs" />
+    <Compile Include="Services\SgusWebService\ManterCertificadoService.cs" />
+    <Compile Include="Services\SgusWebService\ManterEtapaPermissaoNucleoService.cs" />
+    <Compile Include="Services\SgusWebService\ManterMatriculaCapacitacaoService.cs" />
+    <Compile Include="Services\SgusWebService\ManterMatriculaOfertaService.cs" />
+    <Compile Include="Services\SgusWebService\ManterMetaIndividual.cs" />
+    <Compile Include="Services\SgusWebService\ManterOferta.cs" />
+    <Compile Include="Services\SgusWebService\ManterCertificadoCertameService.cs" />
+    <Compile Include="Services\SistemasExternos\EfServices.cs" />
+    <Compile Include="Services\SgusWebService\ManterProcesso.cs" />
+    <Compile Include="Services\SgusWebService\ManterProgramaService.cs" />
+    <Compile Include="Services\SgusWebService\ManterTurma.cs" />
+    <Compile Include="Services\HistoricoAcademicoServices.cs" />
+    <Compile Include="Services\ManterItemTrilhaParticipacao.cs" />
+    <Compile Include="ManterSistemaExterno.cs" />
+    <Compile Include="ManterQuestionario.cs" />
+    <Compile Include="Services\MatriculaTrilhaServices.cs" />
+    <Compile Include="Services\Mensageria\Mensageria.cs" />
+    <Compile Include="Services\SgusWebService\CadastrarHistoricoExtraCurricular.cs" />
+    <Compile Include="Services\SgusWebService\CadastrarTagInteresse.cs" />
+    <Compile Include="Services\SgusWebService\ConsultarCertificadoTemplate.cs" />
+    <Compile Include="Services\SgusWebService\ConsultarCategoriaConteudo.cs" />
+    <Compile Include="Services\SgusWebService\ConsultarFormaAquisicao.cs" />
+    <Compile Include="Services\SgusWebService\ConsultarMetas.cs" />
+    <Compile Include="Services\SgusWebService\ConsultarMeusCursos.cs" />
+    <Compile Include="Services\SgusWebService\ConsultarStatusMatriculaSolucaoEducacional.cs" />
+    <Compile Include="Services\SgusWebService\ManterPublicacaoSaber.cs" />
+    <Compile Include="Services\SgusWebService\ManterSolucaoEducacionalService.cs" />
+    <Compile Include="Services\SgusWebService\ConsultaTags.cs" />
+    <Compile Include="Services\SgusWebService\ConsultaTrilhas.cs" />
+    <Compile Include="Services\SgusWebService\DrupalServices.cs" />
+    <Compile Include="Services\SgusWebService\ManterMatriculaPrograma.cs" />
+    <Compile Include="Services\SgusWebService\ConsultarNivelOcupacional.cs" />
+    <Compile Include="Services\SgusWebService\ConsultarPerfil.cs" />
+    <Compile Include="Services\SgusWebService\ConsultarUF.cs" />
+    <Compile Include="Services\SgusWebService\ManterNotificacao.cs" />
+    <Compile Include="Services\SgusWebService\ManterPerfil.cs" />
+    <Compile Include="Services\SgusWebService\ManterUsuarioPagamento.cs" />
+    <Compile Include="Services\SgusWebService\ManterUsuarioServices.cs" />
+    <Compile Include="Services\SgusWebService\ManterQuestionarioParticipacao.cs" />
+    <Compile Include="Services\SgusWebService\RankingTrilhas.cs" />
+    <Compile Include="Services\SgusWebService\RegistraLogs.cs" />
+    <Compile Include="Services\SgusWebService\TemplateServices.cs" />
+    <Compile Include="Services\SistemasExternos\HistoricoSGTCServices.cs" />
+    <Compile Include="Services\SistemasExternos\SistemaExternoServices.cs" />
+    <Compile Include="Services\SistemasExternos\UsuariosADServices.cs" />
+    <Compile Include="Services\MochilaTrilhaServices.cs" />
+    <Compile Include="Services\TrilhaServices.cs" />
+    <Compile Include="Services\StatusTrilhaServices.cs" />
+    <Compile Include="Services\VersaoAttribute.cs" />
+    <Compile Include="Services\ViewTrilhaServices.cs" />
+    <Compile Include="Services\ViewUsuariosDemitidosServices.cs" />
+    <Compile Include="SGC\ManterCredenciadoArea.cs" />
+    <Compile Include="SGC\ManterSubarea.cs" />
+    <Compile Include="SGC\ManterArea.cs" />
+    <Compile Include="Web References\wsSEBRAE\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sebrae.Academico.Extensions\Sebrae.Academico.Extensions.csproj">
+      <Project>{fb555353-b13a-4d40-bb3b-8d69b853c3c8}</Project>
+      <Name>Sebrae.Academico.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sebrae.Academico.Util\Sebrae.Academico.Util.csproj">
+      <Project>{51A1166D-79AF-4B20-8B7E-E7175EE38637}</Project>
+      <Name>Sebrae.Academico.Util</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sebrae.Academico.InfraEstrutura.Core\Sebrae.Academico.InfraEstrutura.Core.csproj">
+      <Project>{ADDD8A66-BDB8-408D-BE77-BC05874A57A5}</Project>
+      <Name>Sebrae.Academico.InfraEstrutura.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sebrae.Academico.InfraEstrutura.Seguranca\Sebrae.Academico.InfraEstrutura.Seguranca.csproj">
+      <Project>{0960359C-4723-4765-9D93-9F499865D8B9}</Project>
+      <Name>Sebrae.Academico.InfraEstrutura.Seguranca</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sebrae.Academico.BM\Sebrae.Academico.BM.csproj">
+      <Project>{FC5A50C2-1120-46D5-BB99-9CDA4C8C17A1}</Project>
+      <Name>Sebrae.Academico.BM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sebrae.Academico.Dominio\Sebrae.Academico.Dominio.csproj">
+      <Project>{D9B6B84C-B816-4EAF-8D05-C63C5F48B08C}</Project>
+      <Name>Sebrae.Academico.Dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Sebrae.Academico.BP.DTO.Relatorios.DashBoard.DTOMonitoramentoTurma.datasource" />
+    <None Include="Properties\DataSources\Sebrae.Academico.BP.Relatorios.Dashboard.RelatorioMonitoramentoTurmas.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Sebrae.Academico.BP-1.ruleset" />
+    <None Include="Sebrae.Academico.BP.Release.ruleset" />
+    <None Include="Sebrae.Academico.BP.ruleset" />
+    <None Include="Service References\fgvIntegracaoOCW\Sebrae.Academico.BP.fgvIntegracaoOCW.Curriculo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\fgvIntegracaoOCW\Sebrae.Academico.BP.fgvIntegracaoOCW.CursoCurriculo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\fgvIntegracaoOCW\Sebrae.Academico.BP.fgvIntegracaoOCW.Oferta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\fgvIntegracaoOCW\WebServiceSebraeOCW1.wsdl" />
+    <None Include="Service References\fgvIntegracao\ServicoSigaOnline.wsdl" />
+    <None Include="Service References\integracaoSAS\TreinamentoSas.wsdl" />
+    <None Include="Service References\moodleIntegracao\Integracao.wsdl" />
+    <None Include="Service References\solTokenService\tokenws.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\solTokenService\TokenWSService.wsdl" />
+    <None Include="Service References\waIntegracao\waintegracao.wsdl" />
+    <None Include="Service References\wsDrupalServices\soap_server1.wsdl" />
+    <None Include="Web References\wsSEBRAE\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wsSEBRAE\wssgtc.wsdl" />
+    <None Include="Web References\wsSEBRAE\ZADL.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsSEBRAE\ZALI.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsSEBRAE\ZAOE.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsSEBRAE\ZCREDENCIADOS.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsSEBRAE\ZPFUNC.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsSEBRAE\ZUSUARIOSGTC.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\fgvIntegracaoOCW\" />
+    <WCFMetadataStorage Include="Service References\fgvIntegracao\" />
+    <WCFMetadataStorage Include="Service References\integracaoSAS\" />
+    <WCFMetadataStorage Include="Service References\moodleIntegracao\" />
+    <WCFMetadataStorage Include="Service References\solTokenService\" />
+    <WCFMetadataStorage Include="Service References\waIntegracao\" />
+    <WCFMetadataStorage Include="Service References\wsDrupalServices\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\wsDrupalServices\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\wsDrupalServices\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\wsDrupalServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\waIntegracao\waintegracao.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\waIntegracao\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\waIntegracao\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\waIntegracao\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\fgvIntegracao\ServicoSigaOnline.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\fgvIntegracao\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\fgvIntegracao\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\fgvIntegracao\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://www.sgo.sebrae.com.br/businessconnect/wssgtc.asmx%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsSEBRAE\</RelPath>
+      <UpdateFromURL>https://www.sgo.sebrae.com.br/businessconnect/wssgtc.asmx%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Sebrae_Academico_BP_wsSEBRAE_wsSGTC</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\moodleIntegracao\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\moodleIntegracao\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\moodleIntegracao\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\moodleIntegracao\Integracao.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\fgvIntegracaoOCW\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\fgvIntegracaoOCW\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\fgvIntegracaoOCW\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\fgvIntegracaoOCW\WebServiceSebraeOCW1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\solTokenService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\solTokenService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\solTokenService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DTO\Services\Notificacoes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\integracaoSAS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\integracaoSAS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\integracaoSAS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

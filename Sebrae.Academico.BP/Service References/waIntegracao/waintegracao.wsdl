@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Matricular">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authenticationProviderRequest" type="tns:AuthenticationProviderRequest" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="tns:DTOUsuario" />
+            <s:element minOccurs="0" maxOccurs="1" name="turma" type="tns:DTOTurma" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AuthenticationProviderRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Login" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:complexType name="DTOUsuario">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sexo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UF" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DTOTurma">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IDChaveExterna" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MatricularResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MatricularResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="MatricularSoapIn">
+    <wsdl:part name="parameters" element="tns:Matricular" />
+  </wsdl:message>
+  <wsdl:message name="MatricularSoapOut">
+    <wsdl:part name="parameters" element="tns:MatricularResponse" />
+  </wsdl:message>
+  <wsdl:portType name="waIntegracaoSoap">
+    <wsdl:operation name="Matricular">
+      <wsdl:input message="tns:MatricularSoapIn" />
+      <wsdl:output message="tns:MatricularSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="waIntegracaoSoap" type="tns:waIntegracaoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Matricular">
+      <soap:operation soapAction="http://tempuri.org/Matricular" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="waIntegracaoSoap12" type="tns:waIntegracaoSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Matricular">
+      <soap12:operation soapAction="http://tempuri.org/Matricular" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="waIntegracao">
+    <wsdl:port name="waIntegracaoSoap" binding="tns:waIntegracaoSoap">
+      <soap:address location="http://ucsebrae.webaula.com.br/customizacoes/apiv2aspx/waintegracao.asmx" />
+    </wsdl:port>
+    <wsdl:port name="waIntegracaoSoap12" binding="tns:waIntegracaoSoap12">
+      <soap12:address location="http://ucsebrae.webaula.com.br/customizacoes/apiv2aspx/waintegracao.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
