@@ -1,0 +1,636 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="cadastroCategoriaSolucaoEducacional" xml:space="preserve">
+    <value>Toda Solução Educacional deverá ser cadastrada em uma categoria. As categorias são atualizadas automaticamente no portal.</value>
+  </data>
+  <data name="cadastroFormaAprendizagem" xml:space="preserve">
+    <value>Toda Solução Educacional possui sua Forma de Aprendizagem. Antes de cadastrar uma Solução Educacional é necessário verificar a necessidade de cadastro de sua Forma de Aprendizagem. Este item também é chamado de Forma de Aquisição.</value>
+  </data>
+  <data name="cadastroFornecedor" xml:space="preserve">
+    <value>Sistema ou instituição que vai aplicar a solução educacional. Exemplo: WebAula, Moodle, FGV Siga, FGV OCW</value>
+  </data>
+  <data name="cadastroItensTrilhas" xml:space="preserve">
+    <value>São os segmentos da trilha referentes  cada tópico temático.</value>
+  </data>
+  <data name="cadastroObjetos" xml:space="preserve">
+    <value>Cada tópico temático da trilha possui Soluções Educacionais para o usuário participar, as quais possuem vários itens que serão apresentados divididos por seus objetivos, estes deverão ser cadastrados antes do cadastro das Soluções Educacionais.</value>
+  </data>
+  <data name="cadastroQuestionarios" xml:space="preserve">
+    <value>&lt;p&gt;Existem 5 questionários em uma trilha, dois deles serão apresentados ao usuário logo após a realização da inscrição e dois deles no final, logo após a bandeirada. Eles devem ser cadastrados antes do cadastro da trilha.&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;&lt;strong&gt;Questionários Iniciais (Pesquisa)&lt;/strong&gt;
+		&lt;ol&gt;
+			&lt;li&gt;Questionário Pré (opcional) - É chamado de Diagnóstico de Largada na interface do usuário e possui questões objetivas.&lt;/li&gt;
+			&lt;li&gt;Questionário Dinâmico (opcional) - É o questionário que será exibido primeiro caso a opção esteja marcada na tela do nível da trilha, este questionário possui os tópicos temáticos, os objetivos e as opções para o usuário escolher de 1 a 10 o quanto domina daquele assunto e de 1 a 10 a importância daquele tópico.&lt;/li&gt;
+		&lt;/ol&gt;
+	&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Prova (Avaliação/Prova)&lt;/strong&gt; Após o envio da atividade formativa de todos os tópicos da trilha a prova é liberada, na interface do usuário possui o nome de Bandeirada. É uma prova com questões objetivas e após o envio das respostas o usuário recebe uma tela com sua nota, a nota mínima e o gabarito da prova.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Questionários Finais (Pesquisa)&lt;/strong&gt;
+		&lt;ol&gt;
+			&lt;li&gt;Questionário Pós (opcional) - É chamado de Depoimento na interface do usuário e possui questões objetivas.&lt;/li&gt;
+			&lt;li&gt;Questionário Dinâmico (opcional) - É o questionário que será exibido antes do Depoimento caso a opção esteja marcada na tela do nível da trilha, este questionário possui os tópicos temáticos, os objetivos e as opções para o usuário escolher de 1 a 10 o quanto domina daquele assunto e de 1 a 10 a importância daquele tópico.&lt;/li&gt;
+		&lt;/ol&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;</value>
+  </data>
+  <data name="cadastroSolucaoEducacional" xml:space="preserve">
+    <value>Solução Educacional associada ao item.</value>
+  </data>
+  <data name="cadastroTopicosTematicos" xml:space="preserve">
+    <value>Todos os níveis de uma trilha possuem uma quantidade de Tópicos Temáticos em que o usuário deverá cadastrar sua participação para concluir o nível.</value>
+  </data>
+  <data name="cadastroTrilha" xml:space="preserve">
+    <value>Após o cadastro de todos os itens anteriores que vão ‘compor’ a trilha, é realizado o cadastro da trilha com seus níveis separados por ordem (1 Caminhada de Aprendizagem, 2 Corrida do Conhecimento, 3 Maratona da Experiência).</value>
+  </data>
+  <data name="categoriaPai" xml:space="preserve">
+    <value>Termo ao qual esse termo está agrupado ou referenciado</value>
+  </data>
+  <data name="criptografia" xml:space="preserve">
+    <value>Chave usada para decriptografar os dados trafegados com o fornecedor. Deve ter 32 caracteres e não deve ser alterado sem que o fornecedor seja informado.</value>
+  </data>
+  <data name="fornecedorLink" xml:space="preserve">
+    <value>&lt;p&gt;Indica como vai ser montado o link de acesso para os fornecedores. Hastags permitidas:&lt;/p&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;b&gt;#CPF&lt;/b&gt; - CPF do usuário&lt;/li&gt;
+                &lt;li&gt;&lt;b&gt;#TOKEN&lt;/b&gt; - CPF do usuário criptografado de acordo com a chave do Fornecedor&lt;/li&gt;
+                &lt;li&gt;&lt;b&gt;#SENHAMD5&lt;/b&gt; - Senha do usuário no formato MD5&lt;/li&gt;
+            &lt;/ul&gt;</value>
+  </data>
+  <data name="fornecedorPermiteGestao" xml:space="preserve">
+    <value>Indica se o SGUS será capaz de gerar ofertas, turmas e fazer a enturmação dos alunos. Caso negativo, os LMS serão os responsáveis por criar ofertas, turmas e fazer a enturmação.</value>
+  </data>
+  <data name="fornecedorPermiteOferta" xml:space="preserve">
+    <value>Permite que o SGUS crie ofertas para serem exportadas para o fornecedor.</value>
+  </data>
+  <data name="fornecedorPermiteTurma" xml:space="preserve">
+    <value>Permite que o SGUS crie turmas para serem exportadas para o fornecedor.</value>
+  </data>
+  <data name="idDrupal" xml:space="preserve">
+    <value>ID de referência de sincronização SGUS-Portal &lt;br/&gt;&lt;em&gt;&lt;small&gt;somente leitura&lt;/small&gt;&lt;/em&gt;</value>
+  </data>
+  <data name="login" xml:space="preserve">
+    <value>Não utilizar espaços ou pontuação</value>
+  </data>
+  <data name="nome" xml:space="preserve">
+    <value>Nome de identificação no sistema. Pode utilizar acentos e espaço</value>
+  </data>
+  <data name="nomeExibicao" xml:space="preserve">
+    <value>Nome que será exibido para o usuário final</value>
+  </data>
+  <data name="objetivoTexto" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pagamentoBloqueioAcesso" xml:space="preserve">
+    <value>Informa se o pagamento bloqueia o acesso ou se o mesmo apenas solicita o pagamento a cada acesso do usuário ao Portal.</value>
+  </data>
+  <data name="pagamentoDiasInadimplencia" xml:space="preserve">
+    <value>Quantos dias, após a validade, o usuário poderá continuar acessando o portal. Obs: Colocar ao menos 5 para que haja tempo hábil para quem fez o pagamento no último dia por boleto não fique sem acesso.</value>
+  </data>
+  <data name="pagamentoDiasPagamento" xml:space="preserve">
+    <value>Quantos dias o usuário terá antes do boleto vencer.</value>
+  </data>
+  <data name="pagamentoDiasRenovacao" xml:space="preserve">
+    <value>Quantos dias antes do fim da validade o usuário deverá começar a receber notificações que o pagamento está perto do fim.</value>
+  </data>
+  <data name="pagamentoDiasValidade" xml:space="preserve">
+    <value>Por quanto tempo a assinatura deve ficar ativa para o usuário.</value>
+  </data>
+  <data name="pagamentoFimCompetencia" xml:space="preserve">
+    <value>Data que a configuração de pagamento deixa de ser considerada.</value>
+  </data>
+  <data name="pagamentoInicioCompetencia" xml:space="preserve">
+    <value>Data que a configuração de pagamento passa a ser considerada.</value>
+  </data>
+  <data name="pagamentoRecursiva" xml:space="preserve">
+    <value>Indica se a cobrança deve ser feita de forma recursiva, de acordo com a quantidade de dias parametrizada.</value>
+  </data>
+  <data name="pagamentoSituacao" xml:space="preserve">
+    <value>Indica se a configuração do pagamento está ativa no sistema, independente das datas de início e fim da competência.</value>
+  </data>
+  <data name="pagamentoTermoAdesao" xml:space="preserve">
+    <value>Texto que o usuário deverá aceitar antes de efetuar o pagamento.</value>
+  </data>
+  <data name="pagamentoTipo" xml:space="preserve">
+    <value>Nome do tipo do pagamento a ser informado para o usuário.</value>
+  </data>
+  <data name="pagamentoValorAPagar" xml:space="preserve">
+    <value>Valor a ser pago pelo usuário.</value>
+  </data>
+  <data name="senha" xml:space="preserve">
+    <value>Senha de acesso.&lt;br/&gt;Dicas de segurança:&lt;ul&gt;&lt;li&gt;Conter 6 ou mais caracteres.&lt;/li&gt;&lt;li&gt;Conter letras minúsculas e maiusculas&lt;/li&gt;&lt;li&gt;Conter pontuação e números&lt;/li&gt;&lt;/ul&gt; </value>
+  </data>
+  <data name="sistemaExternoLink" xml:space="preserve">
+    <value>&lt;p&gt;Indica como vai ser montado o link de acesso para os fornecedores. Hastags permitidas:&lt;/p&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;b&gt;#CPF&lt;/b&gt; - CPF do usuário&lt;/li&gt;
+                &lt;li&gt;&lt;b&gt;#TOKEN&lt;/b&gt; - CPF do usuário criptografado de acordo com a chave do Fornecedor&lt;/li&gt;
+                &lt;li&gt;&lt;b&gt;#SENHAMD5&lt;/b&gt; - Senha do usuário no formato MD5&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;/div&gt;</value>
+  </data>
+  <data name="tagsCertificado" xml:space="preserve">
+    <value>Para criar textos dinâmicos, utilize os seguintes códigos &lt;br/&gt;que serão alterados automaticamente pelo sistema na geração do certificado.&lt;ul&gt;&lt;li&gt;#NOMESE - Nome da solução educacional (curso)&lt;/li&gt;&lt;li&gt;#ALUNO - Nome do aluno&lt;/li&gt;&lt;/ul&gt;</value>
+  </data>
+  <data name="tagSinonimo" xml:space="preserve">
+    <value>Define se o termo é sinônimo do termo pai (marcado) e deve ser substituído por ele em buscas, ou somente filho (desmarcado)</value>
+  </data>
+  <data name="templateCertificadoImagem" xml:space="preserve">
+    <value>Imagem em JPG ou PNG para o fundo do certificado.&lt;br/&gt;&lt;strong&gt;Largura máxima:&lt;/strong&gt; XXXpx &lt;br/&gt;&lt;strong&gt;Altura máxima:&lt;/strong&gt; XXXpx &lt;br/&gt;</value>
+  </data>
+  <data name="templateCertificadoTexto" xml:space="preserve">
+    <value>&lt;p&gt;Hastags disponíveis para prover as informações do usuário no texto do certificado, no local da hastag aparecerá as informações correspondentes:&lt;/p&gt;
+           &lt;ul&gt;
+           &lt;li&gt;&lt;b&gt;#DATASISTEMAA&lt;/b&gt; - Data atual, do momento de criação do certificado.&lt;/li&gt;
+           &lt;li&gt;&lt;b&gt;#DATASISTEMAEXTENSO&lt;/b&gt; - Data atual por extenso, do momento de criação do certificado.&lt;/li&gt;
+           &lt;li&gt;&lt;b&gt;#DATAHORASISTEMA&lt;/b&gt; - Data e hora atual, do momento de criação do certificado.&lt;/li&gt;
+           &lt;li&gt;&lt;b&gt;#ALUNO&lt;/b&gt; - Nome do aluno.&lt;/li&gt;
+           &lt;li&gt;&lt;b&gt;#CPF&lt;/b&gt; - CPF do aluno.&lt;/li&gt;
+           &lt;li&gt;&lt;b&gt;#EMAILALUNO&lt;/b&gt; - E-mail do aluno.&lt;/li&gt;
+           &lt;li&gt;&lt;b&gt;#CODIGOCERTIFICADO&lt;/b&gt; - Código do certificado.&lt;/li&gt;
+           &lt;li&gt;&lt;b&gt;#DATEGERACAOCERTIFICADO&lt;/b&gt; - Data de geração do primeiro certificado.&lt;/li&gt;
+           &lt;/ul&gt;
+           &lt;p&gt;Hastags disponíveis somente para os certificados dos &lt;b&gt;cursos&lt;/b&gt;:&lt;/p&gt;
+           &lt;ul&gt;
+           &lt;li&gt;&lt;b&gt;#OFERTA&lt;/b&gt; - Nome da Oferta.&lt;/li&gt;
+           &lt;li&gt;&lt;b&gt;#DATAINICIOOFERTA&lt;/b&gt; - Data de início da oferta.&lt;/li&gt;
+           &lt;li&gt;&lt;b&gt;#DATAFIMOFERTA&lt;/b&gt; - Data final da oferta.&lt;/li&gt;
+           &lt;li&gt;&lt;b&gt;#DATATERMINO&lt;/b&gt; - Data de conclusão.&lt;/li&gt;
+           &lt;li&gt;&lt;b&gt;#EMENTA&lt;/b&gt; - Nome da ementa.&lt;/li&gt;
+           &lt;li&gt;&lt;b&gt;#TURMA&lt;/b&gt; - Nome da turma&lt;/li&gt;
+           &lt;li&gt;&lt;b&gt;#PROFESSOR&lt;/b&gt; - Nome do professor.&lt;/li&gt;
+           &lt;li&gt;&lt;b&gt;#MEDIAFINALTURMA&lt;/b&gt; - Média de notas finais do aluno.&lt;/li&gt;
+           &lt;li&gt;&lt;b&gt;#CARGAHORARIA&lt;/b&gt; - Carga horária do curso.&lt;/li&gt;
+           &lt;li&gt;&lt;b&gt;#NOMESE&lt;/b&gt; - Nome do curso.&lt;/li&gt;
+           &lt;li&gt;&lt;b&gt;#NOTAFINAL&lt;/b&gt; - Média final obtida no curso.&lt;/li&gt;
+           &lt;/ul&gt;
+           &lt;p&gt;Hastags disponíveis somente para os certificados das &lt;b&gt;trilhas&lt;/b&gt;:&lt;/p&gt;
+           &lt;ul&gt;
+           &lt;li&gt;&lt;b&gt;#TRILHANIVEL&lt;/b&gt; - Nome do nível da trilha.&lt;/li&gt;
+           &lt;li&gt;&lt;b&gt;#TRILHA&lt;/b&gt; - Nome da trilha.&lt;/li&gt;
+           &lt;li&gt;&lt;b&gt;#DATAINICIOTRILHA&lt;/b&gt; - Data de início da trilha.&lt;/li&gt;
+           &lt;li&gt;&lt;b&gt;#DATAFIMTRILHA&lt;/b&gt; - Data final da trilha.&lt;/li&gt;
+           &lt;li&gt;&lt;b&gt;#MEDIAFINALTRILHA&lt;/b&gt; - Média das notas finais do aluno na trilha.&lt;/li&gt;
+           &lt;/ul&gt;
+&lt;p&gt;Para formatar o template, as seguintes tags são permitidas:&lt;/p&gt;
+&lt;ul&gt;
+           &lt;li&gt;Link - A &lt;/li&gt;
+           &lt;li&gt;Fontes - FONT &lt;/li&gt;
+           &lt;li&gt;Blocos - H{n}, DIV, SPAN, P, DIV, LI, HN&lt;/li&gt;
+           &lt;li&gt;Formatação - B, I, U, S &lt;/li&gt;&lt;li&gt;Listas - OL, UL, LI&lt;/li&gt;
+&lt;/ul&gt;</value>
+    <comment>'</comment>
+  </data>
+  <data name="textoExibicao" xml:space="preserve">
+    <value>Texto de descrição que será exibido para o usuário final</value>
+  </data>
+  <data name="topicoArquivo" xml:space="preserve">
+    <value>Arquivo com o material de apoio necessário para a atividade</value>
+  </data>
+  <data name="topicoArquivoEnvio" xml:space="preserve">
+    <value />
+  </data>
+  <data name="topicoQuantidadeMinima" xml:space="preserve">
+    <value />
+  </data>
+  <data name="topicoTextoEnvio" xml:space="preserve">
+    <value />
+  </data>
+  <data name="bairro" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cadastroNivelTrilha" xml:space="preserve">
+    <value>Sub-nível agrupador de trilhas</value>
+  </data>
+  <data name="cadastroOferta" xml:space="preserve">
+    <value>&lt;p&gt;Uma oferta é forma de tornar um curso disponível para inscrições dentro de condições próprias.&lt;/p&gt;</value>
+  </data>
+  <data name="cadastroProfessor" xml:space="preserve">
+    <value>&lt;p&gt;Usuário responsável pela gestão da solução educacional, portanto com mais poderes de gestão dentro da ferramenta. &lt;/p&gt;&lt;p&gt;Cada plataforma interpretará essa informação de uma forma diferente. Para mais detalhes, buscar na documentação da aplicação em questão.&lt;/p&gt;</value>
+  </data>
+  <data name="cadastroTemplatesCertificados" xml:space="preserve">
+    <value>&lt;p&gt;Ao fim do curso, caso o usuário tenha a nota mínima necessária, o usuário receberá um certificado contendo os dados do curso. Para isso é necessário cadastrar a formatação gráfica deste.&lt;/p&gt;</value>
+  </data>
+  <data name="cadastroTurma" xml:space="preserve">
+    <value>&lt;p&gt;Agrupador de alunos dentro de uma mesma oferta.&lt;/p&gt;</value>
+  </data>
+  <data name="chaveExterna" xml:space="preserve">
+    <value>&lt;p&gt;Código de identificação referente a um grupo no Moodle para sincronização entre sistemas. &lt;/p&gt;&lt;em&gt;&lt;small&gt;Esse campo é preenchido automaticamente pelos sistemas e somente deve ser alterado pela equipe de TI&lt;/small&gt;&lt;/em&gt;</value>
+  </data>
+  <data name="cidade" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cpf" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataDesativacao" xml:space="preserve">
+    <value>Data em que o usuário foi desativado.</value>
+  </data>
+  <data name="dataFim" xml:space="preserve">
+    <value>Formatar como: 12/05/2014</value>
+  </data>
+  <data name="dataFimInscricoes" xml:space="preserve">
+    <value>Data apartir da qual o sistema não permitirá mais inscrições</value>
+  </data>
+  <data name="dataInicio" xml:space="preserve">
+    <value>Formatar como: 12/05/2014</value>
+  </data>
+  <data name="dataInicioInscricoes" xml:space="preserve">
+    <value>Data apartir da qual o sistema permitirá inscrições</value>
+  </data>
+  <data name="dataNascimento" xml:space="preserve">
+    <value />
+  </data>
+  <data name="descricao" xml:space="preserve">
+    <value />
+  </data>
+  <data name="enderecoFisico" xml:space="preserve">
+    <value />
+  </data>
+  <data name="estadoCivil" xml:space="preserve">
+    <value />
+  </data>
+  <data name="idMoodle" xml:space="preserve">
+    <value>ID de referência de sincronização SGUS-Moodle &lt;br/&gt;&lt;em&gt;&lt;small&gt;somente leitura&lt;/small&gt;&lt;/em&gt;</value>
+  </data>
+  <data name="naturalidade" xml:space="preserve">
+    <value />
+  </data>
+  <data name="nomeExtendido" xml:space="preserve">
+    <value />
+  </data>
+  <data name="nomeMae" xml:space="preserve">
+    <value />
+  </data>
+  <data name="nomePai" xml:space="preserve">
+    <value />
+  </data>
+  <data name="nomeReduzido" xml:space="preserve">
+    <value>Nome escrito de maneira reduzida e aberviada para usos em espaços restritos</value>
+  </data>
+  <data name="notaMinima" xml:space="preserve">
+    <value>&lt;p&gt;Nota mínima para a aprovação. &lt;br/&gt;Usar valores entre 0 e 10, e virgula para marcar os decimais. &lt;/p&gt;</value>
+  </data>
+  <data name="ofertaTipo" xml:space="preserve">
+    <value>&lt;p&gt;Modelo de comportamento da oferta&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Normal&lt;/strong&gt; – São ofertas que permitem inscrições pelo portal da UCSebrae e com quantidade de vagas limitadas por turma.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Contínuas&lt;/strong&gt; – São ofertas que permitem inscrições pelo portal e as turmas são criadas automaticamente após alcançado o limite de vagas da turma. As turmas são criadas até a soma de vagas de todas as turmas ser igual a quantidade de vagas da oferta.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Exclusiva&lt;/strong&gt; – São ofertas que não permitem inscrições pelo portal. Desta, forma o gestor é o responsável pelas inscrições. São ofertas com turmas fechadas.&lt;/li&gt;&lt;/ul&gt;</value>
+  </data>
+  <data name="permitirFila" xml:space="preserve">
+    <value>Permitir inscrições de um número superior ao limite da turma, mas mantê-las inativas.</value>
+  </data>
+  <data name="permitirInscricoesOnline" xml:space="preserve">
+    <value>Permitir que a inscrição seja feita diretamente pelo portal.</value>
+  </data>
+  <data name="prazoRealizacao" xml:space="preserve">
+    <value>Tempo máximo para a realização do curso</value>
+  </data>
+  <data name="questionarioPos" xml:space="preserve">
+    <value>Questionário a ser exibido ao término de uma solução educacional</value>
+  </data>
+  <data name="questionarioPre" xml:space="preserve">
+    <value>Questionário a ser exibido antes do acesso de uma solução educacional</value>
+  </data>
+  <data name="RG" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RGDataExpedicao" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RGTipo" xml:space="preserve">
+    <value>Tipo de registro&lt;ul&gt;&lt;li&gt;Registro geral(RG)&lt;/li&gt;&lt;li&gt;Passaporte&lt;/li&gt;&lt;li&gt;Carteira de motorista&lt;/li&gt;&lt;li&gt;etc...&lt;/li&gt;&lt;/ul&gt;</value>
+  </data>
+  <data name="solucaoEducacionalTemMaterial" xml:space="preserve">
+    <value />
+  </data>
+  <data name="statusAtivo" xml:space="preserve">
+    <value>Se esse usuário tem acesso ao sistema.</value>
+  </data>
+  <data name="telefoneCelular" xml:space="preserve">
+    <value />
+  </data>
+  <data name="telefoneFixo" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tipoTutoria" xml:space="preserve">
+    <value />
+  </data>
+  <data name="trilhaIcone" xml:space="preserve">
+    <value>Imagem jpg ou png.&lt;br/&gt;Tamanho máximo: 65px x 65px </value>
+  </data>
+  <data name="turmaAberta" xml:space="preserve">
+    <value>&lt;p&gt;Permite que novos usuários se inscrevam.&lt;/p&gt;</value>
+  </data>
+  <data name="turmaDataFinal" xml:space="preserve">
+    <value />
+  </data>
+  <data name="turmaDataInicio" xml:space="preserve">
+    <value />
+  </data>
+  <data name="turmaLocal" xml:space="preserve">
+    <value>&lt;p&gt;Local onde a solução ocorrerá, se cabível.&lt;/p&gt;</value>
+  </data>
+  <data name="txtCurriculo" xml:space="preserve">
+    <value>Pequeno texto que será apresentado no portal e aplicações para os usuários finais.</value>
+  </data>
+  <data name="txtObservacoes" xml:space="preserve">
+    <value>Pequeno texto que será apresentado dentro da interface com dados extras sobre o usuário.</value>
+  </data>
+  <data name="UF" xml:space="preserve">
+    <value />
+  </data>
+  <data name="valorPrevisto" xml:space="preserve">
+    <value>Gasto total estimado para a realização da oferta da solução educacional</value>
+  </data>
+  <data name="valorRealizado" xml:space="preserve">
+    <value>Gasto total pago para a realização da oferta da solução educacional</value>
+  </data>
+  <data name="arquivoAtividade" xml:space="preserve">
+    <value>Arquivo com o material de apoio necessário para a atividade</value>
+  </data>
+  <data name="cadastroPrograma" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cargaHoraria" xml:space="preserve">
+    <value>Quantidade total de horas previstas da solução educacional</value>
+  </data>
+  <data name="dataLimite" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataTermino" xml:space="preserve">
+    <value />
+  </data>
+  <data name="email" xml:space="preserve">
+    <value />
+  </data>
+  <data name="notaProva" xml:space="preserve">
+    <value />
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dtQuestoesProva" xml:space="preserve">
+    <value>Quantidade de questões que serão sorteadas pelo sistema na geração da prova.</value>
+  </data>
+  <data name="ofertaTrancadaParaPagantes" xml:space="preserve">
+    <value>Informe quais os perfis de pagantes que a oferta ficará trancada no portal até que o pagamento seja realizado.</value>
+  </data>
+  <data name="trilhasEmailTutor" xml:space="preserve">
+    <value>E-mail para contato do tutor responsável por essa trilha</value>
+  </data>
+  <data name="trilhasIDCodigoMoodle" xml:space="preserve">
+    <value>Código ao final do link para o curso no Moodle</value>
+  </data>
+  <data name="capacitacoes_rblAlterarSituacao" xml:space="preserve">
+    <value>Permitir que os gestores possam alterar a situação da matrícula</value>
+  </data>
+  <data name="capacitacoes_rblPermitirCancelamentoMatricula" xml:space="preserve">
+    <value>Permitir que os alunos possam cancelar a matrícula pelo portal</value>
+  </data>
+  <data name="dtFimOferta" xml:space="preserve">
+    <value>Data final para inscrever em uma Oferta</value>
+  </data>
+  <data name="dtInicioOferta" xml:space="preserve">
+    <value>Data inicial para inscrever em uma Oferta</value>
+  </data>
+  <data name="analiseProcesso" xml:space="preserve">
+    <value>Usuários que irão terão acesso ao formulário para fazer a análise</value>
+  </data>
+  <data name="etapaDependeAprovacao" xml:space="preserve">
+    <value>Define se esta etapa precisa ser aprovada ou reprovada, caso não precisa será apenas concluída</value>
+  </data>
+  <data name="etapaDeRetorno" xml:space="preserve">
+    <value>Define para qual etapa o usuário será redirecionado caso esta etapa seja reprovada</value>
+  </data>
+  <data name="etapaRetorna" xml:space="preserve">
+    <value>Define se no caso desta etapa ser reprovada o usuário irá precisar efetuar outra etapa antes de continuar</value>
+  </data>
+  <data name="inscricaoProcesso" xml:space="preserve">
+    <value>Usuários, Perfis e Localidades que poderão efetuar o processo de inscrição nesta etapa</value>
+  </data>
+  <data name="nomeCampoProcesso" xml:space="preserve">
+    <value>Nome da questão do Campo</value>
+  </data>
+  <data name="nomeEtapa" xml:space="preserve">
+    <value>Nome da etapa que aparecerá na tela quando o usúario estiver nesta etapa e também na tela de acompanhamento</value>
+  </data>
+  <data name="nomeProcesso" xml:space="preserve">
+    <value>Nome que aparecerá na lista de inscrição da demanda</value>
+  </data>
+  <data name="nomeProcessoTelaEtapa" xml:space="preserve">
+    <value>Nome da demanda que esta etapa está contida</value>
+  </data>
+  <data name="notificacaoProcesso" xml:space="preserve">
+    <value>Usuários que irão receber as notificações quando esta etapa for concluída</value>
+  </data>
+  <data name="permitirNuloCampo" xml:space="preserve">
+    <value>Define se este campo pode ser deixado em branco</value>
+  </data>
+  <data name="tamanhoCampoProcesso" xml:space="preserve">
+    <value>Quantidade máxima de caracteres permitido</value>
+  </data>
+  <data name="tipoCampoProcesso" xml:space="preserve">
+    <value>Qual será a forma que o usuário irá responder</value>
+  </data>
+  <data name="tipoDadoProcesso" xml:space="preserve">
+    <value>Qual valor será aceito neste campo</value>
+  </data>
+  <data name="etapaVisivelImpressao" xml:space="preserve">
+    <value>Define se esta etapa aparecerá na impressão de acompanhamento do processo no Portal.</value>
+  </data>
+  <data name="codigoSequencialOferta" xml:space="preserve">
+    <value>Código gerado automaticamente pelo sistema após ser realizado o salvamento da oferta. É composto pela sigla da Categoria, seguida do código sequencial da solução educacional e da oferta.</value>
+  </data>
+  <data name="codigoSequencialSolucao" xml:space="preserve">
+    <value>Código gerado automaticamente pelo sistema após ser realizado o salvamento da solução educacional. É composto pela sigla da Categoria, seguida do código sequencial da solução educacional.</value>
+  </data>
+  <data name="codigoSequencialTurma" xml:space="preserve">
+    <value>Código gerado automaticamente pelo sistema após ser realizado o salvamento da turma. É composto pela sigla da Categoria, seguida do código sequencial da solução educacional, da oferta e da turma.</value>
+  </data>
+  <data name="txtLinkSolucaoEducacional" xml:space="preserve">
+    <value>Caso o campo ID Chave Externa estiver preenchido este campo será ignorado. Utilizado no Caso de Fornecedor FGV OCW.</value>
+  </data>
+  <data name="campoTextoAjuda" xml:space="preserve">
+    <value>Texto para ajudar o preenchimento do campo</value>
+  </data>
+  <data name="turmaAcessoAposConlusao" xml:space="preserve">
+    <value>Se o curso pode ser acessado por alunos aprovados após sua conclusão</value>
+  </data>
+  <data name="statusSelecionado" xml:space="preserve">
+    <value>Caso esta opção esteja marcada, somente os status marcados abaixo serão exibidos no gerenciamento do curso. Caso não esteja marcada, o gerenciamento vai exibir todos os status disponíveis.</value>
+  </data>
+  <data name="turmaQuantidadeDeAcessos" xml:space="preserve">
+    <value>Vagas de acordo com a Oferta. Caso o campo fique vazio não existirá limite de Inscrições (Infinito). Não será permitido o valor '0'.</value>
+  </data>
+  <data name="paginaChaveVerificadora" xml:space="preserve">
+    <value>É o nome do identificador no link da página quando a página estiver em modo de edição. Por exemplo, no link "http://sgus.sebrae.com.br/Cadastros/Turma/EdicaoTurma.aspx?Id=1668", note que ao final do link existe um identificador chamado "Id", com o valor de "1668". O nome da chave identificadora, neste caso, é somente "Id", portanto o valor deste campo, no caso do link citado no exemplo, seria "Id".</value>
+  </data>
+  <data name="paginaNomeDoObjeto" xml:space="preserve">
+    <value>Nome do objeto que está sendo cadastrado/editado. Por exemplo, se estiver na página de cadastro de Turmas, o nome do objeto deverá ser apenas "Turma".</value>
+  </data>
+  <data name="filtroNacionalizacaoRelatorio" xml:space="preserve">
+    <value>Marque esta opção para contextualizar o filtros e o resultado do relatório de acordo com a sua UF.</value>
+  </data>
+  <data name="larguraCampo" xml:space="preserve">
+    <value>Largura de exibição do campo, em porcento. Pode ser 33%, 50%, 66% ou 100%, e só funciona para tablets ou dispositivos com telas maiores. Para dispositivos ou telas menores, todo campo sempre terá 100% da largura da tela.</value>
+  </data>
+  <data name="cadastroTemplatesCertificadosProfessor" xml:space="preserve">
+    <value>&lt;p&gt;Ao fim do curso, cada professor receberá um certificado contendo os dados do curso. Para isso é necessário cadastrar a formatação gráfica deste.&lt;/p&gt;</value>
+  </data>
+  <data name="etapaNomeFinalizacao" xml:space="preserve">
+    <value>Nome que vai aparece no botão de aprovação da etapa.</value>
+  </data>
+  <data name="etapaNomeReprovacao" xml:space="preserve">
+    <value>Nome que vai aparece no botão de reprovação da etapa.</value>
+  </data>
+  <data name="exibirCampoNaImpressao" xml:space="preserve">
+    <value>Exibir este campo na impressão do processo.</value>
+  </data>
+  <data name="exibirAjudaNaImpressao" xml:space="preserve">
+    <value>Exibir a ajuda deste campo na impressão do processo.</value>
+  </data>
+  <data name="demandaStatus" xml:space="preserve">
+    <value />
+  </data>
+  <data name="questionarioCancelamento" xml:space="preserve">
+    <value>Questionário que será respondido no cancelamento da matrícula.</value>
+  </data>
+  <data name="questionarioReprovacao" xml:space="preserve">
+    <value>Questionário que será respondido na reprovação da matrícula.</value>
+  </data>
+  <data name="considerarNacionalizacaoUf" xml:space="preserve">
+    <value>Caso essa opção esteja marcada, esta página só poderá ser visualizada por um usuário de uma UF nacionalizada, no menu Configurações &gt; Nacionalização</value>
+  </data>
+  <data name="apresentarComoFornecedorNoPortal" xml:space="preserve">
+    <value>Quando Informado Sim o nome do fornecedor irá aparecer no cadastro de Atividade em Historico Academico</value>
+  </data>
+  <data name="gerenciamentoAreas" xml:space="preserve">
+    <value>Permitir que, ao editar uma Oferta vinculada a esta categoria (ou filhas), seja possível selecionar as Áreas/Subáreas vinculadas ao perfil de Credenciado.</value>
+  </data>
+  <data name="gerenciamentoStatus" xml:space="preserve">
+    <value>Permitir que, ao editar uma Turma vinculada a esta categoria (ou filhas), seja possível selecionar os Status das turmas. O status de turma influencia na disponibilidade para inscrições, e também se atualiza automaticamente de acordo com seu Status, em uma rotina automática.</value>
+  </data>
+  <data name="infoAddCadastrOferta" xml:space="preserve">
+    <value>Neste campo são inseridas informações adicionais sobre a ofertas. Estes dados serão apresentados juntamente a descrição do curso ao acionar o botão “ver detalhes” na listagem de cursos no portal UC</value>
+  </data>
+  <data name="nomeApresentacaoPortalFornecedor" xml:space="preserve">
+    <value>Valor que será colocado como padrão no campo "Nome da instituição" no cadastro de atividade Extra Curricular</value>
+  </data>
+  <data name="objetivoChaveExterna" xml:space="preserve">
+    <value>Chave utilizada para sincronização do objetivo de trilha com outros sistemas</value>
+  </data>
+</root>

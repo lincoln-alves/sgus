@@ -1,0 +1,149 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Academico20.master.cs"
+    Inherits="Sebrae.Academico.WebForms.Academico20" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>SGUS 2.0</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <%-- Bundles --%>
+    <asp:PlaceHolder runat="server">
+        <%: System.Web.Optimization.Styles.Render("~/Content/css") %>
+        <%: System.Web.Optimization.Scripts.Render("~/bundles/master") %>
+    </asp:PlaceHolder>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+		  <script src="/js/html5shiv.js"></script>
+		  <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="/js/ckeditor/ckeditor.js"></script>
+    <script type="text/javascript" src="/js/ckeditorConfig.js"></script>
+    
+    <script type="text/javascript">
+        function validarForm() {
+            // Validação de cadastros com o plugin: "Are you sure?"
+            $('form select').addClass('ays-ignore');
+            $(':checkbox').addClass('ays-ignore');
+            $(':radio').addClass('ays-ignore');
+            $('form').areYouSure({ 'message': 'Existem dados que não foram salvos' });
+        }
+    </script>
+</head>
+<body runat="server" id="MainBody">
+    <form id="form" runat="server" role="form">
+        <div class="navbar navbar-fixed-top">
+            <a runat="server" ClientIDMode="Static" ID="menuCollapse" class='col-sm-1 side-bar-icon hidden-xs'><i class="glyphicon glyphicon-align-justify"></i>
+            </a>
+            <a class="col-sm-3 col-xs-6 dropdown-caller" href="#"><span runat="server" id="NomeLocalizacao"></span><span class="caret"></span></a>
+            <ul class="dropdown-menu col-xs-12" role="menu" aria-labelledby="dLabel" runat="server" id="barraMenu">
+            </ul>
+            <div class="col-xs-6 pull-right">
+                <div class="row">
+                    <div class="col-sm-6 logon hidden-xs text-right">
+                        <div class="pull-right" data-toggle="tooltip" data-title="Alterar perfil" data-placement="bottom">
+                            <a href="#" style="text-transform: none;" id="hrefAlterarConta" data-toggle="modal" data-target="#AlterarPerfilModal">
+                                <span id="spanSaudacao" runat="server"></span><span id="spanPerfil" runat="server"></span><span class="caret"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12 logon text-right">
+                        <a href="/Default.aspx?logout=0">Sair [X]</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 side-bar" runat="server" id="sidebar"></div>
+        <div class="col-sm-9 conteudo_busca content-area" runat="server" id="contentArea">
+            
+            <h3 runat="server" id="tituloPagina"></h3>
+            <hr runat="server" id="linhaTituloPagina" />
+            <div class="text-muted" runat="server" id="descricaoPagina"></div>
+            <div class="text-muted" runat="server" id="divDescricaoAdministrador"></div>
+            <div class="text-muted" runat="server" id="divDescricaoGestor"></div>
+            
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+
+        <div id="AlterarPerfilModal" class="modal fade" runat="server">
+            <div class="modal-dialog" style="width: 25%;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Alterar perfil</h4>
+                    </div>
+                    <div class="modal-body" style="padding-bottom: 0;">
+                        <div class="list-group text-center">
+                            <a href="#" id="A1" runat="server" class="list-group-item active mostrarload" onserverclick="btnPerfilAdministrador_OnServerClick">Retornar para administrador</a>
+                        </div>
+                        <div class="list-group text-center">
+                            <a href="#" id="A2" runat="server" class="list-group-item mostrarload" onserverclick="AlterarPerfil_OnServerClick" name="4">Administrador portal</a>
+                            <a href="#" id="A3" runat="server" class="list-group-item mostrarload" onserverclick="AlterarPerfil_OnServerClick" name="7">Administrador de trilhas</a>
+                            <a href="#" id="A4" runat="server" class="list-group-item mostrarload" onserverclick="AlterarPerfil_OnServerClick" name="1">Colaborador</a>
+                            <a href="#" id="A9" runat="server" class="list-group-item mostrarload" onserverclick="AlterarPerfil_OnServerClick" name="10">Consultor Educacional</a>
+                            <a href="#" id="A5" runat="server" class="list-group-item mostrarload" onserverclick="AlterarPerfil_OnServerClick" name="3">Gestor UC</a>
+                            <a href="#" id="A6" runat="server" class="list-group-item mostrarload" onserverclick="AlterarPerfil_OnServerClick" name="8">Monitor Trilha</a>
+                            <a href="#" id="A7" runat="server" class="list-group-item mostrarload" onserverclick="AlterarPerfil_OnServerClick" name="9">Professor</a>
+                            <a href="#" id="A8" runat="server" class="list-group-item mostrarload" onserverclick="AlterarPerfil_OnServerClick" name="5">Terceiro</a>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-block btn-danger btn-default" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="ModalEdicaoHelperTag" runat="server" Visible="False">
+            <div class="modal fade in" style="display: block;">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close mostrarload" data-dismiss="modal" aria-label="Fechar" runat="server" OnServerClick="btnFecharHelper_OnClick"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title">Alterar texto de ajuda</h4>
+                        </div>
+                        <div class="modal-body" style="padding-bottom: 0;">
+                            <div class="form-group">
+                                <asp:HiddenField ID="hdnHelperTagChave" runat="server" Value="0"/>
+                                <asp:HiddenField ID="hdnHelperTagPaginaId" runat="server" Value="0"/>
+                                <asp:Label ID="Label1" runat="server" Text="Descrição*" AssociatedControlID="txtDescricao" />
+                                <CKEditor:CKEditorControl ID="txtDescricao" BasePath="/js/ckeditor/" runat="server" Height="80px"></CKEditor:CKEditorControl>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <asp:Button ID="btnSalvarHelper" CssClass="btn btn-primary mostrarload" runat="server" Text="Salvar" OnClick="btnSalvarHelper_OnClick" />
+                            <asp:Button ID="btnFecharHelper" CssClass="btn btn-default mostrarload" runat="server" Text="Fechar" OnClick="btnFecharHelper_OnClick" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="divCarregando">
+        </div>
+        
+        <asp:Panel ID="pnlbackdrop" runat="server" Visible="false">
+            <div class="modal-backdrop fade in">
+            </div>
+        </asp:Panel>
+    </form>
+
+<script type="text/javascript">           
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-47632381-3', 'auto');
+    ga('send', 'pageview');
+</script>    
+</body>
+</html>
