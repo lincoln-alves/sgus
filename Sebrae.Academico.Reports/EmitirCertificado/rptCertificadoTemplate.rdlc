@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <DataSources>
+    <DataSource Name="BASE_UC20_SEBRAEDataSet">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>5e64a622-0f93-4fbf-a919-da7e03baae37</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="dsCertificadoTemplate">
+      <Fields>
+        <Field Name="ID_CertificadoTemplate">
+          <DataField>ID_CertificadoTemplate</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="NM_CertificadoTemplate">
+          <DataField>NM_CertificadoTemplate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TX_Certificado">
+          <DataField>TX_Certificado</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OB_Imagem">
+          <DataField>OB_Imagem</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>BASE_UC20_SEBRAEDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>BASE_UC20_SEBRAEDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Projetos\Sebrae.SGUS\ModuloTrilhas\dotNet\Sebrae.Academico.Services\BASE_UC20_SEBRAEDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>TB_CertificadoTemplate</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>TB_CertificadoTemplateTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Body>
+    <ReportItems>
+      <Image Name="Image1">
+        <Source>Database</Source>
+        <Value>=First(Fields!OB_Imagem.Value, "dsCertificadoTemplate")</Value>
+        <MIMEType>image/jpeg</MIMEType>
+        <Sizing>Fit</Sizing>
+        <Top>0.00001cm</Top>
+        <Height>21cm</Height>
+        <Width>29.7cm</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Image>
+      <Textbox Name="Textbox1">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!TX_Certificado.Value</Value>
+                <MarkupType>HTML</MarkupType>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>0.5098cm</Top>
+        <Left>0.5cm</Left>
+        <Height>20cm</Height>
+        <Width>28.7cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <VerticalAlign>Top</VerticalAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <Height>8.26772in</Height>
+    <Style />
+  </Body>
+  <Width>11.69291in</Width>
+  <Page>
+    <PageHeight>21cm</PageHeight>
+    <PageWidth>29.7cm</PageWidth>
+    <InteractiveHeight>22.5cm</InteractiveHeight>
+    <InteractiveWidth>29.1cm</InteractiveWidth>
+    <LeftMargin>0cm</LeftMargin>
+    <RightMargin>0cm</RightMargin>
+    <TopMargin>0cm</TopMargin>
+    <BottomMargin>0cm</BottomMargin>
+    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <Style>
+      <BackgroundImage>
+        <Source>Database</Source>
+        <Value>=First(Fields!OB_Imagem.Value, "dsCertificadoTemplate")</Value>
+        <MIMEType>image/jpeg</MIMEType>
+      </BackgroundImage>
+    </Style>
+  </Page>
+  <rd:ReportID>4d40cc25-e5ff-4aa5-a235-c3d88f55bda7</rd:ReportID>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+</Report>

@@ -1,0 +1,3210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F877A3DE-33A2-4660-98F7-52A67E903FEB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sebrae.Academico.WebForms</RootNamespace>
+    <AssemblyName>Sebrae.Academico.WebForms</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>ExtendedDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
+    <ExcludeApp_Data>true</ExcludeApp_Data>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>Sebrae.Academico.WebForms.Release.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper, Version=5.0.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.5.0.2\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CKEditor.NET">
+      <HintPath>..\lib\CKEditor.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlRenderer, Version=1.5.0.5, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlRenderer.Core.1.5.0.5\lib\net45\HtmlRenderer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\lib\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.10\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itextsharp.xmlworker.5.5.10\lib\itextsharp.xmlworker.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="JWT, Version=1.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JWT.1.3.4\lib\3.5\JWT.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls, Version=1.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.VS2010.10.0.40219.1\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WebForms.VS2010.10.0.40219.1\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Services3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Microsoft.Web.Services3.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.8.3\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.50.3638.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.50.3638-beta\lib\net20\PdfSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.50.3638.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.50.3638-beta\lib\net20\PdfSharp.Charting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PowerfulExtensions_4.5, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PowerfulExtensions.1.0.5\lib\net45\PowerfulExtensions_4.5.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="acessonegado.aspx" />
+    <Content Include="Administracao.aspx" />
+    <Content Include="Cadastros\AreasTematicas\EditarAreaTematica.aspx" />
+    <Content Include="Cadastros\AreasTematicas\ListarAreasTematicas.aspx" />
+    <Content Include="Cadastros\Capacitacao\EdicaoCapacitacao.aspx" />
+    <Content Include="Cadastros\Capacitacao\ListarCapacitacao.aspx" />
+    <Content Include="Cadastros\CertificadoTemplate\VisualizaCertificadoTemplate.aspx" />
+    <Content Include="Cadastros\Certificado\ValidarCertificado.aspx" />
+    <Content Include="Cadastros\ConfiguracaoPagamento\EdicaoConfiguracaoPagamento.aspx" />
+    <Content Include="Cadastros\ConfiguracaoPagamento\ListarConfiguracaoPagamento.aspx" />
+    <Content Include="Cadastros\Configuracoes\EdicaoConfiguracoes.aspx" />
+    <Content Include="Cadastros\EmailEnvio\EdicaoEmailEnvio.aspx" />
+    <Content Include="Cadastros\EmailEnvio\ListarEmailEnvio.aspx" />
+    <Content Include="Cadastros\Etapa\EditarEtapa.aspx" />
+    <Content Include="Cadastros\Etapa\ListarEtapa.aspx" />
+    <Content Include="Cadastros\Faq\EdicaoFaq.aspx" />
+    <Content Include="Cadastros\Faq\ListarFaq.aspx" />
+    <Content Include="Cadastros\Ferramentas\Agilizador.aspx" />
+    <Content Include="Cadastros\HierarquiaNucleo\GerenciarHierarquiaNucleo.aspx" />
+    <Content Include="Cadastros\HierarquiaNucleo\ListarHierarquiaNucleo.aspx" />
+    <Content Include="Cadastros\HierarquiaAuxiliar\EdicaoHierarquiaAuxiliar.aspx" />
+    <Content Include="Cadastros\HierarquiaAuxiliar\ListarHierarquiaAuxiliar.aspx" />
+    <Content Include="Cadastros\Hierarquia\GerenciarHierarquia.aspx" />
+    <Content Include="Cadastros\Hierarquia\ListarHierarquia.aspx" />
+    <Content Include="Cadastros\Matricula\MatriculasAluno.aspx" />
+    <Content Include="Cadastros\MensagemGuia\EdicaoMensagemGuia.aspx" />
+    <Content Include="Cadastros\MensagemGuia\ListarMensagemGuia.aspx" />
+    <Content Include="Cadastros\OrcamentoReembolso\EditarOrcamentoReembolso.aspx" />
+    <Content Include="Cadastros\OrcamentoReembolso\ListarOrcamentoReembolso.aspx" />
+    <Content Include="Cadastros\PontoSebrae\EdicaoPontoSebrae.aspx" />
+    <Content Include="Cadastros\PontoSebrae\ListarPontoSebrae.aspx" />
+    <Content Include="Cadastros\Missao\EdicaoMissao.aspx" />
+    <Content Include="Cadastros\Missao\ListarMissao.aspx" />
+    <Content Include="Cadastros\TrilhaNivel\EdicaoTrilhaNivel.aspx" />
+    <Content Include="Cadastros\TrilhaNivel\ListarTrilhaNivel.aspx" />
+    <Content Include="css\dashboard_demandas.css" />
+    <Content Include="css\fonts.css" />
+    <Content Include="css\print.css" />
+    <Content Include="Dashboard_Redmine.aspx" />
+    <Content Include="DashBoard_Demandas.aspx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="js\estira.js" />
+    <Content Include="Cadastros\Informe\EnvioInforme.aspx" />
+    <Content Include="Cadastros\Informe\EdicaoInforme.aspx" />
+    <Content Include="Cadastros\Informe\ListarInformes.aspx" />
+    <Content Include="Cadastros\Informe\VisualizarInforme.aspx" />
+    <Content Include="Cadastros\ItemTrilhaParticipacao\EdicaoItemTrilhaParticipacao.aspx" />
+    <Content Include="Cadastros\ItemTrilhaParticipacao\ListarItemTrilhaParticipacao.aspx" />
+    <Content Include="Cadastros\Matricula\AvaliarTurma.aspx" />
+    <Content Include="Cadastros\Monitoramento\MonitoramentoTrilha2016.aspx" />
+    <Content Include="Cadastros\SeAutoIndicativa\EdicaoSeAutoindicativa.aspx" />
+    <Content Include="Cadastros\SeAutoIndicativa\ListarSeAutoindicativa.aspx" />
+    <Content Include="Cadastros\Sincronizacao\SincronizacaoGeral.aspx" />
+    <Content Include="Cadastros\SincronizarPortal\Sincroniar.aspx" />
+    <Content Include="Cadastros\TrilhaTutorial\EdicaoTrilhaTutorial.aspx" />
+    <Content Include="Cadastros\TrilhaTutorial\ListarTrilhaTutorial.aspx" />
+    <Content Include="Cadastros\Turma\HistoricoTurma.aspx" />
+    <Content Include="css\elessar.css" />
+    <Content Include="css\markall.css" />
+    <Content Include="css\sebraeuc_fonts.css" />
+    <Content Include="fonts\sebraeuc.svg" />
+    <Content Include="Graficos\MatriculasPorStatus.aspx" />
+    <Content Include="Graficos\TurmasPorStatus.aspx" />
+    <Content Include="img\newsletter\footer.jpg" />
+    <Content Include="img\newsletter\header.jpg" />
+    <Content Include="img\newsletter\page-flip.jpg" />
+    <Content Include="img\newsletter\right-arrow.jpg" />
+    <Content Include="img\seta-ico-black.png" />
+    <Content Include="js\ckeditorConfig.js" />
+    <Content Include="js\dashboard\Chart.min.js" />
+    <Content Include="js\elessar.min.js" />
+    <Content Include="js\jquery.maskMoney.min.js" />
+    <Content Include="js\jqueryUI\reordenaTrilhaTutorial.js" />
+    <Content Include="js\jquery\jquery.mask.min.js" />
+    <Content Include="js\linq.min.js" />
+    <Content Include="js\main.js" />
+    <Content Include="Relatorios\AvaliacoesTrilhas\AvaliacoesTrilhas.aspx" />
+    <Content Include="Relatorios\LogAcessosPortal\LogAcessosPortal.aspx" />
+    <Content Include="Relatorios\PaginasAcessos\RelatorioPaginasAcessos.aspx" />
+    <Content Include="Relatorios\AtividadeExtraCurricular\AtividadeExtraCurricular.aspx" />
+    <Content Include="Relatorios\CertificadoConhecimento\Boletim.aspx" />
+    <Content Include="Relatorios\CertificadoConhecimento\CertificacaoConhecimento.aspx" />
+    <Content Include="Relatorios\CertificadoTemplate\VersoCertificadoTrilhas.aspx" />
+    <Content Include="Relatorios\Demandas\SolicitacaoDemandasForm.aspx" />
+    <Content Include="Relatorios\Demandas\SolicitacaoDemandas.aspx" />
+    <Content Include="Relatorios\Emails\Detalhes.aspx" />
+    <Content Include="Relatorios\HistoricoParticipacaoTrilha\HistoricoParticipacao.aspx" />
+    <Content Include="Relatorios\HistoricoParticipacaoTrilha\HistoricoParticipacaoForm.aspx" />
+    <Content Include="Relatorios\HistoricoDemandas\HistoricoDemandasRelatorio.aspx" />
+    <Content Include="Relatorios\MonitoramentoTurma\MonitoramentoTurma.aspx" />
+    <Content Include="RelatoriosPaginaInicial\HomeRelatoriosPaginaInicial.aspx" />
+    <Content Include="Relatorios\LogSincronia\Lista.aspx" />
+    <Content Include="Cadastros\MatriculaCapacitacao\GerenciarMatriculaCapacitacao.aspx" />
+    <Content Include="Cadastros\MatriculaObrigatoria\EfetuarMatriculaObrigatoria.aspx" />
+    <Content Include="Cadastros\MatriculaPrograma\GerenciamentoMatriculaPrograma.aspx" />
+    <Content Include="Cadastros\MediaServer\EditarMediaServer.aspx" />
+    <Content Include="Cadastros\MediaServer\ListarMediaServer.aspx" />
+    <Content Include="Cadastros\Modulo\EditarModulo.aspx" />
+    <Content Include="Cadastros\Modulo\ListarModulo.aspx" />
+    <Content Include="Cadastros\MonitoramentoIndicadores\Listar.aspx" />
+    <Content Include="Cadastros\Monitoramento\MonitoramentoTrilha.aspx" />
+    <Content Include="Cadastros\Nacionalizacao\SelecionarUfs.aspx" />
+    <Content Include="Cadastros\NotificacaoEnvio\EdicaoNotificacaoEnvio.aspx" />
+    <Content Include="Cadastros\NotificacaoEnvio\ListarNotificacaoEnvio.aspx" />
+    <Content Include="Cadastros\Objetivo\EdicaoObjetivo.aspx" />
+    <Content Include="Cadastros\Objetivo\ListarObjetivo.aspx" />
+    <Content Include="Cadastros\Pagamento\AdministrarPagamento.aspx" />
+    <Content Include="Cadastros\Pagamento\GerenciadorPagamento.aspx" />
+    <Content Include="Cadastros\Pagamento\HistoricoPagamento.aspx" />
+    <Content Include="Cadastros\Painel\GerenciamentoAluno.aspx" />
+    <Content Include="Cadastros\Demanda\EditarDemanda.aspx" />
+    <Content Include="Cadastros\Demanda\ListarDemanda.aspx" />
+    <Content Include="Cadastros\Professor\EdicaoProfessor.aspx" />
+    <Content Include="Cadastros\Professor\ListarProfessor.aspx" />
+    <Content Include="Cadastros\Protocolo\EdicaoProtocolo.aspx" />
+    <Content Include="Cadastros\Protocolo\ListarProtocolo.aspx" />
+    <Content Include="Cadastros\PublicoAlvo\Editar.aspx" />
+    <Content Include="Cadastros\PublicoAlvo\Lista.aspx" />
+    <Content Include="Cadastros\Questionario\EdicaoQuestionarioU.aspx" />
+    <Content Include="Cadastros\RelatorioPaginaInicial\Selecionar.aspx" />
+    <Content Include="Cadastros\Sincronizador\Moodle.aspx" />
+    <Content Include="Cadastros\SincronizarMoodle\ListarCadastros.aspx" />
+    <Content Include="Cadastros\SistemaExterno\ListarSistemaExterno.aspx" />
+    <Content Include="Cadastros\Tag\ImportarTag.aspx" />
+    <Content Include="Cadastros\Template\EdicaoTemplate.aspx" />
+    <Content Include="Cadastros\Termos\Editar.aspx" />
+    <Content Include="Cadastros\Termos\Listar.aspx" />
+    <Content Include="Cadastros\Teste\EnviarEmailMatricula.aspx" />
+    <Content Include="Cadastros\Trilha\EdicaoTrilha.aspx" />
+    <Content Include="Cadastros\TurmaCapacitacao\EditarTurmaCapacitacao.aspx" />
+    <Content Include="Cadastros\TurmaCapacitacao\ListarTurmaCapacitacao.aspx" />
+    <Content Include="Cadastros\Turma\EdicaoTurma.aspx" />
+    <Content Include="Cadastros\Turma\ListarTurma.aspx" />
+    <Content Include="Cadastros\Vagas\GerenciarOfertaRecusaVaga.aspx" />
+    <Content Include="Cadastros\MonitoramentoIndicadores\Editar.aspx" />
+    <Content Include="css\autocomplete-style.css" />
+    <Content Include="css\autocomplete-tinyMCE.css" />
+    <Content Include="css\bootstrap-modal-bs3patch.css" />
+    <Content Include="css\bootstrap-modal.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\colorpicker.css" />
+    <Content Include="css\combobox-autocomplete.css" />
+    <Content Include="css\docs.css" />
+    <Content Include="css\dashboard_graficos.css" />
+    <Content Include="css\fakeTable.css" />
+    <Content Include="css\font-awesome-ext.css" />
+    <Content Include="css\pygments-manni.css" />
+    <Content Include="Cadastros\Usuario\EdicaoUsuario.aspx" />
+    <Content Include="Cadastros\Usuario\InclusaoUsuario.aspx" />
+    <Content Include="Cadastros\Usuario\ListarUsuario.aspx" />
+    <Content Include="Cadastros\Matricula\GerenciamentoMatricula.aspx" />
+    <Content Include="Erro.aspx" />
+    <Content Include="js\jquery\jquery.mobile.custom.min.js" />
+    <Content Include="js\window.mobilecheck.js" />
+    <Content Include="js\jquery.numeric.js" />
+    <Content Include="Painel.aspx" />
+    <Content Include="fonts\fontawesome-ext-webfont.svg" />
+    <Content Include="Graficos\CertificadosPorCargoETema.aspx" />
+    <Content Include="Graficos\ConcluintesPorFormaAquisicao.aspx" />
+    <Content Include="Graficos\ConcluintesPorPerfilETipo.aspx" />
+    <Content Include="Graficos\CursosMaiorNumeroConcluintes.aspx" />
+    <Content Include="Graficos\InscritosPorCategoria.aspx" />
+    <Content Include="Graficos\InscritosTotalUF.aspx" />
+    <Content Include="Graficos\MatriculasPorAnoPorFormaDeAquisicao.aspx" />
+    <Content Include="Graficos\MatriculasPorMes.aspx" />
+    <Content Include="Graficos\ParticipacaoProporcionalAoNumeroDeFuncionarios.aspx" />
+    <Content Include="Graficos\ParticipantesPorUnidade.aspx" />
+    <Content Include="Graficos\PublicoAlvo.aspx" />
+    <Content Include="Graficos\RelatorioUFPerfil.aspx" />
+    <Content Include="Graficos\SatisfacaoSolucoesEducacionais.aspx" />
+    <Content Include="Graficos\SituacaoCursos.aspx" />
+    <Content Include="Graficos\SolucoesEConcluintesPorCategoria.aspx" />
+    <Content Include="Graficos\SolucoesEducacionaisPorCategoria.aspx" />
+    <Content Include="Graficos\TaxaDeAprovacaoNoAno.aspx" />
+    <Content Include="Graficos\TotalizacoesCursosOferecidos.aspx" />
+    <Content Include="Dashboard.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="HomeCadastro.aspx" />
+    <Content Include="Cadastros\AlterarSenha\AlterarSenha.aspx" />
+    <Content Include="Cadastros\AtividadeFormativa\EdicaoAtividadeFormativaParticipacao.aspx" />
+    <Content Include="Cadastros\AtividadeFormativa\ListarAtividadeFormativaParticipacao.aspx" />
+    <Content Include="Cadastros\CategoriaConteudo\EdicaoCategoriaConteudo.aspx" />
+    <Content Include="Cadastros\CategoriaConteudo\ListarCategoriaConteudo.aspx" />
+    <Content Include="Cadastros\CertificadoTemplate\EdicaoCertificadoTemplate.aspx" />
+    <Content Include="Cadastros\CertificadoTemplate\ListarCertificadoTemplate.aspx" />
+    <Content Include="Cadastros\Fornecedor\EdicaoFornecedor.aspx" />
+    <Content Include="Cadastros\Fornecedor\ListarFornecedor.aspx" />
+    <Content Include="Cadastros\SolucaoSebrae\EdicaoSolucaoSebrae.aspx" />
+    <Content Include="Cadastros\SolucaoSebrae\ListarSolucaoSebrae.aspx" />
+    <Content Include="Cadastros\Questionario\ListarQuestionario.aspx" />
+    <Content Include="Cadastros\Tag\EdicaoTag.aspx" />
+    <Content Include="Cadastros\Tag\ListarTag.aspx" />
+    <Content Include="HomeConfiguracao.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Cadastros\MatriculaTrilha\EdicaoMatriculaTrilha.aspx" />
+    <Content Include="Cadastros\MatriculaTrilha\ListarMatriculaTrilha.aspx" />
+    <Content Include="Cadastros\MetasIndividuais\EdicaoMetasIndividuais.aspx" />
+    <Content Include="Cadastros\MetasIndividuais\ListarMetasIndividuais.aspx" />
+    <Content Include="Cadastros\MetasInstitucionais\EdicaoMetasInstitucionais.aspx" />
+    <Content Include="Cadastros\MetasInstitucionais\ListarMetasInstitucionais.aspx" />
+    <Content Include="Cadastros\Oferta\EdicaoOferta.aspx" />
+    <Content Include="Cadastros\Oferta\ListarOferta.aspx" />
+    <Content Include="Cadastros\Programa\EdicaoPrograma.aspx" />
+    <Content Include="Cadastros\Programa\ListarPrograma.aspx" />
+    <Content Include="Cadastros\SenhaEmergencia\ObterSenhaEmergencia.aspx" />
+    <Content Include="Cadastros\SistemaExterno\EdicaoSistemaExterno.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Paginas.aspx" />
+    <Content Include="HomeGerenciador.aspx" />
+    <Content Include="img\cadastro-ico.png" />
+    <Content Include="img\colorpicker\blank.gif" />
+    <Content Include="img\colorpicker\colorpicker_background.png" />
+    <Content Include="img\colorpicker\colorpicker_hex.png" />
+    <Content Include="img\colorpicker\colorpicker_hsb_b.png" />
+    <Content Include="img\colorpicker\colorpicker_hsb_h.png" />
+    <Content Include="img\colorpicker\colorpicker_hsb_s.png" />
+    <Content Include="img\colorpicker\colorpicker_indic.gif" />
+    <Content Include="img\colorpicker\colorpicker_overlay.png" />
+    <Content Include="img\colorpicker\colorpicker_rgb_b.png" />
+    <Content Include="img\colorpicker\colorpicker_rgb_g.png" />
+    <Content Include="img\colorpicker\colorpicker_rgb_r.png" />
+    <Content Include="img\colorpicker\colorpicker_select.gif" />
+    <Content Include="img\colorpicker\colorpicker_submit.png" />
+    <Content Include="img\colorpicker\custom_background.png" />
+    <Content Include="img\colorpicker\custom_hex.png" />
+    <Content Include="img\colorpicker\custom_hsb_b.png" />
+    <Content Include="img\colorpicker\custom_hsb_h.png" />
+    <Content Include="img\colorpicker\custom_hsb_s.png" />
+    <Content Include="img\colorpicker\custom_indic.gif" />
+    <Content Include="img\colorpicker\custom_rgb_b.png" />
+    <Content Include="img\colorpicker\custom_rgb_g.png" />
+    <Content Include="img\colorpicker\custom_rgb_r.png" />
+    <Content Include="img\colorpicker\custom_submit.png" />
+    <Content Include="img\colorpicker\select.png" />
+    <Content Include="img\colorpicker\select2.png" />
+    <Content Include="img\colorpicker\slider.png" />
+    <Content Include="img\configuracoes-ico.png" />
+    <Content Include="img\gerenciador-ico.png" />
+    <Content Include="img\grafico.png" />
+    <Content Include="img\home-ico.png" />
+    <Content Include="img\index.html" />
+    <Content Include="img\link-ico.png" />
+    <Content Include="img\logo-uc.jpg" />
+    <Content Include="img\relatorio-ico.png" />
+    <Content Include="img\seta-ico.png" />
+    <Content Include="img\SGUS_lateral_esq.jpg" />
+    <Content Include="img\SGUS_lateral_rep.jpg" />
+    <Content Include="img\SGUS_menu.jpg" />
+    <Content Include="img\SGUS_miolo_rep.jpg" />
+    <Content Include="img\SGUS_rodape.jpg" />
+    <Content Include="img\SGUS_topo.jpg" />
+    <Content Include="img\trigger.gif" />
+    <Content Include="img\user-ico.png" />
+    <Content Include="js\affix.js" />
+    <Content Include="js\alert.js" />
+    <Content Include="js\application.js" />
+    <Content Include="js\autocomplete-functions.js" />
+    <Content Include="js\bootstrap-modal.js" />
+    <Content Include="js\bootstrap-modalmanager.js" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\button.js" />
+    <Content Include="js\carousel.js" />
+    <Content Include="js\ckeditor\adapters\jquery.js" />
+    <Content Include="js\ckeditor\CHANGES.html" />
+    <Content Include="js\ckeditor\ckeditor.asp" />
+    <Content Include="js\ckeditor\ckeditor.js" />
+    <Content Include="js\ckeditor\ckeditor_basic.js" />
+    <Content Include="js\ckeditor\ckeditor_basic_source.js" />
+    <Content Include="js\ckeditor\ckeditor_source.js" />
+    <Content Include="js\ckeditor\config.js" />
+    <Content Include="js\ckeditor\contents.css" />
+    <Content Include="js\ckeditor\images\spacer.gif" />
+    <Content Include="js\ckeditor\INSTALL.html" />
+    <Content Include="js\ckeditor\lang\af.js" />
+    <Content Include="js\ckeditor\lang\ar.js" />
+    <Content Include="js\ckeditor\lang\bg.js" />
+    <Content Include="js\ckeditor\lang\bn.js" />
+    <Content Include="js\ckeditor\lang\bs.js" />
+    <Content Include="js\ckeditor\lang\ca.js" />
+    <Content Include="js\ckeditor\lang\cs.js" />
+    <Content Include="js\ckeditor\lang\cy.js" />
+    <Content Include="js\ckeditor\lang\da.js" />
+    <Content Include="js\ckeditor\lang\de.js" />
+    <Content Include="js\ckeditor\lang\el.js" />
+    <Content Include="js\ckeditor\lang\en-au.js" />
+    <Content Include="js\ckeditor\lang\en-ca.js" />
+    <Content Include="js\ckeditor\lang\en-gb.js" />
+    <Content Include="js\ckeditor\lang\en.js" />
+    <Content Include="js\ckeditor\lang\eo.js" />
+    <Content Include="js\ckeditor\lang\es.js" />
+    <Content Include="js\ckeditor\lang\et.js" />
+    <Content Include="js\ckeditor\lang\eu.js" />
+    <Content Include="js\ckeditor\lang\fa.js" />
+    <Content Include="js\ckeditor\lang\fi.js" />
+    <Content Include="js\ckeditor\lang\fo.js" />
+    <Content Include="js\ckeditor\lang\fr-ca.js" />
+    <Content Include="js\ckeditor\lang\fr.js" />
+    <Content Include="js\ckeditor\lang\gl.js" />
+    <Content Include="js\ckeditor\lang\gu.js" />
+    <Content Include="js\ckeditor\lang\he.js" />
+    <Content Include="js\ckeditor\lang\hi.js" />
+    <Content Include="js\ckeditor\lang\hr.js" />
+    <Content Include="js\ckeditor\lang\hu.js" />
+    <Content Include="js\ckeditor\lang\id.js" />
+    <Content Include="js\ckeditor\lang\is.js" />
+    <Content Include="js\ckeditor\lang\it.js" />
+    <Content Include="js\ckeditor\lang\ja.js" />
+    <Content Include="js\ckeditor\lang\ka.js" />
+    <Content Include="js\ckeditor\lang\km.js" />
+    <Content Include="js\ckeditor\lang\ko.js" />
+    <Content Include="js\ckeditor\lang\ku.js" />
+    <Content Include="js\ckeditor\lang\lt.js" />
+    <Content Include="js\ckeditor\lang\lv.js" />
+    <Content Include="js\ckeditor\lang\mk.js" />
+    <Content Include="js\ckeditor\lang\mn.js" />
+    <Content Include="js\ckeditor\lang\ms.js" />
+    <Content Include="js\ckeditor\lang\nb.js" />
+    <Content Include="js\ckeditor\lang\nl.js" />
+    <Content Include="js\ckeditor\lang\no.js" />
+    <Content Include="js\ckeditor\lang\pl.js" />
+    <Content Include="js\ckeditor\lang\pt-br.js" />
+    <Content Include="js\ckeditor\lang\pt.js" />
+    <Content Include="js\ckeditor\lang\ro.js" />
+    <Content Include="js\ckeditor\lang\ru.js" />
+    <Content Include="js\ckeditor\lang\sk.js" />
+    <Content Include="js\ckeditor\lang\sl.js" />
+    <Content Include="js\ckeditor\lang\sr-latn.js" />
+    <Content Include="js\ckeditor\lang\sr.js" />
+    <Content Include="js\ckeditor\lang\sv.js" />
+    <Content Include="js\ckeditor\lang\th.js" />
+    <Content Include="js\ckeditor\lang\tr.js" />
+    <Content Include="js\ckeditor\lang\ug.js" />
+    <Content Include="js\ckeditor\lang\uk.js" />
+    <Content Include="js\ckeditor\lang\vi.js" />
+    <Content Include="js\ckeditor\lang\zh-cn.js" />
+    <Content Include="js\ckeditor\lang\zh.js" />
+    <Content Include="js\ckeditor\lang\_languages.js" />
+    <Content Include="js\ckeditor\lang\_translationstatus.txt" />
+    <Content Include="js\ckeditor\LICENSE.html" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\lang\cs.js" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\lang\cy.js" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\lang\da.js" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\lang\de.js" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\lang\el.js" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\lang\en.js" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\lang\eo.js" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\lang\fa.js" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\lang\fi.js" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\lang\fr.js" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\lang\gu.js" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\lang\he.js" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\lang\it.js" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\lang\ku.js" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\lang\lv.js" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\lang\mk.js" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\lang\nb.js" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\lang\nl.js" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\lang\no.js" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\lang\pt-br.js" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\lang\ro.js" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\lang\sk.js" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\lang\tr.js" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\lang\ug.js" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\lang\vi.js" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\lang\zh-cn.js" />
+    <Content Include="js\ckeditor\plugins\a11yhelp\lang\_translationstatus.txt" />
+    <Content Include="js\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="js\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="js\ckeditor\plugins\adobeair\plugin.js" />
+    <Content Include="js\ckeditor\plugins\ajax\plugin.js" />
+    <Content Include="js\ckeditor\plugins\autocomplete\plugin.js" />
+    <Content Include="js\ckeditor\plugins\autogrow\plugin.js" />
+    <Content Include="js\ckeditor\plugins\bbcode\plugin.js" />
+    <Content Include="js\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="js\ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\bg.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\cs.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\cy.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\da.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\de.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\el.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\en.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\eo.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\et.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\fa.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\fi.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\fr.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\gu.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\he.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\hr.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\it.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\ku.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\lv.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\nb.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\nl.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\no.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\pl.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\pt-br.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\sk.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\tr.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\ug.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\uk.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\vi.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\zh-cn.js" />
+    <Content Include="js\ckeditor\plugins\devtools\lang\_translationstatus.txt" />
+    <Content Include="js\ckeditor\plugins\devtools\plugin.js" />
+    <Content Include="js\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="js\ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="js\ckeditor\plugins\docprops\dialogs\docprops.js" />
+    <Content Include="js\ckeditor\plugins\docprops\plugin.js" />
+    <Content Include="js\ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="js\ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="js\ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="js\ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="js\ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="js\ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="js\ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="js\ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="js\ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="js\ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="js\ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="js\ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="js\ckeditor\plugins\iframedialog\plugin.js" />
+    <Content Include="js\ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="js\ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="js\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="js\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="js\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="js\ckeditor\plugins\link\images\anchor.gif" />
+    <Content Include="js\ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="js\ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="js\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="js\ckeditor\plugins\pastetext\dialogs\pastetext.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\dialogs\placeholder.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\bg.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\cs.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\cy.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\da.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\de.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\el.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\en.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\eo.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\et.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\fa.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\fi.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\fr.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\he.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\hr.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\it.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\ku.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\lv.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\nb.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\nl.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\no.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\pl.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\pt-br.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\sk.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\tr.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\ug.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\uk.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\vi.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\zh-cn.js" />
+    <Content Include="js\ckeditor\plugins\placeholder\lang\_translationstatus.txt" />
+    <Content Include="js\ckeditor\plugins\placeholder\placeholder.gif" />
+    <Content Include="js\ckeditor\plugins\placeholder\plugin.js" />
+    <Content Include="js\ckeditor\plugins\preview\preview.html" />
+    <Content Include="js\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="js\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="js\ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="js\ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="js\ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="js\ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="js\ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="js\ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="js\ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="js\ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="js\ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="js\ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="js\ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="js\ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="js\ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="js\ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="js\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="js\ckeditor\plugins\specialchar\lang\cs.js" />
+    <Content Include="js\ckeditor\plugins\specialchar\lang\cy.js" />
+    <Content Include="js\ckeditor\plugins\specialchar\lang\de.js" />
+    <Content Include="js\ckeditor\plugins\specialchar\lang\el.js" />
+    <Content Include="js\ckeditor\plugins\specialchar\lang\en.js" />
+    <Content Include="js\ckeditor\plugins\specialchar\lang\eo.js" />
+    <Content Include="js\ckeditor\plugins\specialchar\lang\et.js" />
+    <Content Include="js\ckeditor\plugins\specialchar\lang\fa.js" />
+    <Content Include="js\ckeditor\plugins\specialchar\lang\fi.js" />
+    <Content Include="js\ckeditor\plugins\specialchar\lang\fr.js" />
+    <Content Include="js\ckeditor\plugins\specialchar\lang\he.js" />
+    <Content Include="js\ckeditor\plugins\specialchar\lang\hr.js" />
+    <Content Include="js\ckeditor\plugins\specialchar\lang\it.js" />
+    <Content Include="js\ckeditor\plugins\specialchar\lang\ku.js" />
+    <Content Include="js\ckeditor\plugins\specialchar\lang\lv.js" />
+    <Content Include="js\ckeditor\plugins\specialchar\lang\nb.js" />
+    <Content Include="js\ckeditor\plugins\specialchar\lang\nl.js" />
+    <Content Include="js\ckeditor\plugins\specialchar\lang\no.js" />
+    <Content Include="js\ckeditor\plugins\specialchar\lang\pt-br.js" />
+    <Content Include="js\ckeditor\plugins\specialchar\lang\sk.js" />
+    <Content Include="js\ckeditor\plugins\specialchar\lang\tr.js" />
+    <Content Include="js\ckeditor\plugins\specialchar\lang\ug.js" />
+    <Content Include="js\ckeditor\plugins\specialchar\lang\zh-cn.js" />
+    <Content Include="js\ckeditor\plugins\specialchar\lang\_translationstatus.txt" />
+    <Content Include="js\ckeditor\plugins\stylesheetparser\plugin.js" />
+    <Content Include="js\ckeditor\plugins\styles\styles\default.js" />
+    <Content Include="js\ckeditor\plugins\tableresize\plugin.js" />
+    <Content Include="js\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="js\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="js\ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="js\ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="js\ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="js\ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="js\ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="js\ckeditor\plugins\uicolor\dialogs\uicolor.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\bg.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\cs.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\cy.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\da.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\de.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\el.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\en.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\eo.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\et.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\fa.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\fi.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\fr.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\he.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\hr.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\it.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\ku.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\lv.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\mk.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\nb.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\nl.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\no.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\pl.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\pt-br.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\sk.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\tr.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\ug.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\uk.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\vi.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\zh-cn.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\lang\_translationstatus.txt" />
+    <Content Include="js\ckeditor\plugins\uicolor\plugin.js" />
+    <Content Include="js\ckeditor\plugins\uicolor\uicolor.gif" />
+    <Content Include="js\ckeditor\plugins\uicolor\yui\assets\hue_bg.png" />
+    <Content Include="js\ckeditor\plugins\uicolor\yui\assets\hue_thumb.png" />
+    <Content Include="js\ckeditor\plugins\uicolor\yui\assets\picker_mask.png" />
+    <Content Include="js\ckeditor\plugins\uicolor\yui\assets\picker_thumb.png" />
+    <Content Include="js\ckeditor\plugins\uicolor\yui\assets\yui.css" />
+    <Content Include="js\ckeditor\plugins\uicolor\yui\yui.js" />
+    <Content Include="js\ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="js\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="js\ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="js\ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="js\ckeditor\plugins\xml\plugin.js" />
+    <Content Include="js\ckeditor\skins\kama\dialog.css" />
+    <Content Include="js\ckeditor\skins\kama\editor.css" />
+    <Content Include="js\ckeditor\skins\kama\icons.png" />
+    <Content Include="js\ckeditor\skins\kama\icons_rtl.png" />
+    <Content Include="js\ckeditor\skins\kama\images\dialog_sides.gif" />
+    <Content Include="js\ckeditor\skins\kama\images\dialog_sides.png" />
+    <Content Include="js\ckeditor\skins\kama\images\dialog_sides_rtl.png" />
+    <Content Include="js\ckeditor\skins\kama\images\mini.gif" />
+    <Content Include="js\ckeditor\skins\kama\images\noimage.png" />
+    <Content Include="js\ckeditor\skins\kama\images\sprites.png" />
+    <Content Include="js\ckeditor\skins\kama\images\sprites_ie6.png" />
+    <Content Include="js\ckeditor\skins\kama\images\toolbar_start.gif" />
+    <Content Include="js\ckeditor\skins\kama\skin.js" />
+    <Content Include="js\ckeditor\skins\kama\templates.css" />
+    <Content Include="js\ckeditor\skins\office2003\dialog.css" />
+    <Content Include="js\ckeditor\skins\office2003\editor.css" />
+    <Content Include="js\ckeditor\skins\office2003\icons.png" />
+    <Content Include="js\ckeditor\skins\office2003\icons_rtl.png" />
+    <Content Include="js\ckeditor\skins\office2003\images\dialog_sides.gif" />
+    <Content Include="js\ckeditor\skins\office2003\images\dialog_sides.png" />
+    <Content Include="js\ckeditor\skins\office2003\images\dialog_sides_rtl.png" />
+    <Content Include="js\ckeditor\skins\office2003\images\mini.gif" />
+    <Content Include="js\ckeditor\skins\office2003\images\noimage.png" />
+    <Content Include="js\ckeditor\skins\office2003\images\sprites.png" />
+    <Content Include="js\ckeditor\skins\office2003\images\sprites_ie6.png" />
+    <Content Include="js\ckeditor\skins\office2003\skin.js" />
+    <Content Include="js\ckeditor\skins\office2003\templates.css" />
+    <Content Include="js\ckeditor\skins\v2\dialog.css" />
+    <Content Include="js\ckeditor\skins\v2\editor.css" />
+    <Content Include="js\ckeditor\skins\v2\icons.png" />
+    <Content Include="js\ckeditor\skins\v2\icons_rtl.png" />
+    <Content Include="js\ckeditor\skins\v2\images\dialog_sides.gif" />
+    <Content Include="js\ckeditor\skins\v2\images\dialog_sides.png" />
+    <Content Include="js\ckeditor\skins\v2\images\dialog_sides_rtl.png" />
+    <Content Include="js\ckeditor\skins\v2\images\mini.gif" />
+    <Content Include="js\ckeditor\skins\v2\images\noimage.png" />
+    <Content Include="js\ckeditor\skins\v2\images\sprites.png" />
+    <Content Include="js\ckeditor\skins\v2\images\sprites_ie6.png" />
+    <Content Include="js\ckeditor\skins\v2\images\toolbar_start.gif" />
+    <Content Include="js\ckeditor\skins\v2\skin.js" />
+    <Content Include="js\ckeditor\skins\v2\templates.css" />
+    <Content Include="js\ckeditor\themes\default\theme.js" />
+    <Content Include="js\collapse.js" />
+    <Content Include="js\colorpicker.js" />
+    <Content Include="js\combobox-autocomplete.js" />
+    <Content Include="js\customizer.js" />
+    <Content Include="js\dashboard\RGraph.common.core.js" />
+    <Content Include="js\dashboard\RGraph.meter.js" />
+    <Content Include="js\dropdown.js" />
+    <Content Include="js\dynamic-form.js" />
+    <Content Include="js\eye.js" />
+    <Content Include="js\filesaver.js" />
+    <Content Include="js\funcoesglobais.js" />
+    <Content Include="js\helpdialogs.js" />
+    <Content Include="js\holder.js" />
+    <Content Include="js\home\Relatorios.js" />
+    <Content Include="js\html5shiv.js" />
+    <Content Include="js\image-upload-control.js" />
+    <Content Include="js\jquery\jquery-1.10.2.min.js" />
+    <Content Include="js\jquery\jquery-1.4.1.js" />
+    <Content Include="js\jquery\jquery-2.0.3.js" />
+    <Content Include="js\jquery-are-you-sure\jquery.are-you-sure.js" />
+    <Content Include="js\jquery\jquery.tablednd.js" />
+    <Content Include="js\jqueryUI\etapa.js" />
+    <Content Include="js\jqueryUI\jquery-ui.min.css" />
+    <Content Include="js\jqueryUI\jquery-ui.min.js" />
+    <Content Include="js\jquery\jquery.autocomplete.js" />
+    <Content Include="js\jquery\jquery.cookie.js" />
+    <Content Include="js\jquery\jquery.js" />
+    <Content Include="js\jquery\jquery.maskedinput.min.js" />
+    <Content Include="js\jquery\jquery.mockjax.js" />
+    <Content Include="js\jquery\jquery.redirect.min.js" />
+    <Content Include="js\jqueryUI\processo.js" />
+    <Content Include="js\jszip.js" />
+    <Content Include="js\less.js" />
+    <Content Include="js\modal.js" />
+    <Content Include="js\noty\jquery.noty.js" />
+    <Content Include="js\noty\layouts\bottom.js" />
+    <Content Include="js\noty\layouts\bottomCenter.js" />
+    <Content Include="js\noty\layouts\bottomLeft.js" />
+    <Content Include="js\noty\layouts\bottomRight.js" />
+    <Content Include="js\noty\layouts\center.js" />
+    <Content Include="js\noty\layouts\centerLeft.js" />
+    <Content Include="js\noty\layouts\centerRight.js" />
+    <Content Include="js\noty\layouts\inline.js" />
+    <Content Include="js\noty\layouts\top.js" />
+    <Content Include="js\noty\layouts\topCenter.js" />
+    <Content Include="js\noty\layouts\topLeft.js" />
+    <Content Include="js\noty\layouts\topRight.js" />
+    <Content Include="js\noty\packaged\jquery.noty.packaged.js" />
+    <Content Include="js\noty\packaged\jquery.noty.packaged.min.js" />
+    <Content Include="js\noty\promise.js" />
+    <Content Include="js\noty\themes\default.js" />
+    <Content Include="js\popover.js" />
+    <Content Include="js\raw-files.js" />
+    <Content Include="js\respond.min.js" />
+    <Content Include="js\scrollspy.js" />
+    <Content Include="js\spin.min.js" />
+    <Content Include="js\tab.js" />
+    <Content Include="js\tinymce\license.txt" />
+    <Content Include="js\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\bbcode\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\colorpicker\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\contextmenu\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-cool.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-cry.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-embarassed.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-foot-in-mouth.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-frown.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-innocent.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-kiss.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-laughing.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-money-mouth.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-sealed.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-smile.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-surprised.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-tongue-out.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-undecided.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-wink.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-yell.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\example\dialog.html" />
+    <Content Include="js\tinymce\plugins\example\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\example_dependency\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\fullpage\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\hr\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\importcss\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\layer\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\legacyoutput\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\media\moxieplayer.swf" />
+    <Content Include="js\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\mention\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\noneditable\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\paste\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\print\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\spellchecker\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\tabfocus\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\template\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\textcolor\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\textpattern\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="js\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="js\tinymce\skins\lightgray\content.inline.min.css" />
+    <Content Include="js\tinymce\skins\lightgray\content.min.css" />
+    <Content Include="js\tinymce\skins\lightgray\fonts\tinymce-small.svg" />
+    <Content Include="js\tinymce\skins\lightgray\fonts\tinymce.svg" />
+    <Content Include="js\tinymce\skins\lightgray\img\anchor.gif" />
+    <Content Include="js\tinymce\skins\lightgray\img\loader.gif" />
+    <Content Include="js\tinymce\skins\lightgray\img\object.gif" />
+    <Content Include="js\tinymce\skins\lightgray\img\trans.gif" />
+    <Content Include="js\tinymce\skins\lightgray\skin.ie7.min.css" />
+    <Content Include="js\tinymce\skins\lightgray\skin.min.css" />
+    <Content Include="js\tinymce\themes\modern\theme.min.js" />
+    <Content Include="js\tinymce\tinymce.min.js" />
+    <Content Include="js\tooltip.js" />
+    <Content Include="js\transition.js" />
+    <Content Include="js\uglify.js" />
+    <Content Include="NovaSenha.aspx" />
+    <Content Include="ProcessarCargaInicial.aspx" />
+    <Content Include="RecuperarSenha.aspx" />
+    <Content Include="Cadastros\SolucaoEducacional\EdicaoSolucaoEducacional.aspx" />
+    <Content Include="Cadastros\SolucaoEducacional\ListarSolucaoEducacional.aspx" />
+    <Content Include="Cadastros\TopicoTematico\EdicaoTopicoTematico.aspx" />
+    <Content Include="Cadastros\TopicoTematico\ListarTopicoTematico.aspx" />
+    <Content Include="Cadastros\Trilha\ListarTrilha.aspx" />
+    <Content Include="Cadastros\FormaAquisicao\EdicaoFormaAquisicao.aspx" />
+    <Content Include="Cadastros\FormaAquisicao\ListarFormaAquisicao.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="HomeRelatorio.aspx" />
+    <Content Include="css\style-sgus20.css" />
+    <Content Include="Relatorios\Acessos\RelatorioAcessos.aspx" />
+    <Content Include="Relatorios\Capacitados\Capacitados.aspx" />
+    <Content Include="Relatorios\MonitoramentoTrilhas\MonitorTrilhas.aspx" />
+    <Content Include="Relatorios\Notificacoes\Detalhes.aspx" />
+    <Content Include="Relatorios\Solicitacoes\Solicitacoes.aspx" />
+    <Content Include="Relatorios\Concluintes\Concluintes.aspx" />
+    <Content Include="Relatorios\DadosPessoais\DadosPessoais.aspx" />
+    <Content Include="Relatorios\DadosProfessor\DadosProfessor.aspx" />
+    <Content Include="Relatorios\Questionario\RelatorioTutor.aspx" />
+    <Content Include="Relatorios\UnificadoSolucaoEducacional\UnificadoSolucaoEducacional.aspx" />
+    <Content Include="Relatorios\DesempenhoAcademico\DesempenhoAcademico.aspx" />
+    <Content Include="Relatorios\FornecedorAcesso\FornecedorAcesso.aspx" />
+    <Content Include="Relatorios\HistoricoDemandas\Detalhes.aspx" />
+    <Content Include="Relatorios\HistoricoDemandas\HistoricoDemandas.aspx" />
+    <Content Include="Relatorios\HorasCapacitacao\HorasCapacitacao.aspx" />
+    <Content Include="Relatorios\InscricoesPorStatusENivel\InscricoesPorStatusENivel.aspx" />
+    <Content Include="Relatorios\MatriculaSolucaoEducacional\MatriculaSolucaoEducacional.aspx" />
+    <Content Include="Relatorios\MetaDesenvolvimentoSE\MetaDesenvolvimentoSE.aspx" />
+    <Content Include="Relatorios\ParticipacaoTrilha.aspx" />
+    <Content Include="Relatorios\Programas\Programas.aspx" />
+    <Content Include="Relatorios\PublicoAlvo\SolucaoEducacionalPorPublicoAlvo.aspx" />
+    <Content Include="Relatorios\QuestionarioAvaliacao\QuestionarioAvaliacao.aspx" />
+    <Content Include="Relatorios\Questionario\RelacaoRespondentes.aspx" />
+    <Content Include="Relatorios\Questionario\RelatorioQuestionario.aspx" />
+    <Content Include="Relatorios\RelatorioIndividual.aspx" />
+    <Content Include="Relatorios\rodape.gif" />
+    <Content Include="Relatorios\SEOfertaMatricula\SEOfertaMatricula.aspx" />
+    <Content Include="Relatorios\SolucaoEducacionalFormaAquisicao\SolucaoEducacionalFormaAquisicao.aspx" />
+    <Content Include="Relatorios\SolucaoEducacionalOferta\SolucaoEducacionalOferta.aspx" />
+    <Content Include="Relatorios\SolucaoEducacionalPorCategoria\SolucaoEducacionalPorCategoria.aspx" />
+    <Content Include="Relatorios\SolucaoEducacionalPrograma\SolucaoEducacionalPrograma.aspx" />
+    <Content Include="Relatorios\StatusUsuariosTrilhas\StatusUsuariosTrilhas.aspx" />
+    <Content Include="Relatorios\UsuarioCadastrado\PorFiltro.aspx" />
+    <Content Include="Relatorios\UsuarioCadastrado\UsuariosCadastrados.aspx" />
+    <Content Include="Relatorios\UsuarioMatriculadoPorTurma\UsuarioMatriculadoPorTurma.aspx" />
+    <Content Include="Relatorios\UsuarioMatriculadoPrograma\RelatorioUsuarioMatriculadoPrograma.aspx" />
+    <Content Include="Relatorios\UsuarioMatriculadoSEFormaAquisicao\RelatorioUsuarioMatriculadoSEFormaAquisicao.aspx" />
+    <Content Include="Relatorios\UsuarioPagante\UsuarioPagante.aspx" />
+    <Content Include="Graficos\ucDashboardParticipacaoProporcionalAoNumeroDeFuncionarios.ascx" />
+    <Content Include="Teste.aspx" />
+    <Content Include="UserControls\ucHelperTooltip.ascx" />
+    <Content Include="UserControls\ucPermissoesRefatorado.ascx" />
+    <Content Include="UserControls\ucTutorias.ascx" />
+    <Content Include="UserControls\ucVisualizaCertificadoTemplate.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\GenericHandlerRoute.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Bundles\BundleConfig.cs" />
+    <Compile Include="Cadastros\AreasTematicas\EditarAreaTematica.aspx.cs">
+      <DependentUpon>EditarAreaTematica.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\AreasTematicas\EditarAreaTematica.aspx.designer.cs">
+      <DependentUpon>EditarAreaTematica.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\AreasTematicas\ListarAreasTematicas.aspx.cs">
+      <DependentUpon>ListarAreasTematicas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\AreasTematicas\ListarAreasTematicas.aspx.designer.cs">
+      <DependentUpon>ListarAreasTematicas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\CertificadoTemplate\VisualizaCertificadoTemplate.aspx.cs">
+      <DependentUpon>VisualizaCertificadoTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\CertificadoTemplate\VisualizaCertificadoTemplate.aspx.designer.cs">
+      <DependentUpon>VisualizaCertificadoTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Faq\EdicaoFaq.aspx.cs">
+      <DependentUpon>EdicaoFaq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Faq\EdicaoFaq.aspx.designer.cs">
+      <DependentUpon>EdicaoFaq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Faq\ListarFaq.aspx.cs">
+      <DependentUpon>ListarFaq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Faq\ListarFaq.aspx.designer.cs">
+      <DependentUpon>ListarFaq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\HierarquiaNucleo\GerenciarHierarquiaNucleo.aspx.cs">
+      <DependentUpon>GerenciarHierarquiaNucleo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\HierarquiaNucleo\GerenciarHierarquiaNucleo.aspx.designer.cs">
+      <DependentUpon>GerenciarHierarquiaNucleo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\HierarquiaNucleo\ListarHierarquiaNucleo.aspx.cs">
+      <DependentUpon>ListarHierarquiaNucleo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\HierarquiaNucleo\ListarHierarquiaNucleo.aspx.designer.cs">
+      <DependentUpon>ListarHierarquiaNucleo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Hierarquia\GerenciarHierarquia.aspx.cs">
+      <DependentUpon>GerenciarHierarquia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Hierarquia\GerenciarHierarquia.aspx.designer.cs">
+      <DependentUpon>GerenciarHierarquia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Hierarquia\ListarHierarquia.aspx.cs">
+      <DependentUpon>ListarHierarquia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Hierarquia\ListarHierarquia.aspx.designer.cs">
+      <DependentUpon>ListarHierarquia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Informe\EnvioInforme.aspx.cs">
+      <DependentUpon>EnvioInforme.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Informe\EnvioInforme.aspx.designer.cs">
+      <DependentUpon>EnvioInforme.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Informe\EdicaoInforme.aspx.cs">
+      <DependentUpon>EdicaoInforme.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Informe\EdicaoInforme.aspx.designer.cs">
+      <DependentUpon>EdicaoInforme.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Informe\ListarInformes.aspx.cs">
+      <DependentUpon>ListarInformes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Informe\ListarInformes.aspx.designer.cs">
+      <DependentUpon>ListarInformes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Informe\VisualizarInforme.aspx.cs">
+      <DependentUpon>VisualizarInforme.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Informe\VisualizarInforme.aspx.designer.cs">
+      <DependentUpon>VisualizarInforme.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Matricula\AvaliarTurma.aspx.cs">
+      <DependentUpon>AvaliarTurma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Matricula\AvaliarTurma.aspx.designer.cs">
+      <DependentUpon>AvaliarTurma.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Matricula\MatriculasAluno.aspx.cs">
+      <DependentUpon>MatriculasAluno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Matricula\MatriculasAluno.aspx.designer.cs">
+      <DependentUpon>MatriculasAluno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\MensagemGuia\EdicaoMensagemGuia.aspx.cs">
+      <DependentUpon>EdicaoMensagemGuia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\MensagemGuia\EdicaoMensagemGuia.aspx.designer.cs">
+      <DependentUpon>EdicaoMensagemGuia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\MensagemGuia\ListarMensagemGuia.aspx.cs">
+      <DependentUpon>ListarMensagemGuia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\MensagemGuia\ListarMensagemGuia.aspx.designer.cs">
+      <DependentUpon>ListarMensagemGuia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\OrcamentoReembolso\EditarOrcamentoReembolso.aspx.cs">
+      <DependentUpon>EditarOrcamentoReembolso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\OrcamentoReembolso\EditarOrcamentoReembolso.aspx.designer.cs">
+      <DependentUpon>EditarOrcamentoReembolso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\OrcamentoReembolso\ListarOrcamentoReembolso.aspx.cs">
+      <DependentUpon>ListarOrcamentoReembolso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\OrcamentoReembolso\ListarOrcamentoReembolso.aspx.designer.cs">
+      <DependentUpon>ListarOrcamentoReembolso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\PontoSebrae\EdicaoPontoSebrae.aspx.cs">
+      <DependentUpon>EdicaoPontoSebrae.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\PontoSebrae\EdicaoPontoSebrae.aspx.designer.cs">
+      <DependentUpon>EdicaoPontoSebrae.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\PontoSebrae\ListarPontoSebrae.aspx.cs">
+      <DependentUpon>ListarPontoSebrae.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\PontoSebrae\ListarPontoSebrae.aspx.designer.cs">
+      <DependentUpon>ListarPontoSebrae.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Missao\EdicaoMissao.aspx.cs">
+      <DependentUpon>EdicaoMissao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Missao\EdicaoMissao.aspx.designer.cs">
+      <DependentUpon>EdicaoMissao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Missao\ListarMissao.aspx.cs">
+      <DependentUpon>ListarMissao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Missao\ListarMissao.aspx.designer.cs">
+      <DependentUpon>ListarMissao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Monitoramento\MonitoramentoTrilha2016.aspx.cs">
+      <DependentUpon>MonitoramentoTrilha2016.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Monitoramento\MonitoramentoTrilha2016.aspx.designer.cs">
+      <DependentUpon>MonitoramentoTrilha2016.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\SeAutoIndicativa\EdicaoSeAutoindicativa.aspx.cs">
+      <DependentUpon>EdicaoSeAutoindicativa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\SeAutoIndicativa\EdicaoSeAutoindicativa.aspx.designer.cs">
+      <DependentUpon>EdicaoSeAutoindicativa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\SeAutoIndicativa\ListarSeAutoindicativa.aspx.cs">
+      <DependentUpon>ListarSeAutoindicativa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\SeAutoIndicativa\ListarSeAutoindicativa.aspx.designer.cs">
+      <DependentUpon>ListarSeAutoindicativa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Sincronizacao\SincronizacaoGeral.aspx.cs">
+      <DependentUpon>SincronizacaoGeral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Sincronizacao\SincronizacaoGeral.aspx.designer.cs">
+      <DependentUpon>SincronizacaoGeral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\SincronizarPortal\Sincroniar.aspx.cs">
+      <DependentUpon>Sincroniar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\SincronizarPortal\Sincroniar.aspx.designer.cs">
+      <DependentUpon>Sincroniar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\TrilhaNivel\EdicaoTrilhaNivel.aspx.cs">
+      <DependentUpon>EdicaoTrilhaNivel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\TrilhaNivel\EdicaoTrilhaNivel.aspx.designer.cs">
+      <DependentUpon>EdicaoTrilhaNivel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\TrilhaNivel\ListarTrilhaNivel.aspx.cs">
+      <DependentUpon>ListarTrilhaNivel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\TrilhaNivel\ListarTrilhaNivel.aspx.designer.cs">
+      <DependentUpon>ListarTrilhaNivel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\TrilhaTutorial\EdicaoTrilhaTutorial.aspx.cs">
+      <DependentUpon>EdicaoTrilhaTutorial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\TrilhaTutorial\EdicaoTrilhaTutorial.aspx.designer.cs">
+      <DependentUpon>EdicaoTrilhaTutorial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\TrilhaTutorial\ListarTrilhaTutorial.aspx.cs">
+      <DependentUpon>ListarTrilhaTutorial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\TrilhaTutorial\ListarTrilhaTutorial.aspx.designer.cs">
+      <DependentUpon>ListarTrilhaTutorial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Turma\HistoricoTurma.aspx.cs">
+      <DependentUpon>HistoricoTurma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Turma\HistoricoTurma.aspx.designer.cs">
+      <DependentUpon>HistoricoTurma.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\HierarquiaAuxiliar\EdicaoHierarquiaAuxiliar.aspx.cs">
+      <DependentUpon>EdicaoHierarquiaAuxiliar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\HierarquiaAuxiliar\EdicaoHierarquiaAuxiliar.aspx.designer.cs">
+      <DependentUpon>EdicaoHierarquiaAuxiliar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\HierarquiaAuxiliar\ListarHierarquiaAuxiliar.aspx.cs">
+      <DependentUpon>ListarHierarquiaAuxiliar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\HierarquiaAuxiliar\ListarHierarquiaAuxiliar.aspx.designer.cs">
+      <DependentUpon>ListarHierarquiaAuxiliar.aspx</DependentUpon>
+    </Compile>
+    <None Include="cstrings.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Compile Include="Dashboard_Redmine.aspx.cs">
+      <DependentUpon>Dashboard_Redmine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard_Redmine.aspx.designer.cs">
+      <DependentUpon>Dashboard_Redmine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoard_Demandas.aspx.cs">
+      <DependentUpon>DashBoard_Demandas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="DashBoard_Demandas.aspx.designer.cs">
+      <DependentUpon>DashBoard_Demandas.aspx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="ExibirThumbnail.ashx.cs">
+      <DependentUpon>ExibirThumbnail.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Graficos\MatriculasPorStatus.aspx.cs">
+      <DependentUpon>MatriculasPorStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Graficos\MatriculasPorStatus.aspx.designer.cs">
+      <DependentUpon>MatriculasPorStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Graficos\TurmasPorStatus.aspx.cs">
+      <DependentUpon>TurmasPorStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Graficos\TurmasPorStatus.aspx.designer.cs">
+      <DependentUpon>TurmasPorStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\GridViewHelper.cs" />
+    <Compile Include="Helpers\GridViewGroup.cs" />
+    <Compile Include="Helpers\GridViewGroupList.cs" />
+    <Compile Include="Helpers\GridViewSummary.cs" />
+    <Compile Include="Helpers\GridViewSummaryList.cs" />
+    <Compile Include="Relatorios\AvaliacoesTrilhas\AvaliacoesTrilhas.aspx.cs">
+      <DependentUpon>AvaliacoesTrilhas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\AvaliacoesTrilhas\AvaliacoesTrilhas.aspx.designer.cs">
+      <DependentUpon>AvaliacoesTrilhas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\LogAcessosPortal\LogAcessosPortal.aspx.cs">
+      <DependentUpon>LogAcessosPortal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\LogAcessosPortal\LogAcessosPortal.aspx.designer.cs">
+      <DependentUpon>LogAcessosPortal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\PaginasAcessos\RelatorioPaginasAcessos.aspx.cs">
+      <DependentUpon>RelatorioPaginasAcessos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\PaginasAcessos\RelatorioPaginasAcessos.aspx.designer.cs">
+      <DependentUpon>RelatorioPaginasAcessos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\AtividadeExtraCurricular\AtividadeExtraCurricular.aspx.cs">
+      <DependentUpon>AtividadeExtraCurricular.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\AtividadeExtraCurricular\AtividadeExtraCurricular.aspx.designer.cs">
+      <DependentUpon>AtividadeExtraCurricular.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\CertificadoConhecimento\Boletim.aspx.cs">
+      <DependentUpon>Boletim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\CertificadoConhecimento\Boletim.aspx.designer.cs">
+      <DependentUpon>Boletim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\CertificadoConhecimento\CertificacaoConhecimento.aspx.cs">
+      <DependentUpon>CertificacaoConhecimento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\CertificadoConhecimento\CertificacaoConhecimento.aspx.designer.cs">
+      <DependentUpon>CertificacaoConhecimento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\Demandas\SolicitacaoDemandasForm.aspx.cs">
+      <DependentUpon>SolicitacaoDemandasForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Demandas\SolicitacaoDemandasForm.aspx.designer.cs">
+      <DependentUpon>SolicitacaoDemandasForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\Demandas\SolicitacaoDemandas.aspx.cs">
+      <DependentUpon>SolicitacaoDemandas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Demandas\SolicitacaoDemandas.aspx.designer.cs">
+      <DependentUpon>SolicitacaoDemandas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\Emails\Detalhes.aspx.cs">
+      <DependentUpon>Detalhes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Emails\Detalhes.aspx.designer.cs">
+      <DependentUpon>Detalhes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\HistoricoParticipacaoTrilha\HistoricoParticipacao.aspx.cs">
+      <DependentUpon>HistoricoParticipacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\HistoricoParticipacaoTrilha\HistoricoParticipacao.aspx.designer.cs">
+      <DependentUpon>HistoricoParticipacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\HistoricoParticipacaoTrilha\HistoricoParticipacaoForm.aspx.cs">
+      <DependentUpon>HistoricoParticipacaoForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\HistoricoParticipacaoTrilha\HistoricoParticipacaoForm.aspx.designer.cs">
+      <DependentUpon>HistoricoParticipacaoForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\HistoricoDemandas\HistoricoDemandasRelatorio.aspx.cs">
+      <DependentUpon>HistoricoDemandasRelatorio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\HistoricoDemandas\HistoricoDemandasRelatorio.aspx.designer.cs">
+      <DependentUpon>HistoricoDemandasRelatorio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\MonitoramentoTurma\MonitoramentoTurma.aspx.cs">
+      <DependentUpon>MonitoramentoTurma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\MonitoramentoTurma\MonitoramentoTurma.aspx.designer.cs">
+      <DependentUpon>MonitoramentoTurma.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RelatoriosPaginaInicial\HomeRelatoriosPaginaInicial.aspx.cs">
+      <DependentUpon>HomeRelatoriosPaginaInicial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RelatoriosPaginaInicial\HomeRelatoriosPaginaInicial.aspx.designer.cs">
+      <DependentUpon>HomeRelatoriosPaginaInicial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\LogSincronia\Lista.aspx.cs">
+      <DependentUpon>Lista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\LogSincronia\Lista.aspx.designer.cs">
+      <DependentUpon>Lista.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\MonitoramentoIndicadores\Listar.aspx.cs">
+      <DependentUpon>Listar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\MonitoramentoIndicadores\Listar.aspx.designer.cs">
+      <DependentUpon>Listar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Protocolo\EdicaoProtocolo.aspx.cs">
+      <DependentUpon>EdicaoProtocolo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Protocolo\EdicaoProtocolo.aspx.designer.cs">
+      <DependentUpon>EdicaoProtocolo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Protocolo\ListarProtocolo.aspx.cs">
+      <DependentUpon>ListarProtocolo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Protocolo\ListarProtocolo.aspx.designer.cs">
+      <DependentUpon>ListarProtocolo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Erro.aspx.cs">
+      <DependentUpon>Erro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Erro.aspx.designer.cs">
+      <DependentUpon>Erro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Painel.aspx.cs">
+      <DependentUpon>Painel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Painel.aspx.designer.cs">
+      <DependentUpon>Painel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardMaster.Master.cs">
+      <DependentUpon>DashboardMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DashboardMaster.Master.designer.cs">
+      <DependentUpon>DashboardMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Academico20.Master.cs">
+      <DependentUpon>Academico20.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Academico20.Master.designer.cs">
+      <DependentUpon>Academico20.Master</DependentUpon>
+    </Compile>
+    <Compile Include="acessonegado.aspx.cs">
+      <DependentUpon>acessonegado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="acessonegado.aspx.designer.cs">
+      <DependentUpon>acessonegado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracao.aspx.cs">
+      <DependentUpon>Administracao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracao.aspx.designer.cs">
+      <DependentUpon>Administracao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Resource.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Capacitacao\EdicaoCapacitacao.aspx.cs">
+      <DependentUpon>EdicaoCapacitacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Capacitacao\EdicaoCapacitacao.aspx.designer.cs">
+      <DependentUpon>EdicaoCapacitacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Capacitacao\ListarCapacitacao.aspx.cs">
+      <DependentUpon>ListarCapacitacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Capacitacao\ListarCapacitacao.aspx.designer.cs">
+      <DependentUpon>ListarCapacitacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Certificado\ValidarCertificado.aspx.cs">
+      <DependentUpon>ValidarCertificado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Certificado\ValidarCertificado.aspx.designer.cs">
+      <DependentUpon>ValidarCertificado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\ConfiguracaoPagamento\EdicaoConfiguracaoPagamento.aspx.cs">
+      <DependentUpon>EdicaoConfiguracaoPagamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\ConfiguracaoPagamento\EdicaoConfiguracaoPagamento.aspx.designer.cs">
+      <DependentUpon>EdicaoConfiguracaoPagamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\ConfiguracaoPagamento\ListarConfiguracaoPagamento.aspx.cs">
+      <DependentUpon>ListarConfiguracaoPagamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\ConfiguracaoPagamento\ListarConfiguracaoPagamento.aspx.designer.cs">
+      <DependentUpon>ListarConfiguracaoPagamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Configuracoes\EdicaoConfiguracoes.aspx.cs">
+      <DependentUpon>EdicaoConfiguracoes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Configuracoes\EdicaoConfiguracoes.aspx.designer.cs">
+      <DependentUpon>EdicaoConfiguracoes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\EmailEnvio\EdicaoEmailEnvio.aspx.cs">
+      <DependentUpon>EdicaoEmailEnvio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\EmailEnvio\EdicaoEmailEnvio.aspx.designer.cs">
+      <DependentUpon>EdicaoEmailEnvio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\EmailEnvio\ListarEmailEnvio.aspx.cs">
+      <DependentUpon>ListarEmailEnvio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\EmailEnvio\ListarEmailEnvio.aspx.designer.cs">
+      <DependentUpon>ListarEmailEnvio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Etapa\EditarEtapa.aspx.cs">
+      <DependentUpon>EditarEtapa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Etapa\EditarEtapa.aspx.designer.cs">
+      <DependentUpon>EditarEtapa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Etapa\ListarEtapa.aspx.cs">
+      <DependentUpon>ListarEtapa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Etapa\ListarEtapa.aspx.designer.cs">
+      <DependentUpon>ListarEtapa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Ferramentas\Agilizador.aspx.cs">
+      <DependentUpon>Agilizador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Ferramentas\Agilizador.aspx.designer.cs">
+      <DependentUpon>Agilizador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\ItemTrilhaParticipacao\EdicaoItemTrilhaParticipacao.aspx.cs">
+      <DependentUpon>EdicaoItemTrilhaParticipacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\ItemTrilhaParticipacao\EdicaoItemTrilhaParticipacao.aspx.designer.cs">
+      <DependentUpon>EdicaoItemTrilhaParticipacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\ItemTrilhaParticipacao\ListarItemTrilhaParticipacao.aspx.cs">
+      <DependentUpon>ListarItemTrilhaParticipacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\ItemTrilhaParticipacao\ListarItemTrilhaParticipacao.aspx.designer.cs">
+      <DependentUpon>ListarItemTrilhaParticipacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\MatriculaCapacitacao\GerenciarMatriculaCapacitacao.aspx.cs">
+      <DependentUpon>GerenciarMatriculaCapacitacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\MatriculaCapacitacao\GerenciarMatriculaCapacitacao.aspx.designer.cs">
+      <DependentUpon>GerenciarMatriculaCapacitacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\MatriculaObrigatoria\EfetuarMatriculaObrigatoria.aspx.cs">
+      <DependentUpon>EfetuarMatriculaObrigatoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\MatriculaObrigatoria\EfetuarMatriculaObrigatoria.aspx.designer.cs">
+      <DependentUpon>EfetuarMatriculaObrigatoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\MatriculaPrograma\GerenciamentoMatriculaPrograma.aspx.cs">
+      <DependentUpon>GerenciamentoMatriculaPrograma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\MatriculaPrograma\GerenciamentoMatriculaPrograma.aspx.designer.cs">
+      <DependentUpon>GerenciamentoMatriculaPrograma.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\MediaServer\EditarMediaServer.aspx.cs">
+      <DependentUpon>EditarMediaServer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\MediaServer\EditarMediaServer.aspx.designer.cs">
+      <DependentUpon>EditarMediaServer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\MediaServer\ListarMediaServer.aspx.cs">
+      <DependentUpon>ListarMediaServer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\MediaServer\ListarMediaServer.aspx.designer.cs">
+      <DependentUpon>ListarMediaServer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Modulo\EditarModulo.aspx.cs">
+      <DependentUpon>EditarModulo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Modulo\EditarModulo.aspx.designer.cs">
+      <DependentUpon>EditarModulo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Modulo\ListarModulo.aspx.cs">
+      <DependentUpon>ListarModulo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Modulo\ListarModulo.aspx.designer.cs">
+      <DependentUpon>ListarModulo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Monitoramento\MonitoramentoTrilha.aspx.cs">
+      <DependentUpon>MonitoramentoTrilha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Monitoramento\MonitoramentoTrilha.aspx.designer.cs">
+      <DependentUpon>MonitoramentoTrilha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Nacionalizacao\SelecionarUfs.aspx.cs">
+      <DependentUpon>SelecionarUfs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Nacionalizacao\SelecionarUfs.aspx.designer.cs">
+      <DependentUpon>SelecionarUfs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\NotificacaoEnvio\EdicaoNotificacaoEnvio.aspx.cs">
+      <DependentUpon>EdicaoNotificacaoEnvio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\NotificacaoEnvio\EdicaoNotificacaoEnvio.aspx.designer.cs">
+      <DependentUpon>EdicaoNotificacaoEnvio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\NotificacaoEnvio\ListarNotificacaoEnvio.aspx.cs">
+      <DependentUpon>ListarNotificacaoEnvio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\NotificacaoEnvio\ListarNotificacaoEnvio.aspx.designer.cs">
+      <DependentUpon>ListarNotificacaoEnvio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Objetivo\EdicaoObjetivo.aspx.cs">
+      <DependentUpon>EdicaoObjetivo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Objetivo\EdicaoObjetivo.aspx.designer.cs">
+      <DependentUpon>EdicaoObjetivo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Objetivo\ListarObjetivo.aspx.cs">
+      <DependentUpon>ListarObjetivo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Objetivo\ListarObjetivo.aspx.designer.cs">
+      <DependentUpon>ListarObjetivo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Oferta\cblOfertaTrancadaParaPagantes.cs" />
+    <Compile Include="Cadastros\Oferta\JSONResultReturn.cs" />
+    <Compile Include="Cadastros\Pagamento\AdministrarPagamento.aspx.cs">
+      <DependentUpon>AdministrarPagamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Pagamento\AdministrarPagamento.aspx.designer.cs">
+      <DependentUpon>AdministrarPagamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Pagamento\GerenciadorPagamento.aspx.cs">
+      <DependentUpon>GerenciadorPagamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Pagamento\GerenciadorPagamento.aspx.designer.cs">
+      <DependentUpon>GerenciadorPagamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Pagamento\HistoricoPagamento.aspx.cs">
+      <DependentUpon>HistoricoPagamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Pagamento\HistoricoPagamento.aspx.designer.cs">
+      <DependentUpon>HistoricoPagamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Painel\GerenciamentoAluno.aspx.cs">
+      <DependentUpon>GerenciamentoAluno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Painel\GerenciamentoAluno.aspx.designer.cs">
+      <DependentUpon>GerenciamentoAluno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Demanda\EditarDemanda.aspx.cs">
+      <DependentUpon>EditarDemanda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Demanda\EditarDemanda.aspx.designer.cs">
+      <DependentUpon>EditarDemanda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Demanda\ListarDemanda.aspx.cs">
+      <DependentUpon>ListarDemanda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Demanda\ListarDemanda.aspx.designer.cs">
+      <DependentUpon>ListarDemanda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Professor\EdicaoProfessor.aspx.cs">
+      <DependentUpon>EdicaoProfessor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Professor\EdicaoProfessor.aspx.designer.cs">
+      <DependentUpon>EdicaoProfessor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Professor\ListarProfessor.aspx.cs">
+      <DependentUpon>ListarProfessor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Professor\ListarProfessor.aspx.designer.cs">
+      <DependentUpon>ListarProfessor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\PublicoAlvo\Editar.aspx.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\PublicoAlvo\Editar.aspx.designer.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\PublicoAlvo\Lista.aspx.cs">
+      <DependentUpon>Lista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\PublicoAlvo\Lista.aspx.designer.cs">
+      <DependentUpon>Lista.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Questionario\EdicaoQuestionarioU.aspx.cs">
+      <DependentUpon>EdicaoQuestionarioU.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Questionario\EdicaoQuestionarioU.aspx.designer.cs">
+      <DependentUpon>EdicaoQuestionarioU.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\RelatorioPaginaInicial\Selecionar.aspx.cs">
+      <DependentUpon>Selecionar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\RelatorioPaginaInicial\Selecionar.aspx.designer.cs">
+      <DependentUpon>Selecionar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Sincronizador\Moodle.aspx.cs">
+      <DependentUpon>Moodle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Sincronizador\Moodle.aspx.designer.cs">
+      <DependentUpon>Moodle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\SincronizarMoodle\ListarCadastros.aspx.cs">
+      <DependentUpon>ListarCadastros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\SincronizarMoodle\ListarCadastros.aspx.designer.cs">
+      <DependentUpon>ListarCadastros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\SistemaExterno\ListarSistemaExterno.aspx.cs">
+      <DependentUpon>ListarSistemaExterno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\SistemaExterno\ListarSistemaExterno.aspx.designer.cs">
+      <DependentUpon>ListarSistemaExterno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Tag\ImportarTag.aspx.cs">
+      <DependentUpon>ImportarTag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Tag\ImportarTag.aspx.designer.cs">
+      <DependentUpon>ImportarTag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Template\EdicaoTemplate.aspx.cs">
+      <DependentUpon>EdicaoTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Template\EdicaoTemplate.aspx.designer.cs">
+      <DependentUpon>EdicaoTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Termos\Editar.aspx.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Termos\Editar.aspx.designer.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Termos\Listar.aspx.cs">
+      <DependentUpon>Listar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Termos\Listar.aspx.designer.cs">
+      <DependentUpon>Listar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Teste\EnviarEmailMatricula.aspx.cs">
+      <DependentUpon>EnviarEmailMatricula.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Teste\EnviarEmailMatricula.aspx.designer.cs">
+      <DependentUpon>EnviarEmailMatricula.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Trilha\EdicaoTrilha.aspx.cs">
+      <DependentUpon>EdicaoTrilha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Trilha\EdicaoTrilha.aspx.designer.cs">
+      <DependentUpon>EdicaoTrilha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\TurmaCapacitacao\EditarTurmaCapacitacao.aspx.cs">
+      <DependentUpon>EditarTurmaCapacitacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\TurmaCapacitacao\EditarTurmaCapacitacao.aspx.designer.cs">
+      <DependentUpon>EditarTurmaCapacitacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\TurmaCapacitacao\ListarTurmaCapacitacao.aspx.cs">
+      <DependentUpon>ListarTurmaCapacitacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\TurmaCapacitacao\ListarTurmaCapacitacao.aspx.designer.cs">
+      <DependentUpon>ListarTurmaCapacitacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Turma\EdicaoTurma.aspx.cs">
+      <DependentUpon>EdicaoTurma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Turma\EdicaoTurma.aspx.designer.cs">
+      <DependentUpon>EdicaoTurma.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Turma\ListarTurma.aspx.cs">
+      <DependentUpon>ListarTurma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Turma\ListarTurma.aspx.designer.cs">
+      <DependentUpon>ListarTurma.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Usuario\EdicaoUsuario.aspx.cs">
+      <DependentUpon>EdicaoUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Usuario\EdicaoUsuario.aspx.designer.cs">
+      <DependentUpon>EdicaoUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Usuario\InclusaoUsuario.aspx.cs">
+      <DependentUpon>InclusaoUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Usuario\InclusaoUsuario.aspx.designer.cs">
+      <DependentUpon>InclusaoUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Usuario\ListarUsuario.aspx.cs">
+      <DependentUpon>ListarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Usuario\ListarUsuario.aspx.designer.cs">
+      <DependentUpon>ListarUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Matricula\GerenciamentoMatricula.aspx.cs">
+      <DependentUpon>GerenciamentoMatricula.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Matricula\GerenciamentoMatricula.aspx.designer.cs">
+      <DependentUpon>GerenciamentoMatricula.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Vagas\GerenciarOfertaRecusaVaga.aspx.cs">
+      <DependentUpon>GerenciarOfertaRecusaVaga.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Vagas\GerenciarOfertaRecusaVaga.aspx.designer.cs">
+      <DependentUpon>GerenciarOfertaRecusaVaga.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\MonitoramentoIndicadores\Editar.aspx.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\MonitoramentoIndicadores\Editar.aspx.designer.cs">
+      <DependentUpon>Editar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExibirFileServer.ashx.cs">
+      <DependentUpon>ExibirFileServer.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina.master.cs">
+      <DependentUpon>Pagina.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagina.master.designer.cs">
+      <DependentUpon>Pagina.master</DependentUpon>
+    </Compile>
+    <Compile Include="Graficos\CertificadosPorCargoETema.aspx.cs">
+      <DependentUpon>CertificadosPorCargoETema.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Graficos\CertificadosPorCargoETema.aspx.designer.cs">
+      <DependentUpon>CertificadosPorCargoETema.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Graficos\ConcluintesPorFormaAquisicao.aspx.cs">
+      <DependentUpon>ConcluintesPorFormaAquisicao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Graficos\ConcluintesPorFormaAquisicao.aspx.designer.cs">
+      <DependentUpon>ConcluintesPorFormaAquisicao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Graficos\ConcluintesPorPerfilETipo.aspx.cs">
+      <DependentUpon>ConcluintesPorPerfilETipo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Graficos\ConcluintesPorPerfilETipo.aspx.designer.cs">
+      <DependentUpon>ConcluintesPorPerfilETipo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Graficos\CursosMaiorNumeroConcluintes.aspx.cs">
+      <DependentUpon>CursosMaiorNumeroConcluintes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Graficos\CursosMaiorNumeroConcluintes.aspx.designer.cs">
+      <DependentUpon>CursosMaiorNumeroConcluintes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Graficos\InscritosPorCategoria.aspx.cs">
+      <DependentUpon>InscritosPorCategoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Graficos\InscritosPorCategoria.aspx.designer.cs">
+      <DependentUpon>InscritosPorCategoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Graficos\InscritosTotalUF.aspx.cs">
+      <DependentUpon>InscritosTotalUF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Graficos\InscritosTotalUF.aspx.designer.cs">
+      <DependentUpon>InscritosTotalUF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Graficos\MatriculasPorAnoPorFormaDeAquisicao.aspx.cs">
+      <DependentUpon>MatriculasPorAnoPorFormaDeAquisicao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Graficos\MatriculasPorAnoPorFormaDeAquisicao.aspx.designer.cs">
+      <DependentUpon>MatriculasPorAnoPorFormaDeAquisicao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Graficos\MatriculasPorMes.aspx.cs">
+      <DependentUpon>MatriculasPorMes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Graficos\MatriculasPorMes.aspx.designer.cs">
+      <DependentUpon>MatriculasPorMes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Graficos\ParticipacaoProporcionalAoNumeroDeFuncionarios.aspx.cs">
+      <DependentUpon>ParticipacaoProporcionalAoNumeroDeFuncionarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Graficos\ParticipacaoProporcionalAoNumeroDeFuncionarios.aspx.designer.cs">
+      <DependentUpon>ParticipacaoProporcionalAoNumeroDeFuncionarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Graficos\ParticipantesPorUnidade.aspx.cs">
+      <DependentUpon>ParticipantesPorUnidade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Graficos\ParticipantesPorUnidade.aspx.designer.cs">
+      <DependentUpon>ParticipantesPorUnidade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Graficos\PublicoAlvo.aspx.cs">
+      <DependentUpon>PublicoAlvo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Graficos\PublicoAlvo.aspx.designer.cs">
+      <DependentUpon>PublicoAlvo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Graficos\RelatorioUFPerfil.aspx.cs">
+      <DependentUpon>RelatorioUFPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Graficos\RelatorioUFPerfil.aspx.designer.cs">
+      <DependentUpon>RelatorioUFPerfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Graficos\SatisfacaoSolucoesEducacionais.aspx.cs">
+      <DependentUpon>SatisfacaoSolucoesEducacionais.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Graficos\SatisfacaoSolucoesEducacionais.aspx.designer.cs">
+      <DependentUpon>SatisfacaoSolucoesEducacionais.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Graficos\SituacaoCursos.aspx.cs">
+      <DependentUpon>SituacaoCursos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Graficos\SituacaoCursos.aspx.designer.cs">
+      <DependentUpon>SituacaoCursos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Graficos\SolucoesEConcluintesPorCategoria.aspx.cs">
+      <DependentUpon>SolucoesEConcluintesPorCategoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Graficos\SolucoesEConcluintesPorCategoria.aspx.designer.cs">
+      <DependentUpon>SolucoesEConcluintesPorCategoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Graficos\SolucoesEducacionaisPorCategoria.aspx.cs">
+      <DependentUpon>SolucoesEducacionaisPorCategoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Graficos\SolucoesEducacionaisPorCategoria.aspx.designer.cs">
+      <DependentUpon>SolucoesEducacionaisPorCategoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Graficos\TaxaDeAprovacaoNoAno.aspx.cs">
+      <DependentUpon>TaxaDeAprovacaoNoAno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Graficos\TaxaDeAprovacaoNoAno.aspx.designer.cs">
+      <DependentUpon>TaxaDeAprovacaoNoAno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Graficos\TotalizacoesCursosOferecidos.aspx.cs">
+      <DependentUpon>TotalizacoesCursosOferecidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Graficos\TotalizacoesCursosOferecidos.aspx.designer.cs">
+      <DependentUpon>TotalizacoesCursosOferecidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Util.cs" />
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeCadastro.aspx.cs">
+      <DependentUpon>HomeCadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeCadastro.aspx.designer.cs">
+      <DependentUpon>HomeCadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\AlterarSenha\AlterarSenha.aspx.cs">
+      <DependentUpon>AlterarSenha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\AlterarSenha\AlterarSenha.aspx.designer.cs">
+      <DependentUpon>AlterarSenha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\AtividadeFormativa\EdicaoAtividadeFormativaParticipacao.aspx.cs">
+      <DependentUpon>EdicaoAtividadeFormativaParticipacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\AtividadeFormativa\EdicaoAtividadeFormativaParticipacao.aspx.designer.cs">
+      <DependentUpon>EdicaoAtividadeFormativaParticipacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\AtividadeFormativa\ListarAtividadeFormativaParticipacao.aspx.cs">
+      <DependentUpon>ListarAtividadeFormativaParticipacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\AtividadeFormativa\ListarAtividadeFormativaParticipacao.aspx.designer.cs">
+      <DependentUpon>ListarAtividadeFormativaParticipacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\CategoriaConteudo\EdicaoCategoriaConteudo.aspx.cs">
+      <DependentUpon>EdicaoCategoriaConteudo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\CategoriaConteudo\EdicaoCategoriaConteudo.aspx.designer.cs">
+      <DependentUpon>EdicaoCategoriaConteudo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\CategoriaConteudo\ListarCategoriaConteudo.aspx.cs">
+      <DependentUpon>ListarCategoriaConteudo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\CategoriaConteudo\ListarCategoriaConteudo.aspx.designer.cs">
+      <DependentUpon>ListarCategoriaConteudo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\CertificadoTemplate\EdicaoCertificadoTemplate.aspx.cs">
+      <DependentUpon>EdicaoCertificadoTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\CertificadoTemplate\EdicaoCertificadoTemplate.aspx.designer.cs">
+      <DependentUpon>EdicaoCertificadoTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\CertificadoTemplate\ListarCertificadoTemplate.aspx.cs">
+      <DependentUpon>ListarCertificadoTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\CertificadoTemplate\ListarCertificadoTemplate.aspx.designer.cs">
+      <DependentUpon>ListarCertificadoTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Fornecedor\EdicaoFornecedor.aspx.cs">
+      <DependentUpon>EdicaoFornecedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Fornecedor\EdicaoFornecedor.aspx.designer.cs">
+      <DependentUpon>EdicaoFornecedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Fornecedor\ListarFornecedor.aspx.cs">
+      <DependentUpon>ListarFornecedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Fornecedor\ListarFornecedor.aspx.designer.cs">
+      <DependentUpon>ListarFornecedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\SolucaoSebrae\EdicaoSolucaoSebrae.aspx.cs">
+      <DependentUpon>EdicaoSolucaoSebrae.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\SolucaoSebrae\EdicaoSolucaoSebrae.aspx.designer.cs">
+      <DependentUpon>EdicaoSolucaoSebrae.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\SolucaoSebrae\ListarSolucaoSebrae.aspx.cs">
+      <DependentUpon>ListarSolucaoSebrae.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\SolucaoSebrae\ListarSolucaoSebrae.aspx.designer.cs">
+      <DependentUpon>ListarSolucaoSebrae.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Questionario\ListarQuestionario.aspx.cs">
+      <DependentUpon>ListarQuestionario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Questionario\ListarQuestionario.aspx.designer.cs">
+      <DependentUpon>ListarQuestionario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Tag\EdicaoTag.aspx.cs">
+      <DependentUpon>EdicaoTag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Tag\EdicaoTag.aspx.designer.cs">
+      <DependentUpon>EdicaoTag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Tag\ListarTag.aspx.cs">
+      <DependentUpon>ListarTag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Tag\ListarTag.aspx.designer.cs">
+      <DependentUpon>ListarTag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeConfiguracao.aspx.cs">
+      <DependentUpon>HomeConfiguracao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeConfiguracao.aspx.designer.cs">
+      <DependentUpon>HomeConfiguracao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\MatriculaTrilha\EdicaoMatriculaTrilha.aspx.cs">
+      <DependentUpon>EdicaoMatriculaTrilha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\MatriculaTrilha\EdicaoMatriculaTrilha.aspx.designer.cs">
+      <DependentUpon>EdicaoMatriculaTrilha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\MatriculaTrilha\ListarMatriculaTrilha.aspx.cs">
+      <DependentUpon>ListarMatriculaTrilha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\MatriculaTrilha\ListarMatriculaTrilha.aspx.designer.cs">
+      <DependentUpon>ListarMatriculaTrilha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\MetasIndividuais\EdicaoMetasIndividuais.aspx.cs">
+      <DependentUpon>EdicaoMetasIndividuais.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\MetasIndividuais\EdicaoMetasIndividuais.aspx.designer.cs">
+      <DependentUpon>EdicaoMetasIndividuais.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\MetasIndividuais\ListarMetasIndividuais.aspx.cs">
+      <DependentUpon>ListarMetasIndividuais.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\MetasIndividuais\ListarMetasIndividuais.aspx.designer.cs">
+      <DependentUpon>ListarMetasIndividuais.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\MetasInstitucionais\EdicaoMetasInstitucionais.aspx.cs">
+      <DependentUpon>EdicaoMetasInstitucionais.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\MetasInstitucionais\EdicaoMetasInstitucionais.aspx.designer.cs">
+      <DependentUpon>EdicaoMetasInstitucionais.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\MetasInstitucionais\ListarMetasInstitucionais.aspx.cs">
+      <DependentUpon>ListarMetasInstitucionais.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\MetasInstitucionais\ListarMetasInstitucionais.aspx.designer.cs">
+      <DependentUpon>ListarMetasInstitucionais.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Oferta\EdicaoOferta.aspx.cs">
+      <DependentUpon>EdicaoOferta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Oferta\EdicaoOferta.aspx.designer.cs">
+      <DependentUpon>EdicaoOferta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Oferta\ListarOferta.aspx.cs">
+      <DependentUpon>ListarOferta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Oferta\ListarOferta.aspx.designer.cs">
+      <DependentUpon>ListarOferta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Programa\EdicaoPrograma.aspx.cs">
+      <DependentUpon>EdicaoPrograma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Programa\EdicaoPrograma.aspx.designer.cs">
+      <DependentUpon>EdicaoPrograma.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Programa\ListarPrograma.aspx.cs">
+      <DependentUpon>ListarPrograma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Programa\ListarPrograma.aspx.designer.cs">
+      <DependentUpon>ListarPrograma.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\SenhaEmergencia\ObterSenhaEmergencia.aspx.cs">
+      <DependentUpon>ObterSenhaEmergencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\SenhaEmergencia\ObterSenhaEmergencia.aspx.designer.cs">
+      <DependentUpon>ObterSenhaEmergencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\SistemaExterno\EdicaoSistemaExterno.aspx.cs">
+      <DependentUpon>EdicaoSistemaExterno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\SistemaExterno\EdicaoSistemaExterno.aspx.designer.cs">
+      <DependentUpon>EdicaoSistemaExterno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas.aspx.cs">
+      <DependentUpon>Paginas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas.aspx.designer.cs">
+      <DependentUpon>Paginas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeGerenciador.aspx.cs">
+      <DependentUpon>HomeGerenciador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeGerenciador.aspx.designer.cs">
+      <DependentUpon>HomeGerenciador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MediaServer.ashx.cs">
+      <DependentUpon>MediaServer.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="NovaSenha.aspx.cs">
+      <DependentUpon>NovaSenha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NovaSenha.aspx.designer.cs">
+      <DependentUpon>NovaSenha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProcessarCargaInicial.aspx.cs">
+      <DependentUpon>ProcessarCargaInicial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProcessarCargaInicial.aspx.designer.cs">
+      <DependentUpon>ProcessarCargaInicial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecuperarSenha.aspx.cs">
+      <DependentUpon>RecuperarSenha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecuperarSenha.aspx.designer.cs">
+      <DependentUpon>RecuperarSenha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\SolucaoEducacional\EdicaoSolucaoEducacional.aspx.cs">
+      <DependentUpon>EdicaoSolucaoEducacional.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\SolucaoEducacional\EdicaoSolucaoEducacional.aspx.designer.cs">
+      <DependentUpon>EdicaoSolucaoEducacional.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\SolucaoEducacional\ListarSolucaoEducacional.aspx.cs">
+      <DependentUpon>ListarSolucaoEducacional.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\SolucaoEducacional\ListarSolucaoEducacional.aspx.designer.cs">
+      <DependentUpon>ListarSolucaoEducacional.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\TopicoTematico\EdicaoTopicoTematico.aspx.cs">
+      <DependentUpon>EdicaoTopicoTematico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\TopicoTematico\EdicaoTopicoTematico.aspx.designer.cs">
+      <DependentUpon>EdicaoTopicoTematico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\TopicoTematico\ListarTopicoTematico.aspx.cs">
+      <DependentUpon>ListarTopicoTematico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\TopicoTematico\ListarTopicoTematico.aspx.designer.cs">
+      <DependentUpon>ListarTopicoTematico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Trilha\ListarTrilha.aspx.cs">
+      <DependentUpon>ListarTrilha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Trilha\ListarTrilha.aspx.designer.cs">
+      <DependentUpon>ListarTrilha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\FormaAquisicao\EdicaoFormaAquisicao.aspx.cs">
+      <DependentUpon>EdicaoFormaAquisicao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\FormaAquisicao\EdicaoFormaAquisicao.aspx.designer.cs">
+      <DependentUpon>EdicaoFormaAquisicao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\FormaAquisicao\ListarFormaAquisicao.aspx.cs">
+      <DependentUpon>ListarFormaAquisicao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\FormaAquisicao\ListarFormaAquisicao.aspx.designer.cs">
+      <DependentUpon>ListarFormaAquisicao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HomeRelatorio.aspx.cs">
+      <DependentUpon>HomeRelatorio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeRelatorio.aspx.designer.cs">
+      <DependentUpon>HomeRelatorio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Relatorios\Acessos\RelatorioAcessos.aspx.cs">
+      <DependentUpon>RelatorioAcessos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Acessos\RelatorioAcessos.aspx.designer.cs">
+      <DependentUpon>RelatorioAcessos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\Capacitados\Capacitados.aspx.cs">
+      <DependentUpon>Capacitados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Capacitados\Capacitados.aspx.designer.cs">
+      <DependentUpon>Capacitados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\MonitoramentoTrilhas\MonitorTrilhas.aspx.cs">
+      <DependentUpon>MonitorTrilhas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\MonitoramentoTrilhas\MonitorTrilhas.aspx.designer.cs">
+      <DependentUpon>MonitorTrilhas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\Notificacoes\Detalhes.aspx.cs">
+      <DependentUpon>Detalhes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Notificacoes\Detalhes.aspx.designer.cs">
+      <DependentUpon>Detalhes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\Solicitacoes\Solicitacoes.aspx.cs">
+      <DependentUpon>Solicitacoes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Solicitacoes\Solicitacoes.aspx.designer.cs">
+      <DependentUpon>Solicitacoes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\Concluintes\Concluintes.aspx.cs">
+      <DependentUpon>Concluintes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Concluintes\Concluintes.aspx.designer.cs">
+      <DependentUpon>Concluintes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\DadosPessoais\DadosPessoais.aspx.cs">
+      <DependentUpon>DadosPessoais.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\DadosPessoais\DadosPessoais.aspx.designer.cs">
+      <DependentUpon>DadosPessoais.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\DadosProfessor\DadosProfessor.aspx.cs">
+      <DependentUpon>DadosProfessor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\DadosProfessor\DadosProfessor.aspx.designer.cs">
+      <DependentUpon>DadosProfessor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\Questionario\RelatorioTutor.aspx.cs">
+      <DependentUpon>RelatorioTutor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Questionario\RelatorioTutor.aspx.designer.cs">
+      <DependentUpon>RelatorioTutor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\UnificadoSolucaoEducacional\UnificadoSolucaoEducacional.aspx.cs">
+      <DependentUpon>UnificadoSolucaoEducacional.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\UnificadoSolucaoEducacional\UnificadoSolucaoEducacional.aspx.designer.cs">
+      <DependentUpon>UnificadoSolucaoEducacional.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\DesempenhoAcademico\DesempenhoAcademico.aspx.cs">
+      <DependentUpon>DesempenhoAcademico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\DesempenhoAcademico\DesempenhoAcademico.aspx.designer.cs">
+      <DependentUpon>DesempenhoAcademico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\dsParticipacaoTrilha.cs">
+      <DependentUpon>dsParticipacaoTrilha.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\dsParticipacaoTrilha.Designer.cs">
+      <DependentUpon>dsParticipacaoTrilha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\FornecedorAcesso\FornecedorAcesso.aspx.cs">
+      <DependentUpon>FornecedorAcesso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\FornecedorAcesso\FornecedorAcesso.aspx.designer.cs">
+      <DependentUpon>FornecedorAcesso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\HistoricoDemandas\Detalhes.aspx.cs">
+      <DependentUpon>Detalhes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\HistoricoDemandas\Detalhes.aspx.designer.cs">
+      <DependentUpon>Detalhes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\HistoricoDemandas\HistoricoDemandas.aspx.cs">
+      <DependentUpon>HistoricoDemandas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\HistoricoDemandas\HistoricoDemandas.aspx.designer.cs">
+      <DependentUpon>HistoricoDemandas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\HorasCapacitacao\HorasCapacitacao.aspx.cs">
+      <DependentUpon>HorasCapacitacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\HorasCapacitacao\HorasCapacitacao.aspx.designer.cs">
+      <DependentUpon>HorasCapacitacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\InscricoesPorStatusENivel\InscricoesPorStatusENivel.aspx.cs">
+      <DependentUpon>InscricoesPorStatusENivel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\InscricoesPorStatusENivel\InscricoesPorStatusENivel.aspx.designer.cs">
+      <DependentUpon>InscricoesPorStatusENivel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\MatriculaSolucaoEducacional\MatriculaSolucaoEducacional.aspx.cs">
+      <DependentUpon>MatriculaSolucaoEducacional.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\MatriculaSolucaoEducacional\MatriculaSolucaoEducacional.aspx.designer.cs">
+      <DependentUpon>MatriculaSolucaoEducacional.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\MetaDesenvolvimentoSE\MetaDesenvolvimentoSE.aspx.cs">
+      <DependentUpon>MetaDesenvolvimentoSE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\MetaDesenvolvimentoSE\MetaDesenvolvimentoSE.aspx.designer.cs">
+      <DependentUpon>MetaDesenvolvimentoSE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\ParticipacaoTrilha.aspx.cs">
+      <DependentUpon>ParticipacaoTrilha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\ParticipacaoTrilha.aspx.designer.cs">
+      <DependentUpon>ParticipacaoTrilha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\Programas\Programas.aspx.cs">
+      <DependentUpon>Programas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Programas\Programas.aspx.designer.cs">
+      <DependentUpon>Programas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\PublicoAlvo\SolucaoEducacionalPorPublicoAlvo.aspx.cs">
+      <DependentUpon>SolucaoEducacionalPorPublicoAlvo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\PublicoAlvo\SolucaoEducacionalPorPublicoAlvo.aspx.designer.cs">
+      <DependentUpon>SolucaoEducacionalPorPublicoAlvo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\QuestionarioAvaliacao\QuestionarioAvaliacao.aspx.cs">
+      <DependentUpon>QuestionarioAvaliacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\QuestionarioAvaliacao\QuestionarioAvaliacao.aspx.designer.cs">
+      <DependentUpon>QuestionarioAvaliacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\Questionario\RelacaoRespondentes.aspx.cs">
+      <DependentUpon>RelacaoRespondentes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Questionario\RelacaoRespondentes.aspx.designer.cs">
+      <DependentUpon>RelacaoRespondentes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\Questionario\RelatorioQuestionario.aspx.cs">
+      <DependentUpon>RelatorioQuestionario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Questionario\RelatorioQuestionario.aspx.designer.cs">
+      <DependentUpon>RelatorioQuestionario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\RelatorioIndividual.aspx.cs">
+      <DependentUpon>RelatorioIndividual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\RelatorioIndividual.aspx.designer.cs">
+      <DependentUpon>RelatorioIndividual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\SEOfertaMatricula\SEOfertaMatricula.aspx.cs">
+      <DependentUpon>SEOfertaMatricula.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\SEOfertaMatricula\SEOfertaMatricula.aspx.designer.cs">
+      <DependentUpon>SEOfertaMatricula.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\SolucaoEducacionalFormaAquisicao\SolucaoEducacionalFormaAquisicao.aspx.cs">
+      <DependentUpon>SolucaoEducacionalFormaAquisicao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\SolucaoEducacionalFormaAquisicao\SolucaoEducacionalFormaAquisicao.aspx.designer.cs">
+      <DependentUpon>SolucaoEducacionalFormaAquisicao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\SolucaoEducacionalOferta\SolucaoEducacionalOferta.aspx.cs">
+      <DependentUpon>SolucaoEducacionalOferta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\SolucaoEducacionalOferta\SolucaoEducacionalOferta.aspx.designer.cs">
+      <DependentUpon>SolucaoEducacionalOferta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\SolucaoEducacionalPorCategoria\SolucaoEducacionalPorCategoria.aspx.cs">
+      <DependentUpon>SolucaoEducacionalPorCategoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\SolucaoEducacionalPorCategoria\SolucaoEducacionalPorCategoria.aspx.designer.cs">
+      <DependentUpon>SolucaoEducacionalPorCategoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\SolucaoEducacionalPrograma\SolucaoEducacionalPrograma.aspx.cs">
+      <DependentUpon>SolucaoEducacionalPrograma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\SolucaoEducacionalPrograma\SolucaoEducacionalPrograma.aspx.designer.cs">
+      <DependentUpon>SolucaoEducacionalPrograma.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\StatusUsuariosTrilhas\StatusUsuariosTrilhas.aspx.cs">
+      <DependentUpon>StatusUsuariosTrilhas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\StatusUsuariosTrilhas\StatusUsuariosTrilhas.aspx.designer.cs">
+      <DependentUpon>StatusUsuariosTrilhas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\UsuarioCadastrado\PorFiltro.aspx.cs">
+      <DependentUpon>PorFiltro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\UsuarioCadastrado\PorFiltro.aspx.designer.cs">
+      <DependentUpon>PorFiltro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\UsuarioCadastrado\UsuariosCadastrados.aspx.cs">
+      <DependentUpon>UsuariosCadastrados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\UsuarioCadastrado\UsuariosCadastrados.aspx.designer.cs">
+      <DependentUpon>UsuariosCadastrados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\UsuarioMatriculadoPorTurma\UsuarioMatriculadoPorTurma.aspx.cs">
+      <DependentUpon>UsuarioMatriculadoPorTurma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\UsuarioMatriculadoPorTurma\UsuarioMatriculadoPorTurma.aspx.designer.cs">
+      <DependentUpon>UsuarioMatriculadoPorTurma.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\UsuarioMatriculadoPrograma\RelatorioUsuarioMatriculadoPrograma.aspx.cs">
+      <DependentUpon>RelatorioUsuarioMatriculadoPrograma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\UsuarioMatriculadoPrograma\RelatorioUsuarioMatriculadoPrograma.aspx.designer.cs">
+      <DependentUpon>RelatorioUsuarioMatriculadoPrograma.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\UsuarioMatriculadoSEFormaAquisicao\RelatorioUsuarioMatriculadoSEFormaAquisicao.aspx.cs">
+      <DependentUpon>RelatorioUsuarioMatriculadoSEFormaAquisicao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\UsuarioMatriculadoSEFormaAquisicao\RelatorioUsuarioMatriculadoSEFormaAquisicao.aspx.designer.cs">
+      <DependentUpon>RelatorioUsuarioMatriculadoSEFormaAquisicao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\UsuarioPagante\UsuarioPagante.aspx.cs">
+      <DependentUpon>UsuarioPagante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\UsuarioPagante\UsuarioPagante.aspx.designer.cs">
+      <DependentUpon>UsuarioPagante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Graficos\ucDashboardParticipacaoProporcionalAoNumeroDeFuncionarios.ascx.cs">
+      <DependentUpon>ucDashboardParticipacaoProporcionalAoNumeroDeFuncionarios.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Graficos\ucDashboardParticipacaoProporcionalAoNumeroDeFuncionarios.ascx.designer.cs">
+      <DependentUpon>ucDashboardParticipacaoProporcionalAoNumeroDeFuncionarios.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Teste.aspx.cs">
+      <DependentUpon>Teste.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teste.aspx.designer.cs">
+      <DependentUpon>Teste.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\dashboard\ucGraficoConcluintesEspacoOcupacionalEmpregados.ascx.cs">
+      <DependentUpon>ucGraficoConcluintesEspacoOcupacionalEmpregados.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\dashboard\ucGraficoConcluintesEspacoOcupacionalEmpregados.ascx.designer.cs">
+      <DependentUpon>ucGraficoConcluintesEspacoOcupacionalEmpregados.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\dashboard\ucGraficoConcluintesExternos.ascx.cs">
+      <DependentUpon>ucGraficoConcluintesExternos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\dashboard\ucGraficoConcluintesExternos.ascx.designer.cs">
+      <DependentUpon>ucGraficoConcluintesExternos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\dashboard\ucGraficoBaseConcluintesMatriculados.ascx.cs">
+      <DependentUpon>ucGraficoBaseConcluintesMatriculados.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\dashboard\ucGraficoBaseConcluintesMatriculados.ascx.designer.cs">
+      <DependentUpon>ucGraficoBaseConcluintesMatriculados.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\dashboard\ucGraficoIndiceSatisfacaoCredenciados.ascx.cs">
+      <DependentUpon>ucGraficoIndiceSatisfacaoCredenciados.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\dashboard\ucGraficoIndiceSatisfacaoCredenciados.ascx.designer.cs">
+      <DependentUpon>ucGraficoIndiceSatisfacaoCredenciados.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\dashboard\ucGraficoMatriculadosPorMes.ascx.cs">
+      <DependentUpon>ucGraficoMatriculadosPorMes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\dashboard\ucGraficoMatriculadosPorMes.ascx.designer.cs">
+      <DependentUpon>ucGraficoMatriculadosPorMes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\dashboard\ucGraficoIndiceSatisfacaoGeral.ascx.cs">
+      <DependentUpon>ucGraficoIndiceSatisfacaoGeral.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\dashboard\ucGraficoIndiceSatisfacaoGeral.ascx.designer.cs">
+      <DependentUpon>ucGraficoIndiceSatisfacaoGeral.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\dashboard\ucGraficoValoresSistema.ascx.cs">
+      <DependentUpon>ucGraficoValoresSistema.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\dashboard\ucGraficoValoresSistema.ascx.designer.cs">
+      <DependentUpon>ucGraficoValoresSistema.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\dashboard\ucGraficoMatriculadosUF.ascx.cs">
+      <DependentUpon>ucGraficoMatriculadosUF.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\dashboard\ucGraficoMatriculadosUF.ascx.designer.cs">
+      <DependentUpon>ucGraficoMatriculadosUF.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucAbandono.ascx.cs">
+      <DependentUpon>ucAbandono.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucAbandono.ascx.designer.cs">
+      <DependentUpon>ucAbandono.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucAreas.ascx.cs">
+      <DependentUpon>ucAreas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucAreas.ascx.designer.cs">
+      <DependentUpon>ucAreas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucAtividadeExtraCurricular.ascx.cs">
+      <DependentUpon>ucAtividadeExtraCurricular.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucAtividadeExtraCurricular.ascx.designer.cs">
+      <DependentUpon>ucAtividadeExtraCurricular.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucCascataSolucaoEducacional.ascx.cs">
+      <DependentUpon>ucCascataSolucaoEducacional.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucCascataSolucaoEducacional.ascx.designer.cs">
+      <DependentUpon>ucCascataSolucaoEducacional.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucCategorias.ascx.cs">
+      <DependentUpon>ucCategorias.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucCategorias.ascx.designer.cs">
+      <DependentUpon>ucCategorias.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucColorPicker.ascx.cs">
+      <DependentUpon>ucColorPicker.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucColorPicker.ascx.designer.cs">
+      <DependentUpon>ucColorPicker.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucCursos.ascx.cs">
+      <DependentUpon>ucCursos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucCursos.ascx.designer.cs">
+      <DependentUpon>ucCursos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucDashboardFuncionalidadesMaisAcessadas.ascx.cs">
+      <DependentUpon>ucDashboardFuncionalidadesMaisAcessadas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucDashboardFuncionalidadesMaisAcessadas.ascx.designer.cs">
+      <DependentUpon>ucDashboardFuncionalidadesMaisAcessadas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucDashboardNotificacoes.ascx.cs">
+      <DependentUpon>ucDashboardNotificacoes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucDashboardNotificacoes.ascx.designer.cs">
+      <DependentUpon>ucDashboardNotificacoes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucDashBoardRelatoriosMaisAcessados.ascx.cs">
+      <DependentUpon>ucDashBoardRelatoriosMaisAcessados.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucDashBoardRelatoriosMaisAcessados.ascx.designer.cs">
+      <DependentUpon>ucDashBoardRelatoriosMaisAcessados.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucDdlSolucaoEducacional.ascx.cs">
+      <DependentUpon>ucDdlSolucaoEducacional.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucDdlSolucaoEducacional.ascx.designer.cs">
+      <DependentUpon>ucDdlSolucaoEducacional.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucExibirQuestionarioResposta.ascx.cs">
+      <DependentUpon>ucExibirQuestionarioResposta.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucExibirQuestionarioResposta.ascx.designer.cs">
+      <DependentUpon>ucExibirQuestionarioResposta.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucFaleConosco.ascx.cs">
+      <DependentUpon>ucFaleConosco.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucFaleConosco.ascx.designer.cs">
+      <DependentUpon>ucFaleConosco.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucFormatoSaidaRelatorio.ascx.cs">
+      <DependentUpon>ucFormatoSaidaRelatorio.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucFormatoSaidaRelatorio.ascx.designer.cs">
+      <DependentUpon>ucFormatoSaidaRelatorio.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucHelperTooltip.ascx.cs">
+      <DependentUpon>ucHelperTooltip.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucHelperTooltip.ascx.designer.cs">
+      <DependentUpon>ucHelperTooltip.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucHistoricoPagamento.ascx.cs">
+      <DependentUpon>ucHistoricoPagamento.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucHistoricoPagamento.ascx.designer.cs">
+      <DependentUpon>ucHistoricoPagamento.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucInformarPagamento.ascx.cs">
+      <DependentUpon>ucInformarPagamento.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucInformarPagamento.ascx.designer.cs">
+      <DependentUpon>ucInformarPagamento.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucItemMenu.ascx.cs">
+      <DependentUpon>ucItemMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucItemMenu.ascx.designer.cs">
+      <DependentUpon>ucItemMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucItemTrilha.ascx.cs">
+      <DependentUpon>ucItemTrilha.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucItemTrilha.ascx.designer.cs">
+      <DependentUpon>ucItemTrilha.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucLupaUsuario.ascx.cs">
+      <DependentUpon>ucLupaUsuario.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucLupaUsuario.ascx.designer.cs">
+      <DependentUpon>ucLupaUsuario.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucMatriculaCapacitacao.ascx.cs">
+      <DependentUpon>ucMatriculaCapacitacao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucMatriculaCapacitacao.ascx.designer.cs">
+      <DependentUpon>ucMatriculaCapacitacao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucMatriculaOferta.ascx.cs">
+      <DependentUpon>ucMatriculaOferta.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucMatriculaOferta.ascx.designer.cs">
+      <DependentUpon>ucMatriculaOferta.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucMatriculaTurma.ascx.cs">
+      <DependentUpon>ucMatriculaTurma.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucMatriculaTurma.ascx.designer.cs">
+      <DependentUpon>ucMatriculaTurma.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucMatrilhaTrilha.ascx.cs">
+      <DependentUpon>ucMatrilhaTrilha.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucMatrilhaTrilha.ascx.designer.cs">
+      <DependentUpon>ucMatrilhaTrilha.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucModalAlternativas.ascx.cs">
+      <DependentUpon>ucModalAlternativas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucModalAlternativas.ascx.designer.cs">
+      <DependentUpon>ucModalAlternativas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucNotificacoes.ascx.cs">
+      <DependentUpon>ucNotificacoes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucNotificacoes.ascx.designer.cs">
+      <DependentUpon>ucNotificacoes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucOferta.ascx.cs">
+      <DependentUpon>ucOferta.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucOferta.ascx.designer.cs">
+      <DependentUpon>ucOferta.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucPermissoesRefatorado.ascx.cs">
+      <DependentUpon>ucPermissoesRefatorado.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucPermissoesRefatorado.ascx.designer.cs">
+      <DependentUpon>ucPermissoesRefatorado.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucPermissoes.ascx.cs">
+      <DependentUpon>ucPermissoes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucPermissoes.ascx.designer.cs">
+      <DependentUpon>ucPermissoes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucPublicacaoSaber.ascx.cs">
+      <DependentUpon>ucPublicacaoSaber.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucPublicacaoSaber.ascx.designer.cs">
+      <DependentUpon>ucPublicacaoSaber.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucQuestionario.ascx.cs">
+      <DependentUpon>ucQuestionario.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucQuestionario.ascx.designer.cs">
+      <DependentUpon>ucQuestionario.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucRelatorioQuestionario.ascx.cs">
+      <DependentUpon>ucRelatorioQuestionario.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucRelatorioQuestionario.ascx.designer.cs">
+      <DependentUpon>ucRelatorioQuestionario.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\dashboard\ucGraficoTop5Cursos.ascx.cs">
+      <DependentUpon>ucGraficoTop5Cursos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\dashboard\ucGraficoTop5Cursos.ascx.designer.cs">
+      <DependentUpon>ucGraficoTop5Cursos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucSeletorCheckboxes.ascx.cs">
+      <DependentUpon>ucSeletorCheckboxes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucSeletorCheckboxes.ascx.designer.cs">
+      <DependentUpon>ucSeletorCheckboxes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucSeletorListBox.ascx.cs">
+      <DependentUpon>ucSeletorListBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucSeletorListBox.ascx.designer.cs">
+      <DependentUpon>ucSeletorListBox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucSolucaoEducacional.ascx.cs">
+      <DependentUpon>ucSolucaoEducacional.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucSolucaoEducacional.ascx.designer.cs">
+      <DependentUpon>ucSolucaoEducacional.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucTags.ascx.cs">
+      <DependentUpon>ucTags.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucTags.ascx.designer.cs">
+      <DependentUpon>ucTags.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucTotalizadorRelatorio.ascx.cs">
+      <DependentUpon>ucTotalizadorRelatorio.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucTotalizadorRelatorio.ascx.designer.cs">
+      <DependentUpon>ucTotalizadorRelatorio.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucTrilhaNivel.ascx.cs">
+      <DependentUpon>ucTrilhaNivel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucTrilhaNivel.ascx.designer.cs">
+      <DependentUpon>ucTrilhaNivel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucTrilhas.ascx.cs">
+      <DependentUpon>ucTrilhas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucTrilhas.ascx.designer.cs">
+      <DependentUpon>ucTrilhas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucTurma.ascx.cs">
+      <DependentUpon>ucTurma.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucTurma.ascx.designer.cs">
+      <DependentUpon>ucTurma.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucNacionalizarRelatorio.ascx.cs">
+      <DependentUpon>ucNacionalizarRelatorio.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucNacionalizarRelatorio.ascx.designer.cs">
+      <DependentUpon>ucNacionalizarRelatorio.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucTutorias.ascx.cs">
+      <DependentUpon>ucTutorias.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucTutorias.ascx.designer.cs">
+      <DependentUpon>ucTutorias.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucUF.ascx.cs">
+      <DependentUpon>ucUF.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucUF.ascx.designer.cs">
+      <DependentUpon>ucUF.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucUpload.ascx.cs">
+      <DependentUpon>ucUpload.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucUpload.ascx.designer.cs">
+      <DependentUpon>ucUpload.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucUsuario.ascx.cs">
+      <DependentUpon>ucUsuario.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucUsuario.ascx.designer.cs">
+      <DependentUpon>ucUsuario.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucLupaMultiplosUsuarios.ascx.cs">
+      <DependentUpon>ucLupaMultiplosUsuarios.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucLupaMultiplosUsuarios.ascx.designer.cs">
+      <DependentUpon>ucLupaMultiplosUsuarios.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucVisualizaCertificadoTemplate.ascx.cs">
+      <DependentUpon>ucVisualizaCertificadoTemplate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucVisualizaCertificadoTemplate.ascx.designer.cs">
+      <DependentUpon>ucVisualizaCertificadoTemplate.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Academico20.Master" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="MediaServer.ashx" />
+    <Content Include="ExibirFileServer.ashx" />
+    <Content Include="fonts\fontawesome-ext-webfont.eot" />
+    <Content Include="fonts\fontawesome-ext-webfont.ttf" />
+    <Content Include="fonts\fontawesome-ext-webfont.woff" />
+    <Content Include="fonts\bella_donna.ttf" />
+    <Content Include="fonts\Museo500-Regular.otf" />
+    <Content Include="fonts\museo900regular.ttf" />
+    <Content Include="DashboardMaster.Master" />
+    <None Include="arquivos\planilha_modelo_matricula_em_lote.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="fonts\sebraeuc.eot" />
+    <Content Include="fonts\sebraeuc.ttf" />
+    <Content Include="fonts\sebraeuc.woff" />
+    <Content Include="Pagina.master" />
+    <Content Include="ExibirThumbnail.ashx" />
+    <Content Include="fonts\opensans_bold\OpenSans-Bold-webfont.eot" />
+    <Content Include="fonts\opensans_bold\OpenSans-Bold-webfont.ttf" />
+    <Content Include="fonts\opensans_bold\OpenSans-Bold-webfont.woff" />
+    <Content Include="fonts\opensans_light\OpenSans-Light-webfont.eot" />
+    <Content Include="fonts\opensans_light\OpenSans-Light-webfont.ttf" />
+    <Content Include="fonts\opensans_light\OpenSans-Light-webfont.woff" />
+    <Content Include="fonts\opensans_regular\OpenSans-Regular-webfont.eot" />
+    <Content Include="fonts\opensans_regular\OpenSans-Regular-webfont.ttf" />
+    <Content Include="fonts\opensans_regular\OpenSans-Regular-webfont.woff" />
+    <Content Include="fonts\opensans_semibold\OpenSans-Semibold-webfont.eot" />
+    <Content Include="fonts\opensans_semibold\OpenSans-Semibold-webfont.ttf" />
+    <Content Include="fonts\opensans_semibold\OpenSans-Semibold-webfont.woff" />
+    <None Include="js\ckeditor\.htaccess" />
+    <None Include="js\ckeditor\ckeditor.pack" />
+    <None Include="js\ckeditor\ckeditor.php" />
+    <None Include="js\ckeditor\ckeditor_php4.php" />
+    <None Include="js\ckeditor\ckeditor_php5.php" />
+    <Content Include="UserControls\dashboard\ucGraficoConcluintesEspacoOcupacionalEmpregados.ascx" />
+    <Content Include="UserControls\dashboard\ucGraficoConcluintesExternos.ascx" />
+    <Content Include="UserControls\dashboard\ucGraficoBaseConcluintesMatriculados.ascx" />
+    <Content Include="UserControls\dashboard\ucGraficoIndiceSatisfacaoCredenciados.ascx" />
+    <Content Include="UserControls\dashboard\ucGraficoMatriculadosPorMes.ascx" />
+    <Content Include="UserControls\dashboard\ucGraficoIndiceSatisfacaoGeral.ascx" />
+    <Content Include="UserControls\dashboard\ucGraficoValoresSistema.ascx" />
+    <Content Include="UserControls\dashboard\ucGraficoMatriculadosUF.ascx" />
+    <Content Include="UserControls\ucAbandono.ascx" />
+    <Content Include="UserControls\ucAreas.ascx" />
+    <Content Include="UserControls\ucAtividadeExtraCurricular.ascx" />
+    <Content Include="UserControls\ucCascataSolucaoEducacional.ascx" />
+    <Content Include="UserControls\ucCategorias.ascx" />
+    <Content Include="UserControls\ucColorPicker.ascx" />
+    <Content Include="UserControls\ucCursos.ascx" />
+    <Content Include="UserControls\ucDashboardFuncionalidadesMaisAcessadas.ascx" />
+    <Content Include="UserControls\ucDashboardNotificacoes.ascx" />
+    <Content Include="UserControls\ucDashBoardRelatoriosMaisAcessados.ascx" />
+    <Content Include="UserControls\ucDdlSolucaoEducacional.ascx" />
+    <Content Include="UserControls\ucExibirQuestionarioResposta.ascx" />
+    <Content Include="UserControls\ucFaleConosco.ascx" />
+    <Content Include="UserControls\ucFormatoSaidaRelatorio.ascx" />
+    <Content Include="UserControls\ucHistoricoPagamento.ascx" />
+    <Content Include="UserControls\ucInformarPagamento.ascx" />
+    <Content Include="UserControls\ucItemMenu.ascx" />
+    <Content Include="UserControls\ucItemTrilha.ascx" />
+    <Content Include="UserControls\ucLupaUsuario.ascx" />
+    <Content Include="UserControls\ucMatriculaCapacitacao.ascx" />
+    <Content Include="UserControls\ucMatriculaOferta.ascx" />
+    <Content Include="UserControls\ucMatriculaTurma.ascx" />
+    <Content Include="UserControls\ucMatrilhaTrilha.ascx" />
+    <Content Include="UserControls\ucModalAlternativas.ascx" />
+    <Content Include="UserControls\ucNotificacoes.ascx" />
+    <Content Include="UserControls\ucOferta.ascx" />
+    <Content Include="UserControls\ucPermissoes.ascx" />
+    <Content Include="UserControls\ucPublicacaoSaber.ascx" />
+    <Content Include="UserControls\ucQuestionario.ascx" />
+    <Content Include="UserControls\ucRelatorioQuestionario.ascx" />
+    <Content Include="UserControls\dashboard\ucGraficoTop5Cursos.ascx" />
+    <Content Include="UserControls\ucSeletorCheckboxes.ascx" />
+    <Content Include="UserControls\ucSeletorListBox.ascx" />
+    <Content Include="UserControls\ucSolucaoEducacional.ascx" />
+    <Content Include="UserControls\ucTags.ascx" />
+    <Content Include="UserControls\ucTotalizadorRelatorio.ascx" />
+    <Content Include="UserControls\ucTrilhaNivel.ascx" />
+    <Content Include="UserControls\ucTrilhas.ascx" />
+    <Content Include="UserControls\ucTurma.ascx" />
+    <Content Include="UserControls\ucNacionalizarRelatorio.ascx" />
+    <Content Include="UserControls\ucUF.ascx" />
+    <Content Include="UserControls\ucUpload.ascx" />
+    <Content Include="UserControls\ucUsuario.ascx" />
+    <Content Include="UserControls\ucLupaMultiplosUsuarios.ascx" />
+    <Content Include="js\jquery\jquery.markall.js" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="local.config" />
+    <None Include="Properties\PublishProfiles\teste.pubxml" />
+    <Content Include="Sebrae.Academico.WebForms.ruleset" />
+    <Content Include="Sebrae.Academico.WebForms-1.ruleset" />
+    <Content Include="Sebrae.Academico.WebForms.Release.ruleset" />
+    <None Include="web.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="js\tinymce\langs\readme.md" />
+    <Content Include="js\tinymce\skins\lightgray\fonts\tinymce-small.eot" />
+    <Content Include="js\tinymce\skins\lightgray\fonts\tinymce-small.ttf" />
+    <Content Include="js\tinymce\skins\lightgray\fonts\tinymce-small.woff" />
+    <Content Include="js\tinymce\skins\lightgray\fonts\tinymce.eot" />
+    <Content Include="js\tinymce\skins\lightgray\fonts\tinymce.ttf" />
+    <Content Include="js\tinymce\skins\lightgray\fonts\tinymce.woff" />
+    <None Include="Relatorios\dsParticipacaoTrilha.xsc">
+      <DependentUpon>dsParticipacaoTrilha.xsd</DependentUpon>
+    </None>
+    <None Include="Relatorios\dsParticipacaoTrilha.xsd" />
+    <None Include="Relatorios\dsParticipacaoTrilha.xss">
+      <DependentUpon>dsParticipacaoTrilha.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sebrae.Academico.BM\Sebrae.Academico.BM.csproj">
+      <Project>{FC5A50C2-1120-46D5-BB99-9CDA4C8C17A1}</Project>
+      <Name>Sebrae.Academico.BM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sebrae.Academico.Dominio\Sebrae.Academico.Dominio.csproj">
+      <Project>{d9b6b84c-b816-4eaf-8d05-c63c5f48b08c}</Project>
+      <Name>Sebrae.Academico.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sebrae.Academico.Extensions\Sebrae.Academico.Extensions.csproj">
+      <Project>{fb555353-b13a-4d40-bb3b-8d69b853c3c8}</Project>
+      <Name>Sebrae.Academico.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sebrae.Academico.UI\Sebrae.Academico.UI.csproj">
+      <Project>{a19811b7-56d5-4cf4-9a7c-861acc11ded8}</Project>
+      <Name>Sebrae.Academico.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sebrae.Academico.Util\Sebrae.Academico.Util.csproj">
+      <Project>{51A1166D-79AF-4B20-8B7E-E7175EE38637}</Project>
+      <Name>Sebrae.Academico.Util</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sebrae.Academico.InfraEstrutura.Core\Sebrae.Academico.InfraEstrutura.Core.csproj">
+      <Project>{ADDD8A66-BDB8-408D-BE77-BC05874A57A5}</Project>
+      <Name>Sebrae.Academico.InfraEstrutura.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sebrae.Academico.BP\Sebrae.Academico.BP.csproj">
+      <Project>{4E54C184-890B-4856-B77E-238F594B15B8}</Project>
+      <Name>Sebrae.Academico.BP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sebrae.Academico.InfraEstrutura.Seguranca\Sebrae.Academico.InfraEstrutura.Seguranca.csproj">
+      <Project>{0960359C-4723-4765-9D93-9F499865D8B9}</Project>
+      <Name>Sebrae.Academico.InfraEstrutura.Seguranca</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sebrae.Academico.Reports\Sebrae.Academico.Reports.csproj">
+      <Project>{F1B171FF-6E80-4D9B-8B66-51E2DE3F05F7}</Project>
+      <Name>Sebrae.Academico.Reports</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sebrae.Academico.Services\Sebrae.Academico.Services.csproj">
+      <Project>{2C5D730A-5D50-4871-8CAA-BC6DBC8C2B25}</Project>
+      <Name>Sebrae.Academico.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="App_Start\App_LocalResources\" />
+    <Folder Include="Relatorios\Concluintes\CertificadoTemplate\" />
+    <Folder Include="uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Resource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Resource.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Relatorios\rptParticipacaoTrilha.rdlc" />
+    <EmbeddedResource Include="Relatorios\rptRelatorioIndividual.rdlc" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>52526</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

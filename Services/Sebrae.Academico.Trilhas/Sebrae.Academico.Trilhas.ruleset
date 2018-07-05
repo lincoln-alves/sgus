@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="SonarQube - Sebrae.Academico Sonar way" ToolsVersion="15.0">
+  <Include Path="..\..\.sonarlint\your.organization.sebrae.academicocsharp.ruleset" Action="Default" />
+</RuleSet>

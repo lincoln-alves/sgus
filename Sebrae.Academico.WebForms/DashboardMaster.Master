@@ -1,0 +1,176 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DashboardMaster.Master.cs"
+    Inherits="Sebrae.Academico.WebForms.DashboardMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>SGUS 2.0</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/css/style-sgus20.css" rel="stylesheet">
+    <link href="/css/font-awesome-ext.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+		  <script src="/js/html5shiv.js"></script>
+		  <script src="/js/respond.min.js"></script>
+		<![endif]-->
+    <script type="text/javascript" src="/js/jquery/jquery.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/jquery/jquery.maskedinput.min.js"></script>
+    <script type="text/javascript" src="/js/noty/packaged/jquery.noty.packaged.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi?autoload={
+            'modules':[{
+              'name':'visualization',
+              'version':'1',
+              'packages':['corechart', 'table']
+            }]
+          }">
+    </script>
+    <script src="/js/window.mobilecheck.js"></script>
+
+
+    <style>
+        .navbar-nav {
+            width: 100%;
+            text-align: center;
+        }
+
+            .navbar-nav > p {
+                float: none;
+                display: inline-block;
+            }
+    </style>
+</head>
+<body>
+    <form id="form" runat="server" role="form">
+        <div class="navbar navbar-fixed-top">
+            <div class="collapse navbar-collapse">
+                <div class="navbar-form navbar-right">
+                    <asp:Button ID="btnProximoMenu" CssClass="btn btn-default" runat="server" />
+                    <button class="btn btn-success" id="btnAtualizar">Atualizar</button>
+                </div>
+                <div class="navbar-form navbar-right" style="padding-right: 0; margin-right: 0;">
+                    <div class="form-group">
+                        <ul class="list-inline" style="padding-right: 0;">
+                            <li style="-moz-min-width: 115px !important; -ms-min-width: 115px !important; -o-min-width: 115px !important; -webkit-min-width: 115px !important; min-width: 115px !important; margin: 0;">
+                                <asp:TextBox ID="txtDataInicial" Width="110" CssClass="form-control" runat="server"></asp:TextBox>
+                            </li>
+                            <li style="-moz-min-width: 115px !important; -ms-min-width: 115px !important; -o-min-width: 115px !important; -webkit-min-width: 115px !important; min-width: 115px !important; margin: 0;">
+                                <asp:TextBox ID="txtDataFinal" Width="110" CssClass="form-control" runat="server"></asp:TextBox>
+                            </li>
+                            <li style="-moz-min-width: 125px !important; -ms-min-width: 125px !important; -o-min-width: 125px !important; -webkit-min-width: 125px !important; min-width: 125px !important; margin: 0;">
+                                <asp:DropDownList ID="cbxUf" runat="server" ClientIDMode="Static" CssClass="form-control"></asp:DropDownList>
+                            </li>
+                            <li style="-moz-min-width: 80px !important; -ms-min-width: 80px !important; -o-min-width: 80px !important; -webkit-min-width: 80px !important; min-width: 80px !important; margin: 0;">
+                                <asp:Button ID="btnFiltrar" ClientIDMode="Static" runat="server" Text="Fitrar" CssClass="btn btn-danger" OnClick="btnFiltrar_OnClick" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapse navbar-collapse">
+                <div class="navbar-nav" style="color: white; position: relative; width: 340px; margin: 0 auto; margin-top: -40px; font-size: 20px;">
+                    <p class="navbar-text visible-lg" style="margin: 0 10px; font-weight: 800">
+                        <asp:Literal ID="ltnTitulo" runat="server"></asp:Literal>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <script>
+            jQuery(document).ready(function () {
+                $('#btnFiltrar').on('click', function () {
+                    $("#cortina").show();
+                });
+
+                $("#btnAtualizar").click(function () {
+                    location.reload(true);
+                });
+
+                $("#<%= txtDataInicial.ClientID %>").mask("99/99/9999", {
+                    autoclear: false
+                }).on('blur', function () {
+                    var valor = $("#<%= txtDataInicial.ClientID %>").val();
+                    var dados = valor.split(' ');
+                    var data = validDate(dados[0]);
+                    if (!data.result) {
+                        $("#<%= txtDataInicial.ClientID %>").val('');
+                    } else {
+                        if (dados[1] != undefined) {
+                            if (dados[1].indexOf(/_/g) > -1) {
+                                dados[1] = dados[1].replace(/_/g, "0");
+                            }
+                            dados[1] = validHour(dados[1]);
+                        }
+                        $("#<%= txtDataInicial.ClientID %>").val(dados.join(' '));
+                    }
+                });
+                $("#<%= txtDataFinal.ClientID %>").mask("99/99/9999", {
+                    autoclear: false
+                }).on('blur', function () {
+                    var valor = $("#<%= txtDataFinal.ClientID %>").val();
+                    var dados = valor.split(' ');
+                    var data = validDate(dados[0]);
+                    if (!data.result) {
+                        $("#<%= txtDataFinal.ClientID %>").val('');
+                    } else {
+                        if (dados[1] != undefined) {
+                            if (dados[1].indexOf(/_/g) > -1) {
+                                dados[1] = dados[1].replace(/_/g, "9");
+                            }
+                            dados[1] = validHour(dados[1]);
+                        }
+                        $("#<%= txtDataFinal.ClientID %>").val(dados.join(' '));
+                    }
+                });
+            });
+
+            function validDate(value) {
+                var comp = value.split('/');
+                var d = parseInt(comp[0], 10);
+                var m = parseInt(comp[1], 10);
+                var y = parseInt(comp[2], 10);
+                var date = new Date(y, m - 1, d);
+                return {
+                    result: (date.getFullYear() === y && date.getMonth() + 1 === m && date.getDate() === d),
+                    value: value
+                }
+            }
+
+            function validHour(value) {
+                var comp = value.split(':');
+                var h = parseInt(comp[0], 10);
+                var m = parseInt(comp[1], 10);
+                var s = parseInt(comp[2], 10);
+                if (h > 23) h = 23;
+                if (m > 59) m = 59;
+                if (s > 59) s = 59;
+                return pad2(h) + ':' + pad2(m) + ':' + pad2(s);
+            }
+
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-47632381-3', 'auto');
+            ga('send', 'pageview');
+    
+        </script>
+    </form>
+</body>
+</html>

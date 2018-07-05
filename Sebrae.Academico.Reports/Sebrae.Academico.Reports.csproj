@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F1B171FF-6E80-4D9B-8B66-51E2DE3F05F7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sebrae.Academico.Reports</RootNamespace>
+    <AssemblyName>Sebrae.Academico.Reports</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>ExtendedDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>Sebrae.Academico.Reports.Release.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PdfSharp, Version=1.50.4000.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.50.4000-beta3b\lib\net20\PdfSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.50.4000.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.50.4000-beta3b\lib\net20\PdfSharp.Charting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sebrae.Academico.BM\Sebrae.Academico.BM.csproj">
+      <Project>{FC5A50C2-1120-46D5-BB99-9CDA4C8C17A1}</Project>
+      <Name>Sebrae.Academico.BM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sebrae.Academico.BP\Sebrae.Academico.BP.csproj">
+      <Project>{4E54C184-890B-4856-B77E-238F594B15B8}</Project>
+      <Name>Sebrae.Academico.BP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sebrae.Academico.Dominio\Sebrae.Academico.Dominio.csproj">
+      <Project>{D9B6B84C-B816-4EAF-8D05-C63C5F48B08C}</Project>
+      <Name>Sebrae.Academico.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sebrae.Academico.Util\Sebrae.Academico.Util.csproj">
+      <Project>{51A1166D-79AF-4B20-8B7E-E7175EE38637}</Project>
+      <Name>Sebrae.Academico.Util</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sebrae.Academico.InfraEstrutura.Core\Sebrae.Academico.InfraEstrutura.Core.csproj">
+      <Project>{ADDD8A66-BDB8-408D-BE77-BC05874A57A5}</Project>
+      <Name>Sebrae.Academico.InfraEstrutura.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sebrae.Academico.InfraEstrutura.Seguranca\Sebrae.Academico.InfraEstrutura.Seguranca.csproj">
+      <Project>{0960359C-4723-4765-9D93-9F499865D8B9}</Project>
+      <Name>Sebrae.Academico.InfraEstrutura.Seguranca</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AcessosPaginas\rptAcessosPaginas.rdlc" />
+    <EmbeddedResource Include="AcessosPortal\rptAcessosPortal.rdlc" />
+    <EmbeddedResource Include="Acessos\rptAcesso.rdlc" />
+    <EmbeddedResource Include="Acessos\rptAcessoAgrupadoPorDataAcesso.rdlc" />
+    <EmbeddedResource Include="UsuarioCertificadoCertame\rptBoletimCertame.rdlc" />
+    <EmbeddedResource Include="UsuarioCertificadoCertame\rptCertificadoCertame.rdlc" />
+    <EmbeddedResource Include="Concluintes\Concluintes.rdlc" />
+    <EmbeddedResource Include="CursosMaiorNumeroConcluintes\rptCursosMaiorNumeroConcluintes.rdlc" />
+    <EmbeddedResource Include="Capacitados\rptCapacitados.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DadosPessoais\rptDadosPessoais.rdlc" />
+    <EmbeddedResource Include="DadosPessoais\rptPorFiltro.rdlc" />
+    <EmbeddedResource Include="DesempenhoAcademico\rptDesempenhoAcademico.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonitoramentoTrilhas\rptMonitoramentoTrilhas.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonitoramentoTurma\rptMonitoramentoTurma.rdlc" />
+    <EmbeddedResource Include="QuestionarioPesquisa\rptQuestionario_consolidado.rdlc" />
+    <EmbeddedResource Include="QuestionarioPesquisa\rptTutor_consolidado.rdlc" />
+    <EmbeddedResource Include="QuestionarioPesquisa\rptQuestionario_estatistico.rdlc" />
+    <EmbeddedResource Include="QuestionarioPesquisa\rptTutor_estatistico.rdlc" />
+    <EmbeddedResource Include="QuestionarioPesquisa\rptQuestionario_respondente.rdlc" />
+    <EmbeddedResource Include="QuestionarioPesquisa\rptTutor_respondente.rdlc" />
+    <EmbeddedResource Include="UnificadoSolucaoEducacional\rptUnificadoSolucaoEducacional.rdlc" />
+    <EmbeddedResource Include="EmitirCertificado\rptCertificadoTemplate.rdlc" />
+    <EmbeddedResource Include="EmitirCertificado\rptCertificadoTemplate2paginas.rdlc" />
+    <EmbeddedResource Include="DadosProfessor\rptDadosProfessor.rdlc" />
+    <EmbeddedResource Include="FornecedorAcesso\rptFornecedorAcesso.rdlc" />
+    <EmbeddedResource Include="HistoricoAtividades\rptHistoricoAtividades.rdlc" />
+    <EmbeddedResource Include="InscricoesPorStatusENivel\rptInscricoes.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Questionario\rptQuestionarioReacao.rdlc" />
+    <EmbeddedResource Include="SolucaoEducacionalPorCategoria\rptSolucaoEducacionalPorCategoria.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SolucaoEducacionalPublicoAlvo\rptSolucaoEducacionalPorPublicoAlvo.rdlc" />
+    <EmbeddedResource Include="StatusUsuariosTrilhas\rptStatusUsuariosTrilhas.rdlc" />
+    <EmbeddedResource Include="StatusUsuariosTrilhas\rptTabelaSituacaoCursos.rdlc" />
+    <EmbeddedResource Include="UsuarioPagante\rptUsuarioPagante.rdlc" />
+    <EmbeddedResource Include="AtividadeExtraCurricular\rptAtividadeExtraCurricular.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="DetalhesDemanda\DetalhesDemanda.aspx" />
+    <Content Include="packages.config" />
+    <None Include="rptParticipacaoTrilha.rdlc" />
+    <None Include="rptRelatorioIndividual.rdlc" />
+    <EmbeddedResource Include="HorasCapacitacao\rptHorasCapacitacao.rdlc" />
+    <EmbeddedResource Include="QuestionarioPesquisa\rptQuestionarioPesquisa.rdlc" />
+    <EmbeddedResource Include="SituacaoCursos\rptTabelaSituacaoCursos.rdlc" />
+    <EmbeddedResource Include="UsuarioMatriculadoSEFormaAquisicao\rptRelatorioUsuarioMatriculadoSEFormaAquisicao.rdlc" />
+    <EmbeddedResource Include="HistoricoAcademico\rptHistoricoAcademico.rdlc" />
+    <EmbeddedResource Include="HistoricoAtividades\rptHistoricoAtividadesTopicoTematico.rdlc" />
+    <EmbeddedResource Include="MatriculaSolucaoEducacional\rptMatriculaSolucaoEducacional.rdlc" />
+    <EmbeddedResource Include="MetaDesenvolvimentoSE\rptMetaDesenvolvimentoSE.rdlc" />
+    <EmbeddedResource Include="Programas\Programas.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEOfertaMatricula\rptSEOfertaMatricula.rdlc" />
+    <EmbeddedResource Include="SolucaoEducacionalFormaAquisicao\rptSolucaoEducacionalFormaAquisicao.rdlc" />
+    <EmbeddedResource Include="SolucaoEducacionalOferta\rptSolucaoEducacionalOferta.rdlc" />
+    <EmbeddedResource Include="SolucaoEducacionalPrograma\rptRelatorioSolucaoEducacionalPrograma.rdlc" />
+    <EmbeddedResource Include="UsuarioMatriculadoPorTurma\UsuarioMatriculadoPorTurma.rdlc" />
+    <EmbeddedResource Include="UsuarioMatriculadoPrograma\rptRelatorioUsuarioMatriculadoPrograma.rdlc" />
+    <Content Include="web.config" />
+    <Content Include="Sebrae.Academico.Reports.ruleset" />
+    <Content Include="Sebrae.Academico.Reports-1.ruleset" />
+    <Content Include="Sebrae.Academico.Reports.Release.ruleset" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Default.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>48826</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

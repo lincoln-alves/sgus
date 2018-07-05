@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{90D75BEA-0ACD-4D17-BF19-98F3D3593263}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sebrae.Academico.SQL</RootNamespace>
+    <AssemblyName>Sebrae.Academico.SQL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>ExtendedDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>Sebrae.Academico.SQL.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentMigrator, Version=1.6.2.0, Culture=neutral, PublicKeyToken=aacfc7de5acabf05, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentMigrator.1.6.2\lib\40\FluentMigrator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enums\TipoDeExpressaoAdicionarPagina.cs" />
+    <Compile Include="Migrations\AlterarProcedureStatusMochila.cs" />
+    <Compile Include="Migrations\AlterandoProcedureSPProtocolo.cs" />
+    <Compile Include="Migrations\AlteracoesEmDemandas.cs" />
+    <Compile Include="Migrations\AlterandoProcedureDesempenhoAcademico.cs" />
+    <Compile Include="Migrations\AlterarItemTrilha4189.cs" />
+    <Compile Include="Migrations\AlterarQuestionarioParticipacao.cs" />
+    <Compile Include="Migrations\AtualizaProtocoloHistorico.cs" />
+    <Compile Include="Migrations\AtualizarNomePagina3151.cs" />
+    <Compile Include="Migrations\AtualizarProcedureObterLojasMapa2.cs" />
+    <Compile Include="Migrations\CorrecaoValorSituacao3095.cs" />
+    <Compile Include="Migrations\CriarCampoTipoEmProcesso.cs" />
+    <Compile Include="Migrations\CriarEstruturaPercentagemDemandas3705.cs" />
+    <Compile Include="Migrations\CriarEstruturaProdutoSebrae.cs" />
+    <Compile Include="Migrations\CriarMissaoMedalha.cs" />
+    <Compile Include="Migrations\CriarSolucaoEducacionalUnidadeDemantes.cs" />
+    <Compile Include="Migrations\DataDownloadBoletimCertame3095.cs" />
+    <Compile Include="Migrations\CriacaoTemplateEmailDemanda.cs" />
+    <Compile Include="Migrations\IncluindoCargoSebraeUF.cs" />
+    <Compile Include="Migrations\IncluirNovoTipoCadastroSolucaoSebrae.cs" />
+    <Compile Include="Migrations\IncluirTabelaItemTrilhaAvaliacao.cs" />
+    <Compile Include="Migrations\MudancaEstruturaTurma.cs" />
+    <Compile Include="Migrations\LogAcessoPagina.cs" />
+    <Compile Include="Migrations\MudancaFileServerProtocolo.cs" />
+    <Compile Include="Migrations\MudancaProcedureSpRelDesempenhoAcademico.cs" />
+    <Compile Include="Migrations\EstruturaOrcamentoAnualReembolso.cs" />
+    <Compile Include="Migrations\MudancasEstruturaUsuarioCertame3096.cs" />
+    <Compile Include="Migrations\MudancasEstruturaHierarquiaNucleo.cs" />
+    <Compile Include="Migrations\NumeroInscricaoBoletimCertame3096.cs" />
+    <Compile Include="Migrations\AdicionarPaginaRelatorio3151.cs" />
+    <Compile Include="Migrations\ProcedureCompilarUsuariosNotificacao.cs" />
+    <Compile Include="Migrations\ProcedureMochilaTrilha4189.cs" />
+    <Compile Include="Migrations\ProcedureMochilaTrilha3789.cs" />
+    <Compile Include="Migrations\ProcedureObterLojasMapa2632.cs" />
+    <Compile Include="Migrations\ProcedureProcessoPermitidosFiltroDias.cs" />
+    <Compile Include="Migrations\ProceduresSolucoesTrilha4189.cs" />
+    <Compile Include="Migrations\ProceduresSolucoesTrilha4186.cs" />
+    <Compile Include="Migrations\ProceduresMapaTrilhas3221.cs" />
+    <Compile Include="Migrations\AtualizarProcedureObterLojasMapa.cs" />
+    <Compile Include="Migrations\ProcedureQuestionariosPendentes3578.cs" />
+    <Compile Include="Migrations\ProtocoloArquivado.cs" />
+    <Compile Include="Migrations\ProcedureSolucoesMochila.cs" />
+    <Compile Include="Migrations\FunctionMoedasConquistadas4190.cs" />
+    <Compile Include="Migrations\RemoverCargoDemandanteDoProcessoResposta.cs" />
+    <Compile Include="Migrations\AlteracaoTriggersUsuarioCargo.cs" />
+    <Compile Include="Migrations\MudancasEstruturaHierarquia.cs" />
+    <Content Include="BasicScripts\RemoverPaginaScript.sql" />
+    <Content Include="BasicScripts\RemoveForeignKeyScript.sql" />
+    <Content Include="BasicScripts\AdicionarPaginaScript.sql" />
+    <Content Include="BasicScripts\RemovePrimaryKeyScript.sql" />
+    <Content Include="Functions\FN_ObterMoedasConquistadasNivelSebrae.sql" />
+    <Content Include="Functions\FN_ObterMoedasConquistadasPontoSebrae.sql" />
+    <Content Include="Migrations\Scripts\2824\RemoverConstraintUsuarioCargoUf.sql" />
+    <Content Include="Migrations\Scripts\2824\RollbackTriggersCargo.sql" />
+    <Content Include="Migrations\Scripts\2824\RollbackTriggersUsuarioCargo.sql" />
+    <Content Include="Migrations\Scripts\2824\TriggersUsuarioCargo.sql" />
+    <Content Include="Migrations\Scripts\2824\TriggersCargo.sql" />
+    <Content Include="Migrations\Scripts\2824\MigrarUsuarioCargoEmEtapaResposta.sql" />
+    <Content Include="Migrations\Scripts\2824\RecriarTabelaSemIdentity.sql" />
+    <Content Include="Migrations\Scripts\2824\RecriarIds.sql" />
+    <Content Include="Migrations\Scripts\3703\ExcluiTemplateEmail.sql" />
+    <Content Include="Migrations\Scripts\3703\IncluiTemplateEmail.sql" />
+    <Content Include="Migrations\Scripts\3400\CommitCriarEstruturaProdutoSebrae.sql" />
+    <Content Include="Migrations\Scripts\3400\ExcluindoCargo.sql" />
+    <Content Include="Migrations\Scripts\3400\IncluindoCargoSebraeUF.sql" />
+    <Content Include="Migrations\Scripts\3410\Alterando procedure SP_Protocolo.sql" />
+    <Compile Include="Properties\BasicScriptsResources.Designer.cs">
+      <DependentUpon>BasicScriptsResources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\FunctionResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FunctionResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Scripts_4189.Designer.cs">
+      <DependentUpon>Scripts_4189.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Scripts_3703.Designer.cs">
+      <DependentUpon>Scripts_3703.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Scripts_3400.Designer.cs">
+      <DependentUpon>Scripts_3400.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Scripts_2883.Designer.cs">
+      <DependentUpon>Scripts_2883.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Scripts_2839.Designer.cs">
+      <DependentUpon>Scripts_2839.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Scripts_2824.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Scripts_2824.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\MigrationExtensions.cs" />
+    <Compile Include="Migrations\ProceduresFunctionsMochilas3219.cs" />
+    <Compile Include="Migrations\ProcedureRanking3205.cs" />
+    <Compile Include="Migrations\MudancasProceduresDashboard2868.cs" />
+    <Compile Include="NumerosMigracoes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Scripts_3095.Designer.cs">
+      <DependentUpon>Scripts_3095.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Scripts_3096.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Scripts_3096.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Scripts_3696.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Scripts_3696.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\StoredProceduresResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StoredProceduresResources.resx</DependentUpon>
+    </Compile>
+    <Content Include="BasicScripts\PreFunctionScript.sql" />
+    <Content Include="BasicScripts\PreProcedureScript.sql" />
+    <Content Include="Functions\FN_ObterStatusSolucaoSebrae.sql" />
+    <Content Include="Functions\FN_POSICAO_RANKING_TRILHAS.sql" />
+    <Content Include="Functions\FN_ObterTotalMoedasTrilhaNivel.sql" />
+    <Content Include="Migrations\Scripts\2883\TriggersHierarquiaNucleo.sql" />
+    <Content Include="Migrations\Scripts\3095\CommitTriggersUsuarioCertame.sql" />
+    <Content Include="Migrations\Scripts\3095\RollbackTriggersUsuarioCertame.sql" />
+    <Content Include="Migrations\Scripts\3096\AtualizaNumeroInscricaoUsuarioCertame.sql" />
+    <Content Include="Migrations\Scripts\3096\AtualizaTabelaUsuarioCertameSituacao.sql" />
+    <Content Include="Migrations\Scripts\3096\CommitTriggersUsuarioCertame2.sql" />
+    <Content Include="Migrations\Scripts\3096\CommitTriggersUsuarioCertame.sql" />
+    <Content Include="Migrations\Scripts\3096\RollbackTriggersUsuarioCertame2.sql" />
+    <Content Include="Migrations\Scripts\3096\RollbackTriggersUsuarioCertame.sql" />
+    <Content Include="Functions\FN_ObterTrofeu.sql" />
+    <Content Include="Migrations\Scripts\3400\ExcluindoCargo.sql" />
+    <Content Include="Migrations\Scripts\3400\IncluindoCargoSebraeUF.sql" />
+    <Content Include="Migrations\Scripts\3696\AdicionandoColunasEmDemandas.sql" />
+    <Content Include="Migrations\Scripts\4189\CriarTabelaMissaoMedalha.sql" />
+    <Content Include="Migrations\Scripts\4189\RemoverTabelaMissaoMedalha.sql" />
+    <Content Include="StoredProcedures\DASHBOARD_REL_MatriculasTurmas.sql" />
+    <Content Include="StoredProcedures\DASHBOARD_REL_MatriculasTurmasTotais.sql" />
+    <Content Include="StoredProcedures\SP_ATUALIZAR_TOKEN_TRILHA.sql" />
+    <Content Include="StoredProcedures\SP_cursos_online_ucsebrae.sql" />
+    <Content Include="StoredProcedures\SP_LIDERES_TRILHAS.sql" />
+    <Content Include="StoredProcedures\SP_MOCHILA_STATUS_MISSOES4189.sql" />
+    <Content Include="StoredProcedures\SP_MOCHILA_STATUS_MISSOES.sql" />
+    <Content Include="StoredProcedures\SP_OBTER_PARTICIPANTES_MAPA.sql" />
+    <Content Include="StoredProcedures\SP_OBTER_LOJAS_MAPA.sql" />
+    <Content Include="StoredProcedures\SP_DADOS_MOCHILA.sql" />
+    <Content Include="StoredProcedures\SP_COMPILAR_USUARIOS_NOTIFICACAO.sql" />
+    <Content Include="Functions\FN_ObterCategoriasFilhas.sql" />
+    <Content Include="StoredProcedures\SP_OBTER_SOLUCOES.sql" />
+    <Content Include="StoredProcedures\SP_LIDERES_TRILHAS.sql" />
+    <Content Include="StoredProcedures\SP_POSICAO_RANKING_TRILHAS.sql" />
+    <Content Include="StoredProcedures\SP_MOCHILA_STATUS_MISSOES.sql" />
+    <Content Include="StoredProcedures\SP_ATUALIZAR_TOKEN_TRILHA.sql" />
+    <Content Include="StoredProcedures\SP_REL_STATUS_USUARIOS_TRILHAS.sql" />
+    <Content Include="StoredProcedures\SP_REL_Questionario.sql" />
+    <Content Include="StoredProcedures\SP_REL_SOLUCAO_EDUCACIONAL_PROGRAMA.sql" />
+    <Content Include="StoredProcedures\SP_Protocolo.sql" />
+    <Content Include="StoredProcedures\SP_REL_USUARIO_MATRICULADO_SE_FORMA_AQUISICAO.sql" />
+    <Content Include="StoredProcedures\SP_ID_ITEM_TRILHA_PARTICIPACOES_RECENTES_2016.sql" />
+    <Content Include="Functions\FN_ObterInteiro.sql" />
+    <Content Include="StoredProcedures\DASHBOARD_REL_GraficoMatriculadosUF.sql" />
+    <Content Include="StoredProcedures\SP_ID_ATIVIDADE_FORMATIVA_PARTICIPACOES_RECENTES.sql" />
+    <Content Include="StoredProcedures\SP_ID_ITEM_TRILHA_PARTICIPACOES_RECENTES.sql" />
+    <Content Include="StoredProcedures\SP_REL_ATIVIDADE_EXTRA_CURRICULAR.sql" />
+    <Content Include="StoredProcedures\SP_REL_SOLUCAO_EDUCACIONAL_PUBLICO_ALVO.sql" />
+    <Content Include="StoredProcedures\SP_REL_DESEMPENHO_ACADEMICO.sql" />
+    <Content Include="StoredProcedures\SP_PROCESSOS_ETAPAS_A_ANALISAR.sql" />
+    <Content Include="StoredProcedures\DASHBOARD_REL_IndiceSatisfacao.sql" />
+    <Content Include="StoredProcedures\SP_REL_ACESSOS.sql" />
+    <Content Include="StoredProcedures\SP_REL_DADOS_PESSOAIS.sql" />
+    <Content Include="StoredProcedures\SP_REL_MATRICULA_SOLUCAO_EDUCACIONAL.sql" />
+    <Content Include="StoredProcedures\SP_REL_QUANTIDADE_POR_PERFIL.sql" />
+    <Content Include="StoredProcedures\SP_REL_INSCRICOES_POR_STATUS_E_NIVEL.sql" />
+    <Content Include="StoredProcedures\SP_REL_CONCLUINTES.sql" />
+    <Content Include="StoredProcedures\SP_REL_HORAS_CAPACITACAO.sql" />
+    <Content Include="StoredProcedures\SP_REL_CAPACITADOS.sql" />
+    <Content Include="StoredProcedures\SP_REL_META_DESENVOLVIMENTO_SE.sql" />
+    <Content Include="StoredProcedures\SP_REL_USUARIOS_PAGANTES.sql" />
+    <Content Include="StoredProcedures\SP_REL_USUARIO_MATRICULADO_PROGRAMA.sql" />
+    <Content Include="StoredProcedures\SP_REL_SOLUCAO_EDUCACIONAL_OFERTA.sql" />
+    <Content Include="StoredProcedures\SP_REL_SOLUCAO_EDUCACIONAL_FORMA_AQUISICAO.sql" />
+    <Content Include="Functions\fnDashboardPercentualMatriculadosUF.sql" />
+    <Content Include="StoredProcedures\SP_RANKING_TRILHAS.sql" />
+    <Content Include="StoredProcedures\SP_solucoes_da_trilha.sql" />
+    <Content Include="StoredProcedures\SP_solucoes_do_desempenho_geral_4189.sql" />
+    <Content Include="StoredProcedures\SP_solucoes_do_desempenho_geral.sql" />
+    <Content Include="StoredProcedures\SP_solucoes_do_trilheiro.sql" />
+    <Content Include="StoredProcedures\SP_TURMAS_ABANDONO_PENDENTES.sql" />
+    <Content Include="Migrations\Scripts\3096\AtualizaTabelaUsuarioCertame.sql" />
+    <Content Include="Migrations\Scripts\2883\RollbackTriggersHierarquiaNucleo.sql" />
+    <Content Include="Migrations\Scripts\2883\RemoverConstaintHierarquiaNucleo.sql" />
+    <Content Include="Migrations\Scripts\2839\RemoverConstaintUsuarioCargoProcessoResposta.sql" />
+    <Content Include="Migrations\Scripts\2824\RemoverConstraintCargoPai.sql" />
+    <Content Include="Migrations\Scripts\2824\RemoverConstraintCargo.sql" />
+    <Content Include="Migrations\Scripts\2824\RemoverConstaintUsuarioCargo.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Sebrae.Academico.SQL.ruleset" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="StoredProcedures\SP_REL_SE_OFERTA_MATRICULA.sql" />
+    <Content Include="StoredProcedures\DASHBOARD_REL_CONCLUINTES.sql" />
+    <Content Include="StoredProcedures\DASHBOARD_REL_CONCLUINTES_EMPREGADOS.sql" />
+    <Content Include="StoredProcedures\DASHBOARD_REL_CONCLUINTES_EXTERNOS.sql" />
+    <Content Include="StoredProcedures\DASHBOARD_REL_IndiceSatisfacaoCredenciados.sql" />
+    <Content Include="StoredProcedures\DASHBOARD_REL_MATRICULADOS.sql" />
+    <Content Include="StoredProcedures\DASHBOARD_REL_MatriculasPorMes.sql" />
+    <Content Include="StoredProcedures\DASHBOARD_REL_Top5CursosOnline.sql" />
+    <Content Include="StoredProcedures\DASHBOARD_Top5CursosPresenciais.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\BasicScriptsResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BasicScriptsResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\FunctionResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FunctionResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Scripts_4189.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Scripts_4189.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Scripts_3703.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Scripts_3703.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Scripts_3400.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Scripts_3400.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Scripts_3095.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Scripts_3095.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Scripts_3096.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Scripts_3096.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Scripts_2883.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Scripts_2883.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Scripts_2839.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Scripts_2839.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Scripts_2824.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Scripts_2824.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\StoredProceduresResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StoredProceduresResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Scripts_3696.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Scripts_3696.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sebrae.Academico.Dominio\Sebrae.Academico.Dominio.csproj">
+      <Project>{D9B6B84C-B816-4EAF-8D05-C63C5F48B08C}</Project>
+      <Name>Sebrae.Academico.Dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

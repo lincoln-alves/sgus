@@ -1,0 +1,16 @@
+﻿body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.modal{
+    overflow: hidden !important;
+}
+.modal-dialog{
+    margin: 0 !important;
+    width: 100vw !important;
+    height: 100% !important;
+    background: #ffffff !important;
+    background-repeat: no-repeat !important
+    z-index: 2000 !important;
+}

@@ -1,0 +1,462 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D9B6B84C-B816-4EAF-8D05-C63C5F48B08C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sebrae.Academico.Dominio</RootNamespace>
+    <AssemblyName>Sebrae.Academico.Dominio</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>Sebrae.Academico.Dominio-1.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>Sebrae.Academico.Dominio.Release.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\TestValidationAttributes\EtapaPermissao\IsNotEtapaPermissaoField.cs" />
+    <Compile Include="Attributes\TestValidationAttributes\EtapaPermissao\IsCompositeEtapaPermissaoField.cs" />
+    <Compile Include="Attributes\TestValidationAttributes\EtapaPermissao\ShouldImplementTwoEtapaPermissaoFieldAttribute.cs" />
+    <Compile Include="Attributes\TestValidationAttributes\EtapaPermissao\ShouldImplementOneEtapaPermissaoFieldAttribute.cs" />
+    <Compile Include="Attributes\TestValidationAttributes\EtapaPermissao\IsSingularEtapaPermissaoField.cs" />
+    <Compile Include="Classes\MissaoMedalha.cs" />
+    <Compile Include="Classes\CampoPorcentagem.cs" />
+    <Compile Include="Classes\Cargo.cs" />
+    <Compile Include="Classes\ConheciGame\Conteudo.cs" />
+    <Compile Include="Classes\ConheciGame\Partida.cs" />
+    <Compile Include="Classes\ConheciGame\Resposta.cs" />
+    <Compile Include="Classes\ConheciGame\Tema.cs" />
+    <Compile Include="Classes\ConheciGame\Usuario.cs" />
+    <Compile Include="Classes\EtapaEncaminhamentoUsuario.cs" />
+    <Compile Include="Classes\EtapaPermissaoNucleo.cs" />
+    <Compile Include="Classes\EtapaRespostaPermissao.cs" />
+    <Compile Include="Classes\EtapaVersao.cs" />
+    <Compile Include="Classes\ItemTrilhaAvaliacao.cs" />
+    <Compile Include="Classes\OrcamentoReembolso.cs" />
+    <Compile Include="Classes\ProtocoloFileServer.cs" />
+    <Compile Include="Classes\HierarquiaNucleoUsuario.cs" />
+    <Compile Include="Classes\HierarquiaNucleo.cs" />
+    <Compile Include="Classes\Moodle\GroupMoodle.cs" />
+    <Compile Include="Classes\PontoSebrae.cs" />
+    <Compile Include="Classes\Missao.cs" />
+    <Compile Include="Classes\ProdutoSebrae.cs" />
+    <Compile Include="Classes\Sessao.cs" />
+    <Compile Include="Classes\UsuarioCertificadoCertame.cs" />
+    <Compile Include="Classes\PosicaoDadoCertificadoCertame.cs" />
+    <Compile Include="Classes\CertificadoCertame.cs" />
+    <Compile Include="Classes\UsuarioCargo.cs" />
+    <Compile Include="Classes\LogLider.cs" />
+    <Compile Include="Classes\UsuarioTrilhaMensagemGuia.cs" />
+    <Compile Include="Classes\MensagemGuia.cs" />
+    <Compile Include="Classes\Views\ViewLogPortal.cs" />
+    <Compile Include="Classes\Views\ViewSolicitacaoDemanda.cs" />
+    <Compile Include="Classes\Views\ViewUsuariosDemitidos.cs" />
+    <Compile Include="DTO\DTOLoja.cs" />
+    <Compile Include="DTO\DTOLider.cs" />
+    <Compile Include="DTO\DTONomeCampo.cs" />
+    <Compile Include="DTO\DTOMissaoMochila.cs" />
+    <Compile Include="DTO\DTOMochila.cs" />
+    <Compile Include="DTO\DTOTrilhaRanking.cs" />
+    <Compile Include="DTO\DtoTrilhaSolucaoSebrae.cs" />
+    <Compile Include="DTO\DtoTrilhaSolucaoSebraeMissoes.cs" />
+    <Compile Include="DTO\DTOUsuarioMapa.cs" />
+    <Compile Include="Enumeracao\enumAcaoNaPagina.cs" />
+    <Compile Include="Enumeracao\enumNomeAjusteDemanda.cs" />
+    <Compile Include="Enumeracao\enumStatusDemanda.cs" />
+    <Compile Include="Enumeracao\enumSituacaoUsuarioCertifcadoCertame.cs" />
+    <Compile Include="Enumeracao\enumStatusCertificadoConhecimento.cs" />
+    <Compile Include="DTO\DTOFiltrosHistoricoParticipacaoTrilha.cs" />
+    <Compile Include="Enumeracao\enumStatusEncaminhamentoEtapa.cs" />
+    <Compile Include="Enumeracao\enumOrigemItemTrilha.cs" />
+    <Compile Include="Enumeracao\enumTipoEtapaPermissao.cs" />
+    <Compile Include="Enumeracao\enumDistribuicaoVagasOferta.cs" />
+    <Compile Include="Enumeracao\enumFaseJogo.cs" />
+    <Compile Include="Enumeracao\enumPrazoEncaminhamentoDemanda.cs" />
+    <Compile Include="Enumeracao\enumErrorNumber.cs" />
+    <Compile Include="Enumeracao\enumTipoMensagemGuia.cs" />
+    <Compile Include="Enumeracao\enumMomento.cs" />
+    <Compile Include="Enumeracao\enumTipoProcesso.cs" />
+    <Compile Include="Enumeracao\enumTipoSolucao.cs" />
+    <Compile Include="Enumeracao\enumTipoTrofeu.cs" />
+    <Compile Include="Classes\PontoSebraeParticipacao.cs" />
+    <Compile Include="Classes\TrilhaTutorialAcesso.cs" />
+    <Compile Include="Classes\UsuarioTrilhaMoedas.cs" />
+    <Compile Include="Classes\ItemTrilhaCurtida.cs" />
+    <Compile Include="Enumeracao\enumTipoMoeda.cs" />
+    <Compile Include="Enumeracao\enumTrilhaMapa.cs" />
+    <Compile Include="Enumeracao\enumTipoCurtida.cs" />
+    <Compile Include="Enumeracao\enumResponseStatusCode.cs" />
+    <Compile Include="Classes\AssuntoTrilhaFaq.cs" />
+    <Compile Include="Classes\TrilhaFaq.cs" />
+    <Compile Include="Classes\HelperTag.cs" />
+    <Compile Include="Classes\TipoItemTrilha.cs" />
+    <Compile Include="Classes\QuestionarioAssociacaoEnvio.cs" />
+    <Compile Include="Classes\QuestaoResposta.cs" />
+    <Compile Include="Classes\Questao.cs" />
+    <Compile Include="Classes\EnvioInforme.cs" />
+    <Compile Include="Classes\Informe.cs" />
+    <Compile Include="Classes\CampoDivisor.cs" />
+    <Compile Include="Classes\Avaliacao.cs" />
+    <Compile Include="Classes\SGC\CredenciadoArea.cs" />
+    <Compile Include="Classes\SGC\Subarea.cs" />
+    <Compile Include="Classes\SGC\Area.cs" />
+    <Compile Include="Classes\EnglishTownUsuario.cs" />
+    <Compile Include="Classes\LogConsultorEducacional.cs" />
+    <Compile Include="Classes\MetaFm.cs" />
+    <Compile Include="Classes\HierarquiaAuxiliar.cs" />
+    <Compile Include="Classes\RelatorioPaginaInicial.cs" />
+    <Compile Include="Classes\AreaTematicaPermissao.cs" />
+    <Compile Include="Classes\AreaTematica.cs" />
+    <Compile Include="Classes\Auditoria.cs" />
+    <Compile Include="Classes\Pagina.cs" />
+    <Compile Include="Classes\CampoMeta.cs" />
+    <Compile Include="Classes\CampoMetaValue.cs" />
+    <Compile Include="Classes\Capacitacao.cs" />
+    <Compile Include="Classes\CategoriaConteudoPermissao.cs" />
+    <Compile Include="Classes\CategoriaConteudoTags.cs" />
+    <Compile Include="Classes\Alternativa.cs" />
+    <Compile Include="Classes\Campo.cs" />
+    <Compile Include="Classes\AlternativaResposta.cs" />
+    <Compile Include="Classes\CampoResposta.cs" />
+    <Compile Include="Classes\LogSincroniaPostParameters.cs" />
+    <Compile Include="Classes\LogSincronia.cs" />
+    <Compile Include="Classes\MonitoramentoIndicadoresValores.cs" />
+    <Compile Include="Classes\MonitoramentoIndicadores.cs" />
+    <Compile Include="Classes\Protocolo.cs" />
+    <Compile Include="Classes\ProgramaAreaTematica.cs" />
+    <Compile Include="Classes\TrilhaAreaTematica.cs" />
+    <Compile Include="Classes\SolucaoEducacionalAreaTematica.cs" />
+    <Compile Include="Classes\NacionalizacaoUf.cs" />
+    <Compile Include="Classes\CategoriaConteudoUF.cs" />
+    <Compile Include="Classes\LogResponsavel.cs" />
+    <Compile Include="Classes\JustificativaStatus.cs" />
+    <Compile Include="Classes\ValorSistema.cs" />
+    <Compile Include="Classes\Email.cs" />
+    <Compile Include="Classes\EmailEnvio.cs" />
+    <Compile Include="Classes\EmailEnvioPermissao.cs" />
+    <Compile Include="Classes\SolicitacaoRelatorio.cs" />
+    <Compile Include="Classes\NomeReprovacaoEtapa.cs" />
+    <Compile Include="Classes\NomeFinalizacaoEtapa.cs" />
+    <Compile Include="Classes\FormaAquisicao.cs" />
+    <Compile Include="Classes\FornecedorUF.cs" />
+    <Compile Include="Classes\Hierarquia.cs" />
+    <Compile Include="Classes\LogAcessoSolucaoEducacionalUsuario.cs" />
+    <Compile Include="Classes\LogAcessoSolucaoEducacional.cs" />
+    <Compile Include="Classes\Moodle\CategoriaMoodle.cs" />
+    <Compile Include="Classes\Moodle\Curso.cs" />
+    <Compile Include="Classes\Moodle\Inscricao.cs" />
+    <Compile Include="Classes\Moodle\LogMoodle.cs" />
+    <Compile Include="Classes\Moodle\SgusMoodleCurso.cs" />
+    <Compile Include="Classes\Moodle\SgusMoodleOferta.cs" />
+    <Compile Include="Classes\Moodle\UsuarioMoodleInscricao.cs" />
+    <Compile Include="Classes\Moodle\UsuarioMoodle.cs" />
+    <Compile Include="Classes\OfertaPublicoAlvo.cs" />
+    <Compile Include="Classes\ProcessoResposta.cs" />
+    <Compile Include="Classes\Processo.cs" />
+    <Compile Include="Classes\EtapaPermissao.cs" />
+    <Compile Include="Classes\EtapaResposta.cs" />
+    <Compile Include="Classes\Etapa.cs" />
+    <Compile Include="Classes\NotificacaoEnvioPermissao.cs" />
+    <Compile Include="Classes\MatriculaCapacitacao.cs" />
+    <Compile Include="Classes\ConfiguracaoPagamentoPublicoAlvo.cs" />
+    <Compile Include="Classes\ConfiguracaoSistema.cs" />
+    <Compile Include="Classes\EntidadeBasicaComStatus.cs" />
+    <Compile Include="Classes\FalhaAcesso.cs" />
+    <Compile Include="Classes\Funcionalidade.cs" />
+    <Compile Include="Classes\HistoricoSGTC.cs" />
+    <Compile Include="Classes\IndiceImportancia.cs" />
+    <Compile Include="Classes\ItemMetaInstitucional.cs" />
+    <Compile Include="Classes\LogAcessoFornecedor.cs" />
+    <Compile Include="Classes\LogAcessoFuncionalidade.cs" />
+    <Compile Include="Classes\LogAcessoPagina.cs" />
+    <Compile Include="Classes\LogAcessoTrilha.cs" />
+    <Compile Include="Classes\LogAcessoTurma.cs" />
+    <Compile Include="Classes\LogBuscaSite.cs" />
+    <Compile Include="Classes\LogFaleConosco.cs" />
+    <Compile Include="Classes\LogGeracaoRelatorio.cs" />
+    <Compile Include="Classes\MatriculaTurmaCapacitacao.cs" />
+    <Compile Include="Classes\Modulo.cs" />
+    <Compile Include="Classes\ModuloPreRequisito.cs" />
+    <Compile Include="Classes\ModuloSolucaoEducacional.cs" />
+    <Compile Include="Classes\NotificacaoEnvio.cs" />
+    <Compile Include="Classes\Objetivo.cs" />
+    <Compile Include="Classes\OfertaGerenciadorVaga.cs" />
+    <Compile Include="Classes\OfertaTrancadaParaPagante.cs" />
+    <Compile Include="Classes\ProgramaCategoriaConteudo.cs" />
+    <Compile Include="Classes\PublicacaoSaber.cs" />
+    <Compile Include="Classes\PublicacaoSaberUsuario.cs" />
+    <Compile Include="Classes\CategoriaConteudo.cs" />
+    <Compile Include="Classes\CertificadoTemplate.cs" />
+    <Compile Include="Classes\ConfiguracaoPagamento.cs" />
+    <Compile Include="Classes\FileServer.cs" />
+    <Compile Include="Classes\MensageriaParametros.cs" />
+    <Compile Include="Classes\EntidadeBasica.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\EntidadeBasicaPorId.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Fornecedor.cs" />
+    <Compile Include="Classes\HistoricoExtraCurricular.cs" />
+    <Compile Include="Classes\ItemQuestionario.cs" />
+    <Compile Include="Classes\ItemQuestionarioOpcoes.cs" />
+    <Compile Include="Classes\ItemQuestionarioParticipacaoOpcoes.cs" />
+    <Compile Include="Classes\ItemTrilha.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\ItemTrilhaParticipacao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\LogAcesso.cs" />
+    <Compile Include="Classes\MatriculaOferta.cs" />
+    <Compile Include="Classes\MatriculaPrograma.cs" />
+    <Compile Include="Classes\MensageriaRegistro.cs" />
+    <Compile Include="Classes\MetaIndividual.cs" />
+    <Compile Include="Classes\MetaInstitucional.cs" />
+    <Compile Include="Classes\NivelOcupacional.cs" />
+    <Compile Include="Classes\Oferta.cs" />
+    <Compile Include="Classes\OfertaPermissao.cs" />
+    <Compile Include="Classes\Perfil.cs" />
+    <Compile Include="Classes\Professor.cs" />
+    <Compile Include="Classes\Programa.cs" />
+    <Compile Include="Classes\ProgramaPermissao.cs" />
+    <Compile Include="Classes\ProgramaSolucaoEducacional.cs" />
+    <Compile Include="Classes\ProgramaTag.cs" />
+    <Compile Include="Classes\PublicoAlvo.cs" />
+    <Compile Include="Classes\Questionario.cs" />
+    <Compile Include="Classes\QuestionarioAssociacao.cs" />
+    <Compile Include="Classes\QuestionarioParticipacao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\QuestionarioPermissao.cs" />
+    <Compile Include="Classes\Regiao.cs" />
+    <Compile Include="Classes\RegiaoUF.cs" />
+    <Compile Include="Classes\Relatorio.cs" />
+    <Compile Include="Classes\RespostaParticipacaoProfessorOpcoes.cs" />
+    <Compile Include="Classes\RespostaParticipacaoProfessor.cs" />
+    <Compile Include="Classes\SenhaEmergencia.cs" />
+    <Compile Include="Classes\SolicitacaoSenha.cs" />
+    <Compile Include="Classes\SistemaExterno.cs" />
+    <Compile Include="Classes\SolucaoEducacional.cs" />
+    <Compile Include="Classes\SolucaoEducacionalExtraCurricular.cs" />
+    <Compile Include="Classes\SolucaoEducacionalObrigatoria.cs" />
+    <Compile Include="Classes\SolucaoEducacionalPermissao.cs" />
+    <Compile Include="Classes\SolucaoEducacionalPreRequisito.cs" />
+    <Compile Include="Classes\SolucaoEducacionalTags.cs" />
+    <Compile Include="Classes\StatusMatricula.cs" />
+    <Compile Include="Classes\Tag.cs" />
+    <Compile Include="Classes\Template.cs" />
+    <Compile Include="Classes\TermoAceite.cs" />
+    <Compile Include="Classes\TermoAceiteCategoriaConteudo.cs" />
+    <Compile Include="Classes\TipoItemQuestionario.cs" />
+    <Compile Include="Classes\TipoOferta.cs" />
+    <Compile Include="Classes\TipoPagamento.cs" />
+    <Compile Include="Classes\TipoQuestionario.cs" />
+    <Compile Include="Classes\TipoQuestionarioAssociacao.cs" />
+    <Compile Include="Classes\TokenAcesso.cs" />
+    <Compile Include="Classes\Trilha.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\TrilhaAtividadeFormativaParticipacao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\TrilhaCategoriaConteudo.cs" />
+    <Compile Include="Classes\TrilhaNivel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\TrilhaNivelPermissao.cs" />
+    <Compile Include="Classes\TrilhaPermissao.cs" />
+    <Compile Include="Classes\TrilhaTag.cs" />
+    <Compile Include="Classes\TrilhaTopicoTematico.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Turma.cs" />
+    <Compile Include="Classes\TurmaCapacitacao.cs" />
+    <Compile Include="Classes\TurmaCapacitacaoPermissao.cs" />
+    <Compile Include="Classes\TurmaProfessor.cs" />
+    <Compile Include="Classes\Uf.cs" />
+    <Compile Include="Classes\Usuario.cs" />
+    <Compile Include="Classes\UsuarioAbandono.cs" />
+    <Compile Include="Classes\UsuarioCategoriaConteudo.cs" />
+    <Compile Include="Classes\UsuarioPagamento.cs" />
+    <Compile Include="Classes\UsuarioPerfil.cs" />
+    <Compile Include="Classes\UsuarioTag.cs" />
+    <Compile Include="Classes\UsuarioTrilha.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Notificacao.cs" />
+    <Compile Include="Classes\Views\ViewConfiguracaoPagamentoPublicoAlvo.cs" />
+    <Compile Include="Classes\Views\ViewLogMoodle.cs" />
+    <Compile Include="Classes\Views\ViewOfertaPermissao.cs" />
+    <Compile Include="Classes\Views\ViewProgramaPermissao.cs" />
+    <Compile Include="Classes\Views\ViewQuestionarioResposta.cs" />
+    <Compile Include="Classes\Views\ViewSistemaExternoPermissao.cs" />
+    <Compile Include="Classes\Views\ViewSolucaoEducacionalPermissao.cs" />
+    <Compile Include="Classes\Views\ViewTrilha.cs" />
+    <Compile Include="Classes\Views\ViewUsuarioItemTrilhaParticipacao.cs" />
+    <Compile Include="Classes\Views\ViewUsuarioTrilhaAtividadeFormativaParticipacao.cs" />
+    <Compile Include="DTO\DTOCertificadosPorNivelOperacional.cs" />
+    <Compile Include="DTO\DtoCertificadosPorCargoETema.cs" />
+    <Compile Include="DTO\DTOCertificadosPorNaoCertificados.cs" />
+    <Compile Include="DTO\DTOConcluintesPorRegiao.cs" />
+    <Compile Include="DTO\DtoConcluintesPorPerfilETipo.cs" />
+    <Compile Include="DTO\DTOConcluintesPorSolucaoEducacional.cs" />
+    <Compile Include="DTO\DTOPaginacao.cs" />
+    <Compile Include="DTO\DTOFaixaEtaria.cs" />
+    <Compile Include="DTO\DTOGrupoMoodle.cs" />
+    <Compile Include="DTO\DTOHistoricoProcessos.cs" />
+    <Compile Include="DTO\DTOInscritosPorQuadroTotal.cs" />
+    <Compile Include="DTO\DTOJsonListaGrupoMoodle.cs" />
+    <Compile Include="DTO\DTOJsonResultDrupalCSRF.cs" />
+    <Compile Include="DTO\DTOJsonResultDrupalImportNode.cs" />
+    <Compile Include="DTO\DTOJsonResultDrupalSession.cs" />
+    <Compile Include="DTO\DTOJsonResultNodeId.cs" />
+    <Compile Include="DTO\DTOJsonResultListaGruposMoodle.cs" />
+    <Compile Include="DTO\DTONumeroDeCertificacoesPorColaborador.cs" />
+    <Compile Include="DTO\DtoParticipantesPorUnidade.cs" />
+    <Compile Include="DTO\DTOPerfilDoPublicoAtendido.cs" />
+    <Compile Include="DTO\DTOProcesso.cs" />
+    <Compile Include="DTO\DTOAlunoDaTrilha.cs" />
+    <Compile Include="DTO\DTOConcluintesPorFormaAquisicao.cs" />
+    <Compile Include="DTO\DTOConfiguracaoPagamentoPublicoAlvo.cs" />
+    <Compile Include="DTO\DTOEstatisticaNivelOcupacional.cs" />
+    <Compile Include="DTO\DTOfertaPermissao.cs" />
+    <Compile Include="DTO\DTOFuncionalidade.cs" />
+    <Compile Include="DTO\DTOGeracaoRelatorio.cs" />
+    <Compile Include="DTO\DTOInscritosPorCategoria.cs" />
+    <Compile Include="DTO\DTOInscritosTotalUF.cs" />
+    <Compile Include="DTO\DTOMatriculaOferta.cs" />
+    <Compile Include="DTO\DTOMatriculaOfertaNoAno.cs" />
+    <Compile Include="DTO\DTOMatriculasPorMes.cs" />
+    <Compile Include="DTO\DTONotificacao.cs" />
+    <Compile Include="DTO\DTOProgramaPermissao.cs" />
+    <Compile Include="DTO\DTOPublicoAlvo.cs" />
+    <Compile Include="DTO\DtoRelatorioUFPerfil.cs" />
+    <Compile Include="DTO\DtoSatisfacaoSolucoesEducacionais.cs" />
+    <Compile Include="DTO\DTOSistemaExternoPermissao.cs" />
+    <Compile Include="DTO\DTOSolucaoEducacionalPermissao.cs" />
+    <Compile Include="DTO\DtoSolucoesEConcluintesPorCategoria.cs" />
+    <Compile Include="DTO\DtoSolucoesEducacionaisPorCategoria.cs" />
+    <Compile Include="DTO\DTOTempoDeSebrae.cs" />
+    <Compile Include="DTO\DTOTermoAceite.cs" />
+    <Compile Include="DTO\DtoTotalizacoesCursosOferecidos.cs" />
+    <Compile Include="DTO\DTOTotalizador.cs" />
+    <Compile Include="DTO\DTOTotalMatriculaOfertaPorAno.cs" />
+    <Compile Include="DTO\DTOTrilhaNivelPermissao.cs" />
+    <Compile Include="DTO\DTOUsuariosPorUF.cs" />
+    <Compile Include="DTO\Filtros\ConfiguracaoPagamentoDTOFiltro.cs" />
+    <Compile Include="Enumeracao\enumStatusParticipacaoItemTrilha.cs" />
+    <Compile Include="Enumeracao\enumTipoItemTrilha.cs" />
+    <Compile Include="Enumeracao\enumCategoriaTrilhaTutorial.cs" />
+    <Compile Include="Enumeracao\enumDirecao.cs" />
+    <Compile Include="Enumeracao\enumDominio.cs" />
+    <Compile Include="Enumeracao\enumStatusAvaliacao.cs" />
+    <Compile Include="Enumeracao\enumStatusProcessoResposta.cs" />
+    <Compile Include="Enumeracao\enumTipoQuestao.cs" />
+    <Compile Include="Enumeracao\enumTotalizacaoRelatorio.cs" />
+    <Compile Include="Enumeracao\enumStatusTurma.cs" />
+    <Compile Include="Enumeracao\enumEstiloItemQuestonario.cs" />
+    <Compile Include="Enumeracao\enumPermissaoPagina.cs" />
+    <Compile Include="Enumeracao\enumTipoEventoAgenda.cs" />
+    <Compile Include="Enumeracao\enumTipoPagina.cs" />
+    <Compile Include="Enumeracao\enumRespostaPoliticaDeConsequencia.cs" />
+    <Compile Include="Enumeracao\enumCampoUsuario.cs" />
+    <Compile Include="Enumeracao\enumStatusEtapaResposta.cs" />
+    <Compile Include="Enumeracao\enumAcaoTelaCadastroDeInformarPagamento.cs" />
+    <Compile Include="Enumeracao\enumConfiguracaoSistema.cs" />
+    <Compile Include="Enumeracao\enumDisponibilidadeSolucaoEducacional.cs" />
+    <Compile Include="Enumeracao\enumFormaPagamento.cs" />
+    <Compile Include="Enumeracao\enumFornecedor.cs" />
+    <Compile Include="Enumeracao\enumFuncionalidade.cs" />
+    <Compile Include="Enumeracao\enumNivelOcupacional.cs" />
+    <Compile Include="Enumeracao\enumOperacao.cs" />
+    <Compile Include="Enumeracao\enumPerfil.cs" />
+    <Compile Include="Enumeracao\enumRelatorio.cs" />
+    <Compile Include="Enumeracao\enumSimNao.cs" />
+    <Compile Include="Enumeracao\enumStatusSolucaoEducacionalSugerida.cs" />
+    <Compile Include="Enumeracao\enumStatusMatricula.cs" />
+    <Compile Include="Classes\MatriculaTurma.cs" />
+    <Compile Include="Enumeracao\enumStatusRegistro.cs" />
+    <Compile Include="Enumeracao\enumTemplate.cs" />
+    <Compile Include="Enumeracao\enumTipoCampo.cs" />
+    <Compile Include="Enumeracao\enumTipoDado.cs" />
+    <Compile Include="Enumeracao\enumTipoDiagnostico.cs" />
+    <Compile Include="Enumeracao\enumTipoFormaAquisicao.cs" />
+    <Compile Include="Enumeracao\enumTipoItemQuestionario.cs" />
+    <Compile Include="Enumeracao\enumTipoMensagem.cs" />
+    <Compile Include="Enumeracao\enumTipoNotificacao.cs" />
+    <Compile Include="Enumeracao\enumTipoOferta.cs" />
+    <Compile Include="Enumeracao\enumTipoParticipacaoTrilha.cs" />
+    <Compile Include="Enumeracao\enumTipoQuestionario.cs" />
+    <Compile Include="Classes\ItemQuestionarioParticipacao.cs" />
+    <Compile Include="Enumeracao\enumTipoQuestionarioAssociacao.cs" />
+    <Compile Include="Classes\ItemMetaIndividual.cs" />
+    <Compile Include="Enumeracao\enumTipoRelatorioResposta.cs" />
+    <Compile Include="Enumeracao\enumTipoSaidaRelatorio.cs" />
+    <Compile Include="Enumeracao\enumAcao.cs" />
+    <Compile Include="Enumeracao\enumUF.cs" />
+    <Compile Include="Classes\EstiloItemQuestionario.cs" />
+    <Compile Include="Enumeracao\enumTipoCargo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Classes\SistemaExternoPermissao.cs" />
+    <Compile Include="Classes\SolucaoEducacionalCategoriaConteudo.cs" />
+    <Compile Include="SolucaoEducacionalProdutoSebrae.cs" />
+    <Compile Include="SolucaoEducacionalUnidadeDemantes.cs" />
+    <Compile Include="TipoQuestionario.cs" />
+    <Compile Include="TrilhaTutorial.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sebrae.Academico.Extensions\Sebrae.Academico.Extensions.csproj">
+      <Project>{fb555353-b13a-4d40-bb3b-8d69b853c3c8}</Project>
+      <Name>Sebrae.Academico.Extensions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sebrae.Academico.Dominio-1.ruleset" />
+    <None Include="Sebrae.Academico.Dominio.Release.ruleset" />
+    <None Include="Sebrae.Academico.Dominio.ruleset" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

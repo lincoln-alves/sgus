@@ -1,0 +1,140 @@
+﻿/* SCRIPT GERADO USANDO O SQLSERVER MANAGEMENT STUDIO EXPRESS */
+
+
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+
+
+GO
+ALTER TABLE dbo.TB_Cargo
+	DROP CONSTRAINT FK_Cargo_UF
+GO
+ALTER TABLE dbo.TB_UF SET (LOCK_ESCALATION = TABLE)
+GO
+
+
+GO
+ALTER TABLE dbo.TB_Cargo
+	DROP CONSTRAINT DF_TB_Cargo_IN_Ativo
+GO
+ALTER TABLE dbo.TB_Cargo
+	DROP CONSTRAINT DF_TB_Cargo_ID_UF
+GO
+CREATE TABLE dbo.Tmp_TB_Cargo
+	(
+	NM_Cargo varchar(255) NOT NULL,
+	VL_TipoCargo int NOT NULL,
+	ID_Cargo int NOT NULL,
+	ID_CargoPai int NULL,
+	IN_Ativo bit NOT NULL,
+	VL_Order int NULL,
+	VL_Sigla nvarchar(100) NULL,
+	ID_UF tinyint NOT NULL
+	)  ON [PRIMARY]
+GO
+ALTER TABLE dbo.Tmp_TB_Cargo SET (LOCK_ESCALATION = TABLE)
+GO
+ALTER TABLE dbo.Tmp_TB_Cargo ADD CONSTRAINT
+	DF_TB_Cargo_IN_Ativo DEFAULT ((1)) FOR IN_Ativo
+GO
+ALTER TABLE dbo.Tmp_TB_Cargo ADD CONSTRAINT
+	DF_TB_Cargo_ID_UF DEFAULT ((1)) FOR ID_UF
+GO
+IF EXISTS(SELECT * FROM dbo.TB_Cargo)
+	 EXEC('INSERT INTO dbo.Tmp_TB_Cargo (NM_Cargo, VL_TipoCargo, ID_Cargo, ID_CargoPai, IN_Ativo, VL_Order, VL_Sigla, ID_UF)
+		SELECT NM_Cargo, VL_TipoCargo, ID_Cargo, ID_CargoPai, IN_Ativo, VL_Order, VL_Sigla, ID_UF FROM dbo.TB_Cargo WITH (HOLDLOCK TABLOCKX)')
+GO
+ALTER TABLE dbo.TB_Cargo
+	DROP CONSTRAINT FK_Cargo_CargoPai
+GO
+ALTER TABLE dbo.TB_UsuarioCargo
+	DROP CONSTRAINT FK_Cargo_UsuarioCargo
+GO
+ALTER TABLE dbo.TB_EtapaResposta
+	DROP CONSTRAINT FK_EtapaResposta_Cargo
+GO
+DROP TABLE dbo.TB_Cargo
+GO
+EXECUTE sp_rename N'dbo.Tmp_TB_Cargo', N'TB_Cargo', 'OBJECT' 
+GO
+ALTER TABLE dbo.TB_Cargo ADD CONSTRAINT
+	PK_TB_Cargo PRIMARY KEY CLUSTERED 
+	(
+	ID_Cargo
+	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+GO
+ALTER TABLE dbo.TB_Cargo ADD CONSTRAINT
+	FK_Cargo_CargoPai FOREIGN KEY
+	(
+	ID_CargoPai
+	) REFERENCES dbo.TB_Cargo
+	(
+	ID_Cargo
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.TB_Cargo ADD CONSTRAINT
+	FK_Cargo_UF FOREIGN KEY
+	(
+	ID_UF
+	) REFERENCES dbo.TB_UF
+	(
+	ID_UF
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+CREATE TRIGGER [dbo].[TR_TB_Cargo_Delete] ON dbo.TB_Cargo FOR DELETE AS SET NOCOUNT ON
+INSERT INTO HT_Cargo
+	(ID_Cargo, NM_Cargo, VL_TipoCargo, ID_CargoPai, IN_Ativo, VL_Order, IN_RegistroExcluido, DT_EventoTrigger)
+SELECT
+	ID_Cargo, NM_Cargo, VL_TipoCargo, ID_CargoPai, IN_Ativo, VL_Order, '1', GETDATE()
+	FROM Deleted
+GO
+CREATE TRIGGER [dbo].[TR_TB_Cargo_Update] ON dbo.TB_Cargo AFTER UPDATE AS SET NOCOUNT ON
+INSERT INTO HT_Cargo
+	(ID_Cargo, NM_Cargo, VL_TipoCargo, ID_CargoPai, IN_Ativo, VL_Order, IN_RegistroExcluido, DT_EventoTrigger)
+SELECT
+	ID_Cargo, NM_Cargo, VL_TipoCargo, ID_CargoPai, IN_Ativo, VL_Order, '0', GETDATE()
+	FROM Deleted
+GO
+
+
+GO
+ALTER TABLE dbo.TB_EtapaResposta ADD CONSTRAINT
+	FK_EtapaResposta_Cargo FOREIGN KEY
+	(
+	ID_Cargo
+	) REFERENCES dbo.TB_Cargo
+	(
+	ID_Cargo
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.TB_EtapaResposta SET (LOCK_ESCALATION = TABLE)
+GO
+
+
+GO
+ALTER TABLE dbo.TB_UsuarioCargo ADD CONSTRAINT
+	FK_Cargo_UsuarioCargo FOREIGN KEY
+	(
+	ID_Cargo
+	) REFERENCES dbo.TB_Cargo
+	(
+	ID_Cargo
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.TB_UsuarioCargo SET (LOCK_ESCALATION = TABLE)
+GO
+

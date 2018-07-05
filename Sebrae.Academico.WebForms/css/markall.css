@@ -1,0 +1,11 @@
+﻿button.markall {
+    background-color: #E8E8E8;
+    border: 1px solid #CCCCCC;
+    cursor: pointer;
+    font-size: 12px !important;
+    padding: 0 5px;
+    display: inline;
+    text-transform: uppercase;
+    line-height: 17px;
+    font-weight: 300;
+}

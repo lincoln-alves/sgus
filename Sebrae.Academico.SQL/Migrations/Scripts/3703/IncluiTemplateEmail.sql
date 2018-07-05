@@ -1,0 +1,2 @@
+﻿INSERT INTO TB_Template (ID_Template, TX_Template, DE_Template, TX_hashTag, TX_Assunto, DT_UltimaAtualizacao)
+values(29, '<p>#NOME,<br><br>#MENSAGEM</p><p>Universidade Corporativa Sebrae</p>','Status da Demanda','#NOME, #MENSAGEM','Status da Demanda', GetDate())

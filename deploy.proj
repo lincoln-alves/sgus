@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+
+    <SolutionName>Sebrae.Academico</SolutionName>
+    <SolutionFile>$(SolutionName).sln</SolutionFile>
+
+    <WebFormsProjectName>Sebrae.Academico.WebForms</WebFormsProjectName>
+    <UIProjectName>Sebrae.Academico.UI</UIProjectName>
+    <ServicesProjectName>Sebrae.Academico.Services</ServicesProjectName>
+    <TrilhasProjectName>Sebrae.Academico.Trilhas</TrilhasProjectName>
+
+    <WebFormsProjectFile>$(WebFormsProjectName)\$(WebFormsProjectName).csproj</WebFormsProjectFile>
+    <UIProjectFile>$(UIProjectName)\$(UIProjectName).csproj</UIProjectFile>
+    <ServicesProjectFile>$(ServicesProjectName)\$(ServicesProjectName).csproj</ServicesProjectFile>
+    <TrilhasProjectFile>Services\$(TrilhasProjectName)\$(TrilhasProjectName).csproj</TrilhasProjectFile>
+
+  </PropertyGroup>
+
+  <Target Name="Build" DependsOnTargets="BuildPackage;CopyOutput" />
+
+  <Target Name="BuildPackage">
+
+    <MSBuild Projects="$(SolutionFile)" ContinueOnError="false" Targets="Rebuild" Properties="Configuration=$(Configuration)" />
+
+    <Exec Command="CALL backup.bat" Condition="'$(MSBuildLastTaskResult)' == 'True'" ContinueOnError="true" />
+
+    <MSBuild Projects="$(WebFormsProjectFile)" ContinueOnError="false" Targets="Package"
+    Properties="Configuration=$(Configuration)" />
+    
+    <MSBuild Projects="$(UIProjectFile)" ContinueOnError="false" Targets="Package"
+    Properties="Configuration=$(Configuration)" />
+    
+    <MSBuild Projects="$(ServicesProjectFile)" ContinueOnError="false" Targets="Package"
+    Properties="Configuration=$(Configuration)" />
+    
+    <MSBuild Projects="$(TrilhasProjectFile)" ContinueOnError="false" Targets="Package"
+    Properties="Configuration=$(Configuration)" />
+
+  </Target>
+
+  <Target Name="CopyOutput">
+    <ItemGroup>
+      <WebFormsPackagedFiles Include="$(WebFormsProjectName)\obj\$(Configuration)\Package\PackageTmp\**\*.*"/>
+      <UIPackagedFiles Include="$(UIProjectName)\obj\$(Configuration)\Package\PackageTmp\**\*.*"/>
+      <ServicesPackagedFiles Include="$(ServicesProjectName)\obj\$(Configuration)\Package\PackageTmp\**\*.*"/>
+      <TrilhasPackagedFiles Include="Services\$(TrilhasProjectName)\obj\$(Configuration)\Package\PackageTmp\**\*.*"/>
+    </ItemGroup>
+    
+    <Copy SourceFiles="@(WebFormsPackagedFiles)" DestinationFiles="@(WebFormsPackagedFiles-> 'BUILDS\$(WebFormsProjectName)\%(RecursiveDir)%(Filename)%(Extension)')"/>
+    <Copy SourceFiles="@(UIPackagedFiles)" DestinationFiles="@(UIPackagedFiles-> 'BUILDS\$(UIProjectName)\%(RecursiveDir)%(Filename)%(Extension)')"/>
+    <Copy SourceFiles="@(ServicesPackagedFiles)" DestinationFiles="@(ServicesPackagedFiles-> 'BUILDS\$(ServicesProjectName)\%(RecursiveDir)%(Filename)%(Extension)')"/>
+    <Copy SourceFiles="@(TrilhasPackagedFiles)" DestinationFiles="@(TrilhasPackagedFiles-> 'BUILDS\$(TrilhasProjectName)\%(RecursiveDir)%(Filename)%(Extension)')"/>
+  </Target>
+</Project>

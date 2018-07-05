@@ -1,0 +1,2 @@
+..\packages\FluentMigrator.1.6.2\tools\migrate -a bin\debug\Sebrae.Academico.SQL.dll -db SqlServer2008 -conn "Data Source=THOR\SEBRAE;Initial Catalog=UCSEBRAE_SGUS20_TRILHAS;User ID=sistema.sebrae;Password=ratpack@2000#;MultipleActiveResultSets=True;" -profile "Debug" --task="migrate:up"
+pause

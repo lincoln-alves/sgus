@@ -1,0 +1,171 @@
+﻿.navbar-custom {
+    background-color: #229922;
+    color: #ffffff;
+    border-radius: 0;
+}
+
+.nome-nucleo {
+    font-size: 1.3em;
+}
+
+.box-content {
+    height: 128px;
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
+
+.box-content a {
+    color: #FFF;
+}
+
+.box-content a:hover {
+    color: #FFF;
+}
+
+.vencida {
+    background-color: #c70000;
+}
+
+.vencida-modal .modal-header {
+    background-color: #c70000;
+}
+
+.vencida-modal a {
+    color: #c70000;
+}
+
+.vencida-modal .manualPagination {
+    font-weight: bold;
+}
+
+.no-prazo {
+    background-color: #099600;
+}
+
+.no-prazo-modal .modal-header {
+    background-color: #099600;
+}
+
+.no-prazo-modal a {
+    color: #099600;
+}
+
+.no-prazo-modal .manualPagination {
+    font-weight: bold;
+}
+
+.encerrada {
+    background-color: #4da2f3;
+}
+
+.encerrada-modal .modal-header {
+    background-color: #4da2f3;
+}
+
+.encerrada-modal a {
+    color: #4da2f3;
+}
+
+.encerrada-modal .manualPagination {
+    font-weight: bold;
+}
+
+.expirar {
+    background-color: #ffa500;
+}
+
+.expirar-modal .modal-header {
+    background-color: #ffa500;
+}
+
+.expirar-modal a {
+    color: #ffa500;
+}
+
+.expirar-modal .manualPagination {
+    font-weight: bold;
+}
+
+.heading-demandas {
+    background-color: #3974ac !important;
+    color: #fff !important;
+    font-size: 1.2em !important;
+    padding: 5px 5px 10px 5px !important;
+    box-sizing: border-box;
+    height: 100%;
+    min-height: 120px;
+}
+
+.panel-body.demanda {
+    padding: 3px;
+    background-color: #dedede;
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color: #fff;
+}
+
+.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color: transparent;
+}
+
+.navbar-custom .navbar-brand {
+    color: #eeeeee;
+}
+
+.container-box {
+    padding: 40px 30px;
+}
+
+.status-demanda {
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+.valor {
+    font-size: 3.6em;
+}
+
+.sem-resultados {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.modal-header.demandas {
+    color: #FFF;
+}
+
+.informacoes-nucleo h4 {
+    display: inline-block;
+}
+
+.informacoes-nucleo span {
+    font-weight: bold;
+}
+
+.detalhes-menu ul {
+    padding: 0;
+}
+
+.detalhes-menu li {
+    margin-right: 10px;
+    display: inline-block;
+    list-style: none;
+    vertical-align: middle;
+}
+
+#head-detalhes {
+    color: #FFF;
+}
+
+#list-rpt {
+    text-align: right;
+}
+
+.col-sm-demanda{
+    padding: 0 5px !important;
+    width: 19% !important;
+    display: inline-block;
+}

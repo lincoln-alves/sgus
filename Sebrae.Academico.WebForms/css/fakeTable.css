@@ -1,0 +1,66 @@
+﻿.fakeTh
+{
+    color: #fff;
+    background-color: #6db672;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 14px;
+    padding: 8px;
+    font-weight: bold;
+}
+
+.fakeTable
+{
+    -webkit-padding-start: 0;
+    padding: 0;
+}
+
+.fakeTable li
+{
+    list-style: none;
+    padding: 8px;
+    line-height: 1.428571429;
+    vertical-align: top;
+    border-top: 1px solid #dddddd;
+    border: 1px solid #D8D8D8;
+}
+
+
+.fakeTable li.row
+{
+    margin: 0;
+}
+
+.fakeTable li.reorder
+{
+    cursor: move;
+}
+
+.fakeTable li:nth-child(odd)
+{
+    background: #EEE;
+}
+
+.fakeTable li:nth-child(even)
+{
+    background: #FFF;
+}
+
+.EtapasContainer li:first-child
+{
+    font-weight:bold;
+    border: 2px dashed #D8D8D8;
+}
+
+.EtapasContainer li .ordem{
+    display: inline; 
+    float: left; 
+    margin: 2px 10px; 
+    font-size: 11px; 
+    color: #237929;
+}
+
+.fakeTh.boostraped, .EtapasContainer.boostraped li{
+    padding: 8px 0;    
+}

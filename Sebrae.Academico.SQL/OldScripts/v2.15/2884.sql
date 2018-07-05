@@ -1,0 +1,1 @@
+UPDATE TB_Pagina SET TX_Nome = 'Gerenciamento de Hierarquia de Núcleo', TX_Titulo = 'Gerenciamento de Hierarquia de Núcleo' WHERE ID_Pagina = 449;

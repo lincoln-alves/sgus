@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="DASHBOARD_REL_CONCLUINTES" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\dashboard_rel_concluintes.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="DASHBOARD_REL_CONCLUINTES_EMPREGADOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\dashboard_rel_concluintes_empregados.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="DASHBOARD_REL_CONCLUINTES_EXTERNOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\dashboard_rel_concluintes_externos.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="DASHBOARD_REL_GraficoMatriculadosUF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\dashboard_rel_graficomatriculadosuf.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="DASHBOARD_REL_IndiceSatisfacao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\dashboard_rel_indicesatisfacao.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="DASHBOARD_REL_IndiceSatisfacaoCredenciados" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\dashboard_rel_indicesatisfacaocredenciados.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="DASHBOARD_REL_MATRICULADOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\dashboard_rel_matriculados.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="DASHBOARD_REL_MatriculasPorMes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\dashboard_rel_matriculaspormes.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="DASHBOARD_REL_Top5CursosOnline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\dashboard_rel_top5cursosonline.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="DASHBOARD_Top5CursosPresenciais" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\dashboard_top5cursospresenciais.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SP_ATUALIZAR_TOKEN_TRILHA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_atualizar_token_trilha.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_COMPILAR_USUARIOS_NOTIFICACAO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_compilar_usuarios_notificacao.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_cursos_online_ucsebrae" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_cursos_online_ucsebrae.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="SP_DADOS_MOCHILA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_dados_mochila.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_ID_ATIVIDADE_FORMATIVA_PARTICIPACOES_RECENTES" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_id_atividade_formativa_participacoes_recentes.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_ID_ITEM_TRILHA_PARTICIPACOES_RECENTES" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_id_item_trilha_participacoes_recentes.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_ID_ITEM_TRILHA_PARTICIPACOES_RECENTES_2016" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_id_item_trilha_participacoes_recentes_2016.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SP_LIDERES_TRILHAS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_lideres_trilhas.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_MOCHILA_STATUS_MISSOES" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_mochila_status_missoes.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_OBTER_LOJAS_MAPA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_obter_lojas_mapa.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_OBTER_PARTICIPANTES_MAPA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_obter_participantes_mapa.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_OBTER_SOLUCOES" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_obter_solucoes.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_POSICAO_RANKING_TRILHAS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_posicao_ranking_trilhas.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_PROCESSOS_ETAPAS_A_ANALISAR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_processos_etapas_a_analisar.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_PROCESSOS_PERMITIDOS_INICIAR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_processos_permitidos_iniciar.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SP_Protocolo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_protocolo.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_ProtocoloHistorico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_protocolohistorico.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="SP_RANKING_TRILHAS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_ranking_trilhas.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_REL_ACESSOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_rel_acessos.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_REL_ATIVIDADE_EXTRA_CURRICULAR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_rel_atividade_extra_curricular.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_REL_CAPACITADOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_rel_capacitados.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_REL_CONCLUINTES" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_rel_concluintes.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_REL_DADOS_PESSOAIS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_rel_dados_pessoais.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_REL_DESEMPENHO_ACADEMICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_rel_desempenho_academico.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="SP_REL_HORAS_CAPACITACAO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_rel_horas_capacitacao.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_REL_INSCRICOES_POR_STATUS_E_NIVEL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_rel_inscricoes_por_status_e_nivel.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_REL_MATRICULA_SOLUCAO_EDUCACIONAL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_rel_matricula_solucao_educacional.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="SP_REL_META_DESENVOLVIMENTO_SE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_rel_meta_desenvolvimento_se.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_REL_QUANTIDADE_POR_PERFIL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_rel_quantidade_por_perfil.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_REL_Questionario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_rel_questionario.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_REL_SE_OFERTA_MATRICULA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_rel_se_oferta_matricula.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="SP_REL_SOLUCAO_EDUCACIONAL_FORMA_AQUISICAO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_rel_solucao_educacional_forma_aquisicao.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_REL_SOLUCAO_EDUCACIONAL_OFERTA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_rel_solucao_educacional_oferta.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="SP_REL_SOLUCAO_EDUCACIONAL_PROGRAMA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_rel_solucao_educacional_programa.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_REL_SOLUCAO_EDUCACIONAL_PUBLICO_ALVO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_rel_solucao_educacional_publico_alvo.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_REL_STATUS_USUARIOS_TRILHAS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_rel_status_usuarios_trilhas.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_REL_USUARIOS_PAGANTES" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_rel_usuarios_pagantes.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_REL_USUARIO_MATRICULADO_PROGRAMA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_rel_usuario_matriculado_programa.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_REL_USUARIO_MATRICULADO_SE_FORMA_AQUISICAO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_rel_usuario_matriculado_se_forma_aquisicao.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="SP_solucoes_da_trilha" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_solucoes_da_trilha.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="SP_solucoes_do_desempenho_geral" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_solucoes_do_desempenho_geral.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="SP_solucoes_do_trilheiro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_solucoes_do_trilheiro.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="SP_TURMAS_ABANDONO_PENDENTES" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_turmas_abandono_pendentes.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_MOCHILA_STATUS_MISSOES4189" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_mochila_status_missoes4189.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SP_solucoes_do_desempenho_geral_4189" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\storedprocedures\sp_solucoes_do_desempenho_geral_4189.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+</root>

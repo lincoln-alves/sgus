@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsParticipacaoTrilha" targetNamespace="http://tempuri.org/dsParticipacaoTrilha.xsd" xmlns:mstns="http://tempuri.org/dsParticipacaoTrilha.xsd" xmlns="http://tempuri.org/dsParticipacaoTrilha.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="cnxSebraeAcademico" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="cnxSebraeAcademico (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.cnxSebraeAcademico.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vwParticipacaoTrilhaTableAdapter" GeneratorDataComponentClassName="vwParticipacaoTrilhaTableAdapter" Name="vwParticipacaoTrilha" UserDataComponentName="vwParticipacaoTrilhaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="cnxSebraeAcademico (Web.config)" DbObjectName="BASE_UC20_SEBRAE.dbo.vwParticipacaoTrilha" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Nome, CPF, Nivel_ocupacional, NM_UF, Email, Trilha, Trilha_Nivel, qtd_topicos, qtd_topicos_executados, DT_Limite FROM dbo.vwParticipacaoTrilha</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Nome" DataSetColumn="Nome" />
+              <Mapping SourceColumn="CPF" DataSetColumn="CPF" />
+              <Mapping SourceColumn="Nivel_ocupacional" DataSetColumn="Nivel_ocupacional" />
+              <Mapping SourceColumn="NM_UF" DataSetColumn="NM_UF" />
+              <Mapping SourceColumn="Email" DataSetColumn="Email" />
+              <Mapping SourceColumn="Trilha" DataSetColumn="Trilha" />
+              <Mapping SourceColumn="Trilha_Nivel" DataSetColumn="Trilha_Nivel" />
+              <Mapping SourceColumn="qtd_topicos" DataSetColumn="qtd_topicos" />
+              <Mapping SourceColumn="qtd_topicos_executados" DataSetColumn="qtd_topicos_executados" />
+              <Mapping SourceColumn="DT_Limite" DataSetColumn="DT_Limite" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsParticipacaoTrilha" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="dsParticipacaoTrilha" msprop:Generator_UserDSName="dsParticipacaoTrilha">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vwParticipacaoTrilha" msprop:Generator_TableClassName="vwParticipacaoTrilhaDataTable" msprop:Generator_TableVarName="tablevwParticipacaoTrilha" msprop:Generator_TablePropName="vwParticipacaoTrilha" msprop:Generator_RowDeletingName="vwParticipacaoTrilhaRowDeleting" msprop:Generator_RowChangingName="vwParticipacaoTrilhaRowChanging" msprop:Generator_RowEvHandlerName="vwParticipacaoTrilhaRowChangeEventHandler" msprop:Generator_RowDeletedName="vwParticipacaoTrilhaRowDeleted" msprop:Generator_UserTableName="vwParticipacaoTrilha" msprop:Generator_RowChangedName="vwParticipacaoTrilhaRowChanged" msprop:Generator_RowEvArgName="vwParticipacaoTrilhaRowChangeEvent" msprop:Generator_RowClassName="vwParticipacaoTrilhaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nome" msprop:Generator_ColumnVarNameInTable="columnNome" msprop:Generator_ColumnPropNameInRow="Nome" msprop:Generator_ColumnPropNameInTable="NomeColumn" msprop:Generator_UserColumnName="Nome">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPF" msprop:Generator_ColumnVarNameInTable="columnCPF" msprop:Generator_ColumnPropNameInRow="CPF" msprop:Generator_ColumnPropNameInTable="CPFColumn" msprop:Generator_UserColumnName="CPF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nivel_ocupacional" msprop:Generator_ColumnVarNameInTable="columnNivel_ocupacional" msprop:Generator_ColumnPropNameInRow="Nivel_ocupacional" msprop:Generator_ColumnPropNameInTable="Nivel_ocupacionalColumn" msprop:Generator_UserColumnName="Nivel_ocupacional">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NM_UF" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNM_UF" msprop:Generator_ColumnPropNameInRow="NM_UF" msprop:Generator_ColumnPropNameInTable="NM_UFColumn" msprop:Generator_UserColumnName="NM_UF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Trilha" msprop:Generator_ColumnVarNameInTable="columnTrilha" msprop:Generator_ColumnPropNameInRow="Trilha" msprop:Generator_ColumnPropNameInTable="TrilhaColumn" msprop:Generator_UserColumnName="Trilha" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Trilha_Nivel" msprop:Generator_ColumnVarNameInTable="columnTrilha_Nivel" msprop:Generator_ColumnPropNameInRow="Trilha_Nivel" msprop:Generator_ColumnPropNameInTable="Trilha_NivelColumn" msprop:Generator_UserColumnName="Trilha_Nivel">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="qtd_topicos" msprop:Generator_ColumnVarNameInTable="columnqtd_topicos" msprop:Generator_ColumnPropNameInRow="qtd_topicos" msprop:Generator_ColumnPropNameInTable="qtd_topicosColumn" msprop:Generator_UserColumnName="qtd_topicos" type="xs:int" minOccurs="0" />
+              <xs:element name="qtd_topicos_executados" msprop:Generator_ColumnVarNameInTable="columnqtd_topicos_executados" msprop:Generator_ColumnPropNameInRow="qtd_topicos_executados" msprop:Generator_ColumnPropNameInTable="qtd_topicos_executadosColumn" msprop:Generator_UserColumnName="qtd_topicos_executados" type="xs:int" minOccurs="0" />
+              <xs:element name="DT_Limite" msprop:Generator_ColumnVarNameInTable="columnDT_Limite" msprop:Generator_ColumnPropNameInRow="DT_Limite" msprop:Generator_ColumnPropNameInTable="DT_LimiteColumn" msprop:Generator_UserColumnName="DT_Limite" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
